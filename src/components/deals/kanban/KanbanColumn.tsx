@@ -9,7 +9,7 @@ type KanbanColumnProps = {
 
 export default function KanbanColumn({ title, color, deals } : KanbanColumnProps){
     return(
-        <div className="flex flex-col bg-white">
+        <div className="flex flex-col bg-white drop-shadow-cardContainer">
             <h3 className={`text-sm bg-[${color}]`}>{title}</h3>
 
             <div className="flex flex-col gap-2">
