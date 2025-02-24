@@ -26,8 +26,8 @@ export const groupedDeals: StageDetails[] = [
         color: "#FFA1A3",
         deals: [
             { id:1, title: "LTD Solutions", primaryPerson: "John Doe", price: "£100,000.00", date: "03/03/2024", dealTarget: DealTargetEnum.OnTarget },
-            { id:2, title: "TechCorp", primaryPerson: "Jane Smith", price: "£250,000.00", date: "10/04/2024", dealTarget: DealTargetEnum.Overdue },
-            { id:3, title: "InnovateX", primaryPerson: "Alice Brown", price: "£75,500.00", date: "15/05/2024", dealTarget: DealTargetEnum.Approaching },
+            // { id:2, title: "TechCorp", primaryPerson: "Jane Smith", price: "£250,000.00", date: "10/04/2024", dealTarget: DealTargetEnum.Overdue },
+            // { id:3, title: "InnovateX", primaryPerson: "Alice Brown", price: "£75,500.00", date: "15/05/2024", dealTarget: DealTargetEnum.Approaching },
         ]
     },
     {

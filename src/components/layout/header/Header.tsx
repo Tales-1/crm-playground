@@ -2,6 +2,8 @@ import Image from "next/image";
 import GlobalSearch from "../sidebar/GlobalSearch";
 import Avatar from "./Avatar";
 import companyLogo from "@/assets/prima.png"; 
+import { Bell } from "lucide-react";
+import IconWrapper from "./IconWrapper";
 
 export default function Header(){
 
@@ -12,9 +14,14 @@ export default function Header(){
             </div>
 
             <GlobalSearch />
-            
-            <div className="rounded-full w-[35px] aspect-square bg-white overflow-hidden">
-                <Avatar />
+
+            <div className="flex gap-3">
+                <IconWrapper>
+                    <Bell className="w-[50%] object-cover"/>
+                </IconWrapper>
+                <IconWrapper>
+                    <Avatar />
+                </IconWrapper>            
             </div>
         </header>
     )

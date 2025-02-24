@@ -26,16 +26,16 @@ export default function KanbanColumn({ title, color, deals } : KanbanColumnProps
     }
 
     return(
-        <div className="flex flex-col bg-white rounded-lg shadow-1 p-3 gap-4 w-full">
+        <div className="flex flex-col bg-white rounded-lg shadow-1 gap-12 w-full p-3">
             <div className="w-fit rounded-lg overflow-hidden">
-                <h3 className={`text-md px-2 py-1 font-bold`} style={{background:color}}>{title}</h3>
+                <h3 className={`text-sm px-2 py-1 font-bold`} style={{background:color}}>{title}</h3>
             </div>
 
-            <div className="flex flex-col gap-2 overflow-y-scroll max-h-[600px]">
+            <div className="flex flex-col gap-2 overflow-y-scroll max-h-[600px] py-3 px-3">
                 {dealCards.map((deal) => (<KanbanCard deal={deal} key={deal.id} />))}
             </div>
-            <button type="button" onClick={AddCard} className="flex justify-center items-center 
-                self-end border rounded-lg aspect-square bg-[#303030] text-white shadow-2">+</button>
+            <button type="button" onClick={AddCard} className="flex justify-center items-center p-1
+                self-end border rounded-xl aspect-square bg-[#303030] text-white shadow-2">+</button>
         </div>
     )
 }
