@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  --background: #F4F4F4;
   --foreground: #171717;
 }
 
@@ -15,7 +15,23 @@
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  background: #f4f4f4;
   font-family: Arial, Helvetica, sans-serif;
+  display:grid;
+  grid-template-areas: "header header header"
+                     "side main main"
+                      "side main main";
+  grid-template-columns: 0.5fr 2fr 2fr;
+}
+
+header{
+  grid-area:header;
+}
+
+aside{
+  grid-area:side;
+}
+
+main{
+  grid-area:main;
 }
