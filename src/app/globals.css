@@ -9,6 +9,7 @@ body {
                      "side main main"
                       "side main main";
   grid-template-columns: 0.5fr 2fr 2fr;
+  font-family: "Inter", serif;
 }
 
 header{
@@ -21,6 +22,21 @@ aside{
 
 main{
   grid-area:main;
+}
+
+input[type="checkbox"]{
+  display:none
+}
+
+.toggle-label{
+  padding: 2px 4px;
+  background: var(--inactive-state-bg);
+  color: var(--inactive-state-text);
+}
+
+.toggle-label-active{
+  background: var(--active-state-bg);
+  color: var(--active-state-text);
 }
 
 @layer base {
@@ -50,6 +66,10 @@ main{
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
+    --active-state-bg:hsl(0, 0%, 18.82%);
+    --active-state-text:hsl(0, 0%, 100%);
+    --inactive-state-bg:hsl(0, 0%, 100%);
+    --inactive-state-text:hsl(0, 0%, 18.82%);
   }
   .dark {
     --background: 0 0% 3.9%;

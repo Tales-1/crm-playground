@@ -16,16 +16,15 @@ type KanbanCardProps = {
 export default function KanbanCard({ deal } : KanbanCardProps){
     const { title, primaryPerson, price, date, dealTarget } = deal;
     
-    let cardColor = returnColorForTarget(dealTarget);
 
     return(
-       <Card className={`rounded-lg border border-t-[${cardColor}] drop-shadow-card`}>
+       <Card className={`rounded-lg border-t-[3px] shadow-2`} style={{ borderTopColor: returnColorForTarget(deal.dealTarget) }}>
         <CardHeader>
             <CardTitle>{title}</CardTitle>
             <CardDescription>{primaryPerson}</CardDescription>
         </CardHeader>
         <CardFooter>
-            <div className="flex gap-2">
+            <div className="flex gap-2 text-xs">
                 <p>{price}</p>
                 <p className="text-muted">{date}</p>
             </div>

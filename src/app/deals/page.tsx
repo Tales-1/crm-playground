@@ -1,6 +1,12 @@
+import DealsBody from "@/components/deals/DealsBody"
+import { groupedDeals } from "@/data/deals/dealsData"
 
 export default function Page(){
-    return(
-        
+
+    // fetch data
+    return (
+        <main>
+            <DealsBody data={groupedDeals} />
+        </main>
     )
 }

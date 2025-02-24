@@ -57,8 +57,8 @@ export default {
   			sm: 'calc(var(--radius) - 4px)'
   		},
 		boxShadow:{
-			cardContainer:"rgba(0, 0, 0, 0.1) 0px 4px 12px;",
-			card: 'rgba(0, 0, 0, 0.24) 0px 3px 8px'
+			"1":'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px',
+			"2": 'rgba(0, 0, 0, 0.24) 0px 3px 8px'
 		}
   	}
   },
