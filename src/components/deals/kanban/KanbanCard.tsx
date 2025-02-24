@@ -18,7 +18,7 @@ export default function KanbanCard({ deal } : KanbanCardProps){
     
 
     return(
-       <Card className={`rounded-lg border-t-[3px] shadow-2`} style={{ borderTopColor: returnColorForTarget(deal.dealTarget) }}>
+       <Card className={`rounded-lg border-t-[3px] shadow-2`} style={{ borderTopColor: returnColorForTarget(dealTarget) }}>
         <CardHeader>
             <CardTitle>{title}</CardTitle>
             <CardDescription>{primaryPerson}</CardDescription>

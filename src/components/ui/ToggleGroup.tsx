@@ -1,6 +1,5 @@
 import { ReactNode } from "react";
 
-
 type ToggleGroupProps = {
     widthClass?:string
     heightClass?:string

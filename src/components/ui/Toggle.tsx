@@ -1,5 +1,3 @@
-import { FormEvent } from "react";
-
 type ToggleProps = {
     buttonLabel: string;
     active: boolean;

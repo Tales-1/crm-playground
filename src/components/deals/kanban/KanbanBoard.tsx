@@ -1,4 +1,4 @@
-import { StageDetails, Deal } from "@/data/deals/dealsData"
+import { StageDetails } from "@/data/deals/dealsData"
 import KanbanColumn from "./KanbanColumn"
 
 type KanbanBoardProps = {
