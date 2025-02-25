@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { Deal } from "../../data/deal-schema"
 import KanbanCard from "./kanban-card"
-import { DealTargetEnum } from "../../data/deals-data";
+import { DealTargetEnum } from "../../data/kanban-deals-data";
 
 type KanbanColumnProps = {
     title:string,

@@ -1,4 +1,4 @@
-import { DealTargetEnum } from "./deals-data";
+import { DealTargetEnum } from "./kanban-deals-data";
 import { z } from "zod";
 
 export const dealSchema = z.object({

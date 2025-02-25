@@ -1,6 +1,6 @@
-import { StageDetails } from "../../data/deals-data"
+import { StageDetails } from "../../data/kanban-deals-data"
 import KanbanColumn from "./kanban-column"
-import { groupedDeals } from "../../data/deals-data"
+import { groupedDeals } from "../../data/kanban-deals-data"
 
 export default function KanbanBoard(){
     
