@@ -4,8 +4,9 @@ import { groupedDeals } from "@/data/deals/dealsData"
 export default function Page(){
 
     // fetch data
+    
     return (
-        <main>
+        <main className="main">
             <DealsBody data={groupedDeals} />
         </main>
     )

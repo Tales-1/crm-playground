@@ -8,7 +8,7 @@ body {
   grid-template-areas: "header header header"
                      "side main main"
                       "side main main";
-  grid-template-columns: 0.5fr 2fr 2fr;
+  grid-template-columns: 0.125fr 2fr 2fr;
   font-family: "Inter", serif;
 }
 
@@ -18,10 +18,13 @@ header{
 
 aside{
   grid-area:side;
+  max-width: 75px;
 }
 
 main{
   grid-area:main;
+  margin-left: 15px;
+  margin-top: 10px;
 }
 
 input[type="checkbox"]{
