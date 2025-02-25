@@ -17,11 +17,12 @@ export default function KanbanColumn({ title, color, deals } : KanbanColumnProps
     function AddCard(){
         setDealCards((prev) => [...prev, {
             id:4,
-            title:"NextGen Ltd",
+            organisation:"NextGen Ltd",
             primaryPerson:"Robert Wilson",
-            price:"£320,000.00",
+            price:320000,
             date:"22/06/2025",
-            dealTarget:DealTargetEnum.NoTarget
+            dealTarget:DealTargetEnum.NoTarget,
+            stageTitle:title
         }])
     }
 

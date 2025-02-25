@@ -6,6 +6,7 @@ import { StageDetails } from "@/data/deals/dealsData";
 import ToggleGroup from "../ui/ToggleGroup";
 import Toggle from "../ui/Toggle";
 import { AlignJustify, Kanban, LayoutGrid, TableOfContents } from "lucide-react";
+import DealsTable from "./table/DealsTable";
 
 type DealsBodyProps = {
   data: StageDetails[];
@@ -13,10 +14,11 @@ type DealsBodyProps = {
 
 export default function DealsBody({ data }: DealsBodyProps) {
   const [isKanban, setIsKanban] = useState(true);
+  const deals = data.map(data => data.deals);
 
   return (
     <div className="flex flex-col gap-4">
-      <ToggleGroup heightClass="h-[30px] w-[175px]">
+      <ToggleGroup heightClass="h-[33px] w-[175px]">
         <Toggle
           active={isKanban}
           buttonLabel="Kanban"
@@ -31,7 +33,7 @@ export default function DealsBody({ data }: DealsBodyProps) {
         />
       </ToggleGroup>
 
-      {isKanban ? <KanbanBoard stages={data} /> : <table></table>}
+      {isKanban ? <KanbanBoard stages={data} /> : <DealsTable deals={deals.flat()} />}
     </div>
   );
 }
