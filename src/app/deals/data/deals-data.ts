@@ -1,17 +1,9 @@
+import { Deal } from "./deal-schema";
+
 export type StageDetails = {
     title: string;
     color: string;
     deals: Deal[];
-};
-
-export type Deal = {
-    id:number;
-    organisation: string;
-    primaryPerson: string;
-    price: number;
-    date: string;
-    dealTarget: DealTargetEnum;
-    stageTitle:string
 };
 
 export enum DealTargetEnum {

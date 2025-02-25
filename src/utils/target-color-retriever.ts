@@ -1,4 +1,4 @@
-import { DealTargetEnum } from "@/data/deals/dealsData";
+import { DealTargetEnum } from "@/app/deals/data/deals-data";
 
 export default function returnColorForTarget(target:DealTargetEnum){
     switch(target){

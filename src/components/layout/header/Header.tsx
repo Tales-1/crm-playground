@@ -1,9 +1,9 @@
 import Image from "next/image";
-import GlobalSearch from "./GlobalSearch";
-import Avatar from "./Avatar";
+import GlobalSearch from "../sidebar/global-search";
+import Avatar from "./avatar";
 import companyLogo from "@/assets/prima.png";
 import { Bell } from "lucide-react";
-import IconWrapper from "./IconWrapper";
+import IconWrapper from "./icon-wrapper";
 import { ICON_SIZES } from "@/constants/constants";
 
 export default function Header() {

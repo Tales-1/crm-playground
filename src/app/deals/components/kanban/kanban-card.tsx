@@ -1,4 +1,3 @@
-import { Deal } from "@/data/deals/dealsData";
 import {
   Card,
   CardDescription,
@@ -7,8 +6,9 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-import returnColorForTarget from "@/utils/targetColorRetriever";
-import formatCurrency from "@/utils/formatCurrency";
+import returnColorForTarget from "@/utils/target-color-retriever";
+import formatCurrency from "@/utils/format-currency";
+import { Deal } from "../../data/deal-schema";
 
 type KanbanCardProps = {
   deal: Deal;

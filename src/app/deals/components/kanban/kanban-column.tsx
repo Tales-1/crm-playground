@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react"
-import { Deal, DealTargetEnum } from "@/data/deals/dealsData"
-import KanbanCard from "./KanbanCard"
+import { Deal } from "../../data/deal-schema"
+import KanbanCard from "./kanban-card"
+import { DealTargetEnum } from "../../data/deals-data";
 
 type KanbanColumnProps = {
     title:string,

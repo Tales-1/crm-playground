@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link";
-import IconWrapper from "../header/IconWrapper";
+import IconWrapper from "../header/icon-wrapper";
 import {
   Coins,
   LayoutDashboard,
