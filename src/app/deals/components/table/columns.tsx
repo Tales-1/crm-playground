@@ -5,56 +5,65 @@ import { DealTargetEnum } from "../../data/kanban-deals-data";
 import formatCurrency from "@/utils/format-currency";
 import { Deal } from "../../data/deal-schema";
 import { DataTableColumnHeader } from "@/components/ui/datatable/data-table-header";
+import { DataTableViewOptions } from "@/components/ui/datatable/data-table-view-options";
 
 export const columns: ColumnDef<Deal>[] = [
   {
+    accessorKey: "",
+    id:"0",
+    header: ({ table }) => (
+      <DataTableViewOptions table={table} />
+    ),
+    cell: () => "",
+  },
+  {
     accessorKey: "stageTitle",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Stage" />
+        <DataTableColumnHeader column={column} title="Stage" showFilter={true} accessorKey="stageTitle" />
     ),
     cell: ({ row }) => (
-      <div className="text-right">{row.getValue("stageTitle")}</div>
+      <div>{row.getValue("stageTitle")}</div>
     ),
   },
   {
     accessorKey: "organisation",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Organisation" />
+      <DataTableColumnHeader column={column} title="Organisation" showFilter={true} accessorKey="organisation" />
     ),
     cell: ({ row }) => (
-      <div className="text-right">{row.getValue("organisation")}</div>
+      <div>{row.getValue("organisation")}</div>
     ),
   },
   {
     accessorKey: "primaryPerson",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Primary" />
+      <DataTableColumnHeader column={column} title="Primary" showFilter={true} accessorKey="primaryPerson"/>
     ),
     cell: ({ row }) => (
-      <div className="text-right">{row.getValue("primaryPerson")}</div>
+      <div>{row.getValue("primaryPerson")}</div>
     ),
   },
   {
     accessorKey: "price",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Price" />
+      <DataTableColumnHeader column={column} title="Price" showFilter={true} accessorKey="price" />
     ),
     cell: ({ row }) => {
       const price: number = row.getValue("price");
       const formatted = formatCurrency(price);
-      return <div className="text-right">{formatted}</div>;
+      return <div>{formatted}</div>;
     },
   },
   {
     accessorKey: "date",
     header: ({ column }) => (
-      <DataTableColumnHeader column={column} title="Date" />
+      <DataTableColumnHeader column={column} title="Date" showFilter={true} accessorKey="date" />
     ),
-    cell: ({ row }) => <div className="text-right">{row.getValue("date")}</div>,
+    cell: ({ row }) => <div>{row.getValue("date")}</div>,
   },
   {
     accessorKey: "dealTarget",
-    header: ({ column }) => <DataTableColumnHeader column={column} title="Target" />,
+    header: ({ column }) => <DataTableColumnHeader column={column} title="Target" showFilter={true} accessorKey="dealTarget" />,
     cell: ({ row }) => {
       const target: number = row.getValue("dealTarget");
       let targetDesc;
@@ -76,7 +85,7 @@ export const columns: ColumnDef<Deal>[] = [
           "No active stage";
       }
 
-      return <div className="text-right">{targetDesc}</div>;
+      return <div>{targetDesc}</div>;
     },
   },
 ];

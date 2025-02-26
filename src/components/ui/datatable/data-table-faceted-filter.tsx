@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import { Column } from "@tanstack/react-table"
-import { Check, PlusCircle } from "lucide-react"
+import { Check, Filter, PlusCircle } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import { Badge } from "../badge"
@@ -23,29 +23,30 @@ import {
   PopoverTrigger,
 } from "../popover"
 
-import { Separator } from "../separator"
 import { useDeals } from "@/app/deals/data/deals-context";
 
 interface DataTableFacetedFilterProps<TData, TValue> {
   column?: Column<TData, TValue>
-  title?: string
- 
+  title?: string,
+  accessorkey?:string
 }
 
 export function DataTableFacetedFilter<TData, TValue>({
   column,
   title,
+  accessorkey = ""
 }: DataTableFacetedFilterProps<TData, TValue>) {
+
   const deals = useDeals();
    
-  const stageOptions = deals
-        .map(deal => deal.stageTitle)
+  const options = deals
+        .map(deal => deal[accessorkey])
         .filter((item, index, arr) => arr.indexOf(item) === index)
-        .map(stageTitle => {
+        .map(key => {
             return(
                 {
-                    label: stageTitle,
-                    value: stageTitle,
+                    label: key,
+                    value: key,
                 }
             )});
 
@@ -55,43 +56,19 @@ export function DataTableFacetedFilter<TData, TValue>({
   return (
     <Popover>
       <PopoverTrigger asChild>
-        <Button variant="outline" size="sm" className="h-8 border-dashed">
-          <PlusCircle />
-          {title}
+        <button className="border-none bg-transparent">
+          <Filter size={14} />
           {selectedValues?.size > 0 && (
             <>
-              <Separator orientation="vertical" className="mx-2 h-4" />
               <Badge
                 variant="secondary"
                 className="rounded-sm px-1 font-normal lg:hidden"
               >
                 {selectedValues.size}
               </Badge>
-              <div className="hidden space-x-1 lg:flex">
-                {selectedValues.size > 2 ? (
-                  <Badge
-                    variant="secondary"
-                    className="rounded-sm px-1 font-normal"
-                  >
-                    {selectedValues.size} selected
-                  </Badge>
-                ) : (
-                    stageOptions
-                    .filter((option) => selectedValues.has(option.value))
-                    .map((option) => (
-                      <Badge
-                        variant="secondary"
-                        key={option.value}
-                        className="rounded-sm px-1 font-normal"
-                      >
-                        {option.label}
-                      </Badge>
-                    ))
-                )}
-              </div>
             </>
           )}
-        </Button>
+        </button>
       </PopoverTrigger>
       <PopoverContent className="w-[200px] p-0" align="start">
         <Command>
@@ -99,7 +76,7 @@ export function DataTableFacetedFilter<TData, TValue>({
           <CommandList>
             <CommandEmpty>No results found.</CommandEmpty>
             <CommandGroup>
-              {stageOptions.map((option) => {
+              {options.map((option) => {
                 const isSelected = selectedValues.has(option.value)
                 return (
                   <CommandItem
@@ -110,7 +87,9 @@ export function DataTableFacetedFilter<TData, TValue>({
                       } else {
                         selectedValues.add(option.value)
                       }
+
                       const filterValues = Array.from(selectedValues)
+
                       column?.setFilterValue(
                         filterValues.length ? filterValues : undefined
                       )

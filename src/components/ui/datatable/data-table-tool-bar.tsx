@@ -4,7 +4,6 @@ import { Table } from "@tanstack/react-table"
 import { X } from "lucide-react"
 
 import { Button } from "../button"
-import { Input } from "../input"
 import { DataTableViewOptions } from "./data-table-view-options"
 
 import { DataTableFacetedFilter } from "./data-table-faceted-filter"
@@ -25,8 +24,7 @@ export function DataTableToolbar<TData>({
         {table.getColumn("stageTitle") && (
           <DataTableFacetedFilter
             column={table.getColumn("stageTitle")}
-            title="Status"
-          />
+            title="Status" />
         )}
 
         {isFiltered && (

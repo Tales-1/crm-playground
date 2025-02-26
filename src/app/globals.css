@@ -8,23 +8,25 @@ body {
   grid-template-areas: "header header header"
                      "side main main"
                       "side main main";
-  grid-template-columns: 0.125fr 2fr 2fr;
+  grid-template-columns: auto 2fr 2fr;
   font-family: "Inter", serif;
 }
 
 header{
   grid-area:header;
+  z-index:10;
 }
 
 aside{
   grid-area:side;
-  max-width: 75px;
+  z-index: 10;
 }
 
 main{
   grid-area:main;
   margin-left: 15px;
   margin-top: 10px;
+  z-index: 10;
 }
 
 input[type="checkbox"]{
@@ -73,6 +75,7 @@ input[type="checkbox"]{
     --active-state-text:hsl(0, 0%, 100%);
     --inactive-state-bg:hsl(0, 0%, 100%);
     --inactive-state-text:hsl(0, 0%, 18.82%);
+    --side-bar-gradient:linear-gradient(90deg, rgba(143,143,143,1) 0%, rgba(255,248,248,1) 100%);
   }
   .dark {
     --background: 0 0% 3.9%;
@@ -99,6 +102,10 @@ input[type="checkbox"]{
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
+    --active-state-bg:hsl(0, 0%, 100%);
+    --active-state-text:hsl(0, 0%, 18.82%);
+    --inactive-state-bg:hsl(0, 0%, 18.82%);
+    --inactive-state-text:hsl(0, 0%, 100%);
   }
 }
 

@@ -11,40 +11,45 @@ import {
   DropdownMenuTrigger,
 } from "../dropdown-menu";
 import { HTMLAttributes } from "react";
+import { DataTableFacetedFilter } from "./data-table-faceted-filter";
+import React from "react";
 
 interface DataTableColumnHeaderProps<TData, TValue>
   extends HTMLAttributes<HTMLDivElement> {
-    column: Column<TData, TValue>;
-    title:string
-  }
+  column: Column<TData, TValue>;
+  title: string,
+  showFilter?: boolean,
+  accessorKey?: string,
+}
 
-  export function DataTableColumnHeader<TData, TValue>({
-    column,
-    title, className
-  }: DataTableColumnHeaderProps<TData, TValue>) {
-  
-    return(
-        <div className={cn("flex items-center justify-center space-x-2", className)}>
-
-        <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-                <Button 
-                    variant="ghost"
-                    size={"sm"}
-                    className="-ml-3 h-8 data-[state=open]:bg-accent">
-                        <span>{title}</span>
-                        {column.getIsSorted() === "desc" ? 
-                        (
-                            <ArrowDown />
-                        ): column.getIsSorted() === "asc" ? (
-                            <ArrowUp /> 
-                        ) : (
-                            <ChevronsUpDown />
-                        )
-                    }
-                    </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="start">
+export function DataTableColumnHeader<TData, TValue>({
+  column,
+  title,
+  className,
+  accessorKey,
+  showFilter = false
+}: DataTableColumnHeaderProps<TData, TValue>) {
+  return (
+    <div className={cn("flex items-center", className)}>
+      <DropdownMenu>
+        <DropdownMenuTrigger asChild>
+          <Button
+            variant="ghost"
+            size={"sm"}
+            className="-ml-3 h-8 data-[state=open]:bg-accent">
+            <span>{title}</span>
+            {column.getIsSorted() === "desc" ?
+              (
+                <ArrowDown />
+              ) : column.getIsSorted() === "asc" ? (
+                <ArrowUp />
+              ) : (
+                <ChevronsUpDown />
+              )
+            }
+          </Button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent align="start">
           <DropdownMenuItem onClick={() => column.toggleSorting(false)}>
             <ArrowUp className="h-3.5 w-3.5 text-muted-foreground/70" />
             Asc
@@ -59,7 +64,11 @@ interface DataTableColumnHeaderProps<TData, TValue>
             Hide
           </DropdownMenuItem>
         </DropdownMenuContent>
-        </DropdownMenu>
-        </div>
-    )
+      </DropdownMenu>
+      {
+        (showFilter && accessorKey) &&
+        <DataTableFacetedFilter column={column} accessorkey={accessorKey} />
+      }
+    </div>
+  )
 }

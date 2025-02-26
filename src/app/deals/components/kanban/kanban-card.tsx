@@ -22,13 +22,13 @@ export default function KanbanCard({ deal }: KanbanCardProps) {
       className={`rounded-lg border-t-[3px] shadow-2`}
       style={{ borderTopColor: returnColorForTarget(dealTarget) }}>
       <CardHeader>
-        <CardTitle>{organisation}</CardTitle>
-        <CardDescription>{primaryPerson}</CardDescription>
+        <CardTitle className="text-sm">{organisation}</CardTitle>
+        <CardDescription className="text-xs">{primaryPerson}</CardDescription>
       </CardHeader>
       <CardFooter>
-        <div className="flex gap-2 text-xs">
+        <div className="flex justify-between w-full text-[10px] text-foreground">
           <p>{formatCurrency(price)}</p>
-          <p className="text-muted">{date}</p>
+          <p>{date}</p>
         </div>
       </CardFooter>
     </Card>

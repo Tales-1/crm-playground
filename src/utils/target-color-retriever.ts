@@ -12,3 +12,18 @@ export default function returnColorForTarget(target:DealTargetEnum){
             return "#0033AA";
     }
 }
+
+export function returnTargetNameForNumber(target:number){
+    switch (target) {
+        case DealTargetEnum.OnTarget:
+          return "On Target";
+        case DealTargetEnum.Approaching:
+          return "Approaching";
+        case DealTargetEnum.Overdue:
+          return "Overdue";
+        case DealTargetEnum.NoTarget:
+          return "No Target";
+        default:
+          return "No active stage";
+      }
+}
