@@ -38,8 +38,8 @@ export default function Sidebar() {
             <p className={`absolute z-10 text-xs ${linkTextStyles}`}>Deals</p>
           </Link>
 
-          <Link href="/organisation" className="relative flex items-center gap-2">
-            <IconWrapper isActive={usePathname() == "/organisation"}>
+          <Link href="/organisations" className="relative flex items-center gap-2">
+            <IconWrapper isActive={usePathname() == "/organisations"}>
               <Network size={ICON_SIZES.medium} />
             </IconWrapper>
             <p className={`absolute text-xs ${linkTextStyles}`}>Organisations</p>

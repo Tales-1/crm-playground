@@ -6,7 +6,6 @@ import { dealSchema } from "./data/deal-schema";
 import { DealsProvider } from "./data/deals-context";
 
 async function getDealsAsync() {
-  console.log(process.cwd());
   const data = await fs.readFile(
     path.join(process.cwd(), "src/app/deals/data/deals.json")
   );
@@ -19,7 +18,7 @@ export default async function Page() {
   const data = await getDealsAsync();
 
   return (
-    <main className="main">
+    <main>
       <DealsProvider data={data}>
         <DealsBody />
       </DealsProvider>
