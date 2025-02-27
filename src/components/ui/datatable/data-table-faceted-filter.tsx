@@ -2,11 +2,10 @@
 
 import * as React from "react"
 import { Column } from "@tanstack/react-table"
-import { Check, Filter, PlusCircle } from "lucide-react"
+import { Check, Filter } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import { Badge } from "../badge"
-import { Button } from "../button"
 import {
   Command,
   CommandEmpty,
@@ -22,7 +21,6 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "../popover"
-
 import { useDeals } from "@/app/deals/data/deals-context";
 
 interface DataTableFacetedFilterProps<TData, TValue> {
@@ -38,7 +36,7 @@ export function DataTableFacetedFilter<TData, TValue>({
 }: DataTableFacetedFilterProps<TData, TValue>) {
 
   const deals = useDeals();
-   
+
   const options = deals
         .map(deal => deal[accessorkey])
         .filter((item, index, arr) => arr.indexOf(item) === index)

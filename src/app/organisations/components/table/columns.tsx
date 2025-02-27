@@ -19,6 +19,7 @@ export const columns: ColumnDef<Organisation>[] = [
         header: ({ column }) => (
             <DataTableColumnHeader column={column} title="Name" showFilter={true} accessorKey="name" />
         ),
+        accessorFn: () => "name" 
     },
     {
         accessorKey: "address",

@@ -15,7 +15,7 @@ import {
 
 import KanbanBoard from "./kanban/kanban-board";
 import ToggleGroup from "@/components/ui/toggle-group";
-import Toggle from "@/components/ui/Toggle";
+import Toggle from "@/components/ui/toggle";
 
 export default function DealsBody() {
   const [isKanban, setIsKanban] = useState(true);
@@ -23,7 +23,7 @@ export default function DealsBody() {
   const data = useDeals();
 
   return (
-    <div className="flex flex-col gap-3 w-[80%] mx-auto">
+    <div className="flex flex-col gap-3 w-[90%] mx-auto">
       <div className="flex justify-between items-center">
         <ToggleGroup heightClass="h-[30px]" widthClass="w-[175px]">
           <Toggle
@@ -41,7 +41,7 @@ export default function DealsBody() {
         </ToggleGroup>
 
         <Select defaultValue="primary">
-          <SelectTrigger className="w-[180px] bg-white h-[30px] w-[175px] text-xs">
+          <SelectTrigger className="w-[180px] bg-white h-[30px] w-[175px] text-xs rounded-lg">
             <SelectValue />
           </SelectTrigger>
           <SelectContent>

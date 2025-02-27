@@ -1,6 +1,5 @@
 import { Column } from "@tanstack/react-table";
 import { ArrowDown, ArrowUp, ChevronsUpDown, EyeOff } from "lucide-react";
-
 import { cn } from "@/lib/utils";
 import { Button } from "../button";
 import {
@@ -31,23 +30,21 @@ export function DataTableColumnHeader<TData, TValue>({
 }: DataTableColumnHeaderProps<TData, TValue>) {
   return (
     <div className={cn("flex items-center", className)}>
+      <span>{title}</span>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button
-            variant="ghost"
-            size={"sm"}
-            className="-ml-3 h-8 data-[state=open]:bg-accent">
-            <span>{title}</span>
+          <button
+            className=" h-8 ">
             {column.getIsSorted() === "desc" ?
               (
-                <ArrowDown />
+                <ArrowDown size={16} />
               ) : column.getIsSorted() === "asc" ? (
-                <ArrowUp />
+                <ArrowUp size={16} />
               ) : (
-                <ChevronsUpDown />
+                <ChevronsUpDown size={16} />
               )
             }
-          </Button>
+          </button>
         </DropdownMenuTrigger>
         <DropdownMenuContent align="start">
           <DropdownMenuItem onClick={() => column.toggleSorting(false)}>
@@ -65,10 +62,6 @@ export function DataTableColumnHeader<TData, TValue>({
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
-      {
-        (showFilter && accessorKey) &&
-        <DataTableFacetedFilter column={column} accessorkey={accessorKey} />
-      }
     </div>
   )
 }

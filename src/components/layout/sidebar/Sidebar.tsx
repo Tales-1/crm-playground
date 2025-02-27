@@ -22,7 +22,7 @@ export default function Sidebar() {
 
   return (
     <>
-      <aside className={`relative mt-16 ml-2 ${showFullMenu ? "z-30 " : "z-10 w-fit"}`}>
+      <aside className={`relative mt-16 pl-4 ${showFullMenu ? "z-30 " : "z-10 w-fit"}`}>
         <nav className="flex flex-col items-start gap-2" onMouseEnter={setShowFullMenu} onMouseLeave={setShowFullMenu}>
           <Link href="/" className="relative flex items-center gap-2" >  
             <IconWrapper isActive={usePathname() == "/"} >

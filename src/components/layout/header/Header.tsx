@@ -1,10 +1,11 @@
 import Image from "next/image";
 import GlobalSearch from "../sidebar/global-search";
-import Avatar from "./Avatar";
+import Avatar from "./avatar";
 import companyLogo from "@/assets/p-icon.png";
 import { Bell } from "lucide-react";
 import IconWrapper from "./icon-wrapper";
 import { ICON_SIZES } from "@/constants/constants";
+import NotificationBell from "./notification-bell";
 
 export default function Header() {
   return (
@@ -20,9 +21,8 @@ export default function Header() {
       <GlobalSearch />
 
       <div className="flex gap-3">
-        <IconWrapper>
-          <Bell size={ICON_SIZES.small} />
-        </IconWrapper>
+        <NotificationBell />
+
         <Avatar />
       </div>
     </header>

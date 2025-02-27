@@ -75,7 +75,7 @@ input[type="checkbox"]{
     --active-state-text:hsl(0, 0%, 100%);
     --inactive-state-bg:hsl(0, 0%, 100%);
     --inactive-state-text:hsl(0, 0%, 18.82%);
-    --side-bar-gradient:linear-gradient(90deg, rgba(143,143,143,1) 0%, rgba(255,248,248,1) 100%);
+    --side-bar-gradient:linear-gradient(90deg, rgb(31, 31, 31) 0%, rgba(255,248,248,1) 100%);
   }
   .dark {
     --background: 0 0% 3.9%;

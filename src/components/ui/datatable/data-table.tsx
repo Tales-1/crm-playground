@@ -25,6 +25,7 @@ import {
 } from "@/components/ui/table";
 
 import { Button } from "../button";
+import { DataTableFacetedFilter } from "./data-table-faceted-filter";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -68,9 +69,11 @@ export function DataTable<TData, TValue>({
       <Table className="text-xs px-1 w-full" style={{ borderCollapse: "separate", borderSpacing: "0 .6rem" }}>
         <TableHeader className="bg-white">
           {table.getHeaderGroups().map((headerGroup) => (
-            <TableRow key={headerGroup.id} className="shadow-2 rounded-xl bg-white">
+            <TableRow key={headerGroup.id} className="drop-shadow-md rounded-xl bg-white">
               {headerGroup.headers.map((header, index) => {
+                console.log(header.column)
                 return (
+                <>
                   <TableHead key={header.id} className={`${getBorderRadius(index, headerGroup.headers.length)}`}>
                     {header.isPlaceholder
                       ? null
@@ -79,6 +82,7 @@ export function DataTable<TData, TValue>({
                         header.getContext()
                       )}
                   </TableHead>
+                </>
                 );
               })}
             </TableRow>
@@ -91,7 +95,7 @@ export function DataTable<TData, TValue>({
               <TableRow
                 key={row.id}
                 data-state={row.getIsSelected() && "selected"}
-                className="shadow-2 rounded-xl h-12 bg-white"
+                className="drop-shadow-md rounded-xl h-12 bg-white"
               >
                 {row.getVisibleCells().map((cell, index) =>
                 (
@@ -131,39 +135,3 @@ export function DataTable<TData, TValue>({
     </>
   );
 }
-
-// <Table>
-// <TableCaption>A list of your recent invoices.</TableCaption>
-// <TableHeader>
-//   <TableRow>
-//     <TableHead className="w-[100px]">Stage</TableHead>
-//     <TableHead className="w-[100px]">Organisation</TableHead>
-//     <TableHead>Primary</TableHead>
-//     <TableHead>Price</TableHead>
-//     <TableHead>Date</TableHead>
-//     <TableHead>Target</TableHead>
-//   </TableRow>
-// </TableHeader>
-// <TableBody>
-//   {deals.map((deal) => (
-//     <TableRow
-//           key={deal.id}
-//           onClick={() => router.push(`/deals/${deal.id}`)}
-//           className="cursor-pointer"
-//           >
-//       <TableCell className="font-medium">{deal.stageTitle}</TableCell>
-//       <TableCell>{deal.organisation}</TableCell>
-//       <TableCell>{deal.primaryPerson}</TableCell>
-//       <TableCell>{deal.price}</TableCell>
-//       <TableCell>{deal.date}</TableCell>
-//       <TableCell>{deal.dealTarget}</TableCell>
-//     </TableRow>
-//   ))}
-// </TableBody>
-// <TableFooter>
-//   <TableRow>
-//     <TableCell colSpan={3}>Total</TableCell>
-//     <TableCell>{deals.reduce((acc, deal) => acc + deal.price, 0)}</TableCell>
-//   </TableRow>
-// </TableFooter>
-// </Table>
