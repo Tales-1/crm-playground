@@ -64,6 +64,10 @@ export function DataTable<TData, TValue>({
         : "";
   }
 
+  // pagination works by setting the page number and skip as search params
+  // this is then retrieved by the parent component upon rerender and put into the 
+  // data fetching url.
+  
   return (
     <>
       <Table className="text-xs px-1 w-full" style={{ borderCollapse: "separate", borderSpacing: "0 .6rem" }}>

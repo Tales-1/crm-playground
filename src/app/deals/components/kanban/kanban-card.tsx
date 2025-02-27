@@ -26,9 +26,9 @@ export default function KanbanCard({ deal }: KanbanCardProps) {
         <CardDescription className="text-xs">{primaryPerson}</CardDescription>
       </CardHeader>
       <CardFooter>
-        <div className="flex justify-between w-full text-[10px] text-foreground">
-          <p>{formatCurrency(price)}</p>
-          <p>{date}</p>
+        <div className="flex justify-between w-full text-foreground gap-3">
+          <p className="sm:text-[8px] md:text-[10px]">{formatCurrency(price)}</p>
+          <p className="sm:text-[8px] md:text-[10px]">{date}</p>
         </div>
       </CardFooter>
     </Card>

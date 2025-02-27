@@ -27,7 +27,7 @@ export default function NotificationBell(){
               <DialogTitle className="flex items-center gap-4">
                 <BellDot size={ICON_SIZES.small} />
                 Notifications
-                 <span className="bg-[#303030] text-xs py-[4px] px-2 rounded-lg text-background">2</span>
+                 <span className="bg-[#303030] text-xs py-[4px] px-2 rounded-lg text-background">5</span>
                 </DialogTitle>
               <Separator />
 
