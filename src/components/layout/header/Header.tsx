@@ -1,5 +1,5 @@
 import Image from "next/image";
-import GlobalSearch from "../sidebar/global-search";
+import GlobalSearch from "./global-search";
 import Avatar from "./avatar";
 import companyLogo from "@/assets/p-icon.png";
 import NotificationBell from "./notification-bell";
