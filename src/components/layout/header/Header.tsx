@@ -1,9 +1,6 @@
 import Image from "next/image";
 import GlobalSearch from "./global-search";
-import Avatar from "./avatar";
 import companyLogo from "@/assets/p-icon.png";
-import NotificationBell from "./notification-bell";
-import { ChevronsUpDown, CreditCard, LogOut, Settings, User } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -12,24 +9,24 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { ICON_SIZES } from "@/constants/constants";
-import { Separator } from "@/components/ui/separator";
+
+import ProfileButton from "./buttons/profile-button";
+import ThemeToggle from "./buttons/theme-toggle";
+import NotificationButton from "./buttons/notification-button";
 
 export default function Header() {
   return (
     <header className="flex justify-between items-center w-screen px-4 gap-[5rem]">
-      <div className="aspect-square w-[85px] flex items-center">
-        <Image
-          src={companyLogo}
-          alt="Company logo"
-          className="object-cover w-full"
-        />
-
-        <DropdownMenu>
+      <div className="relative aspect-square w-[85px] flex items-center">
+        <DropdownMenu >
           <DropdownMenuTrigger>
-            <ChevronsUpDown size={ICON_SIZES.small} />
+            <Image
+              src={companyLogo}
+              alt="Company logo"
+              className="object-cover sm:w-[50px] md:w-[85px]"
+            />
           </DropdownMenuTrigger>
-          <DropdownMenuContent>
+          <DropdownMenuContent className="absolute -left-3">
             <DropdownMenuLabel className="text-[11px]">
               My Products
             </DropdownMenuLabel>
@@ -44,37 +41,9 @@ export default function Header() {
       <GlobalSearch />
 
       <div className="flex gap-3">
-        <NotificationBell />
-        <DropdownMenu>
-          <DropdownMenuTrigger>
-          <Avatar />
-          </DropdownMenuTrigger>
-          <DropdownMenuContent className="mr-3 w-[200px] flex flex-col gap-1">
-            <DropdownMenuLabel className="text-[12px]">
-            Jawad Nazir
-            </DropdownMenuLabel>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem className="text-xs">
-              <User size={ICON_SIZES.small} />
-              Account
-            </DropdownMenuItem>
-            <DropdownMenuItem className="text-xs">
-              <CreditCard size={ICON_SIZES.small} />
-              Billing
-            </DropdownMenuItem>
-            <DropdownMenuItem className="text-xs">
-              <Settings size={ICON_SIZES.small} />
-              Settings
-              </DropdownMenuItem>
-            <Separator />
-            <DropdownMenuItem className="text-xs">
-              <LogOut size={ICON_SIZES.small} />
-              Log out
-            </DropdownMenuItem>
-
-          </DropdownMenuContent>
-        </DropdownMenu>
-        
+        <ThemeToggle />
+        <NotificationButton />
+        <ProfileButton />
       </div>
     </header>
   );

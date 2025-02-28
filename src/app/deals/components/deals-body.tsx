@@ -41,7 +41,7 @@ export default function DealsBody() {
         </ToggleGroup>
 
         <Select defaultValue="primary">
-          <SelectTrigger className="w-[180px] bg-white h-[30px] w-[175px] text-xs rounded-lg">
+          <SelectTrigger className="w-[180px] bg-surface h-[30px] w-[175px] text-xs rounded-lg">
             <SelectValue />
           </SelectTrigger>
           <SelectContent>

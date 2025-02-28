@@ -8,6 +8,8 @@ type OrganisationsBodyProps = {
 
 export default function OrganisationsBody({ organisations }: OrganisationsBodyProps){
     return(
-        <DataTable data={organisations} columns={columns} />
+        <div>
+            <DataTable data={organisations} columns={columns} />
+        </div>
     )
 }

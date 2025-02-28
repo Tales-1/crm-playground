@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import IconWrapper from "../header/icon-wrapper";
+import IconWrapper from "../../ui/icon-wrapper";
 
 import { Coins, LayoutDashboard, Network, Tags, User, Users } from "lucide-react";
 import { ICON_SIZES } from "@/constants/constants";

@@ -1,19 +1,17 @@
 import {
     Dialog,
     DialogContent,
-    DialogDescription,
     DialogHeader,
     DialogTitle,
     DialogTrigger,
-  } from "@/components/layout/header/notifications-menu";
+  } from "@/components/layout/header/buttons/notification-menu";
   
-import IconWrapper from "./icon-wrapper";
+import IconWrapper from "../../../ui/icon-wrapper";
 import { Bell, BellDot } from "lucide-react";
 import { ICON_SIZES } from "@/constants/constants";
 import { Separator } from "@/components/ui/separator";
   
-export default function NotificationBell(){
-
+export default function NotificationButton(){
     return(
         <Dialog>
           <DialogTrigger>
@@ -27,7 +25,7 @@ export default function NotificationBell(){
               <DialogTitle className="flex items-center gap-4">
                 <BellDot size={ICON_SIZES.small} />
                 Notifications
-                 <span className="bg-[#303030] text-xs py-[4px] px-2 rounded-lg text-background">5</span>
+                 <span className="bg-[var(--on-surface)] text-white text-xs py-[4px] px-2 rounded-lg">5</span>
                 </DialogTitle>
               <Separator />
 
@@ -83,6 +81,5 @@ export default function NotificationBell(){
             </DialogHeader>
           </DialogContent>
         </Dialog>
-
     )
 }

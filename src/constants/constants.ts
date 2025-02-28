@@ -10,3 +10,8 @@ export const STROKE_WIDTHS : { thin: number, normal:number, thick: number} = {
     normal: 1.75,
     thick: 2.5
 }
+
+export const THEMES = {
+    light:"light",
+    dark:"dark"
+}
