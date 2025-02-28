@@ -7,6 +7,7 @@ export type Organisation = {
     phone:string;
     email:string;
     website:string;
+    about:string;
 }
 
 export const organisationSchema = z.object({

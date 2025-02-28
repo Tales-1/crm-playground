@@ -52,7 +52,7 @@ export default function KanbanColumn({
   }
 
   return (
-    <div className="flex flex-col bg-surface rounded-lg drop-shadow gap-4 w-full p-3 pt-4 h-fit max-h-[90vh]">
+    <div className="flex flex-col bg-surface rounded-lg drop-shadow gap-4 w-full p-3 pt-4 h-fit">
       <div className="w-fit rounded-lg overflow-hidden ml-3">
         <h3
           className={`text-sm px-2 py-1 font-bold`}
@@ -62,12 +62,15 @@ export default function KanbanColumn({
         </h3>
       </div>
 
-      <div className="flex flex-col gap-2 overflow-y-scroll max-h-[500px] py-3 px-3">
+      <div className="flex flex-col gap-2 overflow-y-scroll max-h-full py-3 px-3">
         {dealCards.map((deal) => (
           <KanbanCard deal={deal} key={deal.id} />
         ))}
       </div>
+
+    <div className="px-3">
       <AddDealButton action={AddCard} />
+    </div>
     </div>
   );
 }
@@ -98,7 +101,8 @@ function AddDealButton({
       <SheetTrigger asChild>
         <button
           type="button"
-          className="bg-add-button text-white flex justify-center items-center p-[3px] self-end border rounded-xl aspect-square drop-shadow">
+          className="bg-add-button w-full text-white drop-shadow-lg ease-in-out 
+          duration-200 hover:scale-[1.05] flex justify-center items-center p-[3px] self-end border rounded-lg">
           +
         </button>
       </SheetTrigger>

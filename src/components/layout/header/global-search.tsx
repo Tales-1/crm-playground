@@ -15,7 +15,7 @@ export default function GlobalSearch() {
         <input
           name="query"
           placeholder="Search"
-          className="border text-sm px-3 py-[.3rem] w-full rounded-lg"
+          className="bg-surface border text-sm px-3 py-[.3rem] w-full rounded-lg"
           onFocus={toggleSuggestions}
           onBlur={toggleSuggestions}
         />

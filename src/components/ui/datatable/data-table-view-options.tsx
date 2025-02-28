@@ -22,7 +22,7 @@ export function DataTableViewOptions<TData>({
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Settings className="cursor-pointer" size={15}/>
+        <Settings className="ml-2 cursor-pointer" size={15}/>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-[150px]">
         <DropdownMenuLabel>Options</DropdownMenuLabel>

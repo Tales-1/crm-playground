@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { AlignJustify, LayoutGrid } from "lucide-react";
+import { AlignJustify, Kanban, LayoutGrid } from "lucide-react";
 import { DataTable } from "@/components/ui/datatable/data-table";
 import { columns } from "./table/columns";
 import { useDeals } from "../data/deals-context";
@@ -16,6 +16,7 @@ import {
 import KanbanBoard from "./kanban/kanban-board";
 import ToggleGroup from "@/components/ui/toggle-group";
 import Toggle from "@/components/ui/toggle";
+import { ICON_SIZES } from "@/constants/constants";
 
 export default function DealsBody() {
   const [isKanban, setIsKanban] = useState(true);
@@ -30,13 +31,13 @@ export default function DealsBody() {
             active={isKanban}
             buttonLabel="Kanban"
             toggleBtn={() => setIsKanban(true)}
-            toggleImage={<LayoutGrid width={15} />}
+            toggleImage={<Kanban width={ICON_SIZES.small} />}
           />
           <Toggle
             active={!isKanban}
             buttonLabel="Table"
             toggleBtn={() => setIsKanban(false)}
-            toggleImage={<AlignJustify width={15} />}
+            toggleImage={<AlignJustify width={ICON_SIZES.small} />}
           />
         </ToggleGroup>
 

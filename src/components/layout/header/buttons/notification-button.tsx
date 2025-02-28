@@ -25,7 +25,7 @@ export default function NotificationButton(){
               <DialogTitle className="flex items-center gap-4">
                 <BellDot size={ICON_SIZES.small} />
                 Notifications
-                 <span className="bg-[var(--on-surface)] text-white text-xs py-[4px] px-2 rounded-lg">5</span>
+                 <span className="bg-[var(--on-surface)] text-[var(--surface)] text-xs py-[4px] px-2 rounded-lg">5</span>
                 </DialogTitle>
               <Separator />
 

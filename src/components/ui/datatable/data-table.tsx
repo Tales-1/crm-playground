@@ -71,9 +71,9 @@ export function DataTable<TData, TValue>({
   return (
     <>
       <Table className="text-xs px-1 w-full" style={{ borderCollapse: "separate", borderSpacing: "0 .6rem" }}>
-        <TableHeader className="bg-white">
+        <TableHeader>
           {table.getHeaderGroups().map((headerGroup) => (
-            <TableRow key={headerGroup.id} className="drop-shadow-md rounded-xl bg-white">
+            <TableRow key={headerGroup.id} className="drop-shadow-md rounded-xl bg-surface">
               {headerGroup.headers.map((header, index) => {
                 console.log(header.column)
                 return (
@@ -99,7 +99,7 @@ export function DataTable<TData, TValue>({
               <TableRow
                 key={row.id}
                 data-state={row.getIsSelected() && "selected"}
-                className="drop-shadow-md rounded-xl h-12 bg-white"
+                className="drop-shadow-md rounded-xl h-12 bg-surface"
               >
                 {row.getVisibleCells().map((cell, index) =>
                 (
@@ -120,6 +120,7 @@ export function DataTable<TData, TValue>({
 
       <div className="flex items-center justify-end space-x-2 py-4">
         <Button
+          className="bg-surface"
           variant="outline"
           size="sm"
           onClick={() => table.previousPage()}
@@ -128,6 +129,7 @@ export function DataTable<TData, TValue>({
           Previous
         </Button>
         <Button
+          className="bg-surface"
           variant="outline"
           size="sm"
           onClick={() => table.nextPage()}

@@ -26,7 +26,7 @@ export default function Header() {
               className="object-cover sm:w-[50px] md:w-[85px]"
             />
           </DropdownMenuTrigger>
-          <DropdownMenuContent className="absolute -left-3">
+          <DropdownMenuContent className="bg-menu absolute -left-3">
             <DropdownMenuLabel className="text-[11px]">
               My Products
             </DropdownMenuLabel>

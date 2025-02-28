@@ -9,12 +9,16 @@ body {
                      "side main main"
                       "side main main";
   grid-template-columns: auto 2fr 2fr;
+  grid-template-rows:auto auto auto;
   font-family: "Inter", serif;
+  overflow: hidden;
 }
 
 header{
   grid-area:header;
   z-index:10;
+  height: 7vh;
+  padding-top:1rem;
 }
 
 aside{
@@ -27,6 +31,8 @@ main{
   margin-left: 15px;
   margin-top: 10px;
   z-index: 10;
+  height:93vh;
+  overflow:scroll;
 }
 
 
@@ -70,11 +76,16 @@ colors:
 
 }
 
-.bg-card, .bg-menu {
+.bg-card {
   background: linear-gradient(var(--surface), var(--surface)), 
               linear-gradient(var(--elevation-14), var(--elevation-14));
   background-blend-mode: overlay;
+}
 
+.bg-menu{
+  background: linear-gradient(var(--surface), var(--surface)), 
+              linear-gradient(var(--elevation-16), var(--elevation-16));
+  background-blend-mode: overlay;
 }
 
 .bg-modal {
@@ -85,7 +96,7 @@ colors:
 }
 
 .bg-add-button{
-  background: linear-gradient(var(--surface), var(--surface)),
+  background: linear-gradient(var(--primary), var(--primary)),
               linear-gradient(var(--elevation-14), var(--elevation-14));
   background-blend-mode: overlay;
 }
@@ -169,7 +180,7 @@ colors:
     --elevation-15:rgba(255, 255, 255, 0.15);
     --elevation-16:rgba(255, 255, 255, 0.16);
 
-    --primary:hsl(0, 0%, 7.06%%);
+    --primary:hsl(0, 0%, 7.06%);
 
     --popover: 0 0% 3.9%;
     --popover-foreground: 0 0% 98%;
@@ -204,17 +215,18 @@ colors:
 
 .scrollbar {
     background: #a8a8a8 !important;
+    border-radius:12px;
   }
   ::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(83, 83, 83, 0.07);
-    background-color: #f1f1f1;
+    background-color: var(--surface);
   }
   ::-webkit-scrollbar {
-    width: 7px;
-    background-color: #f1f1f1;
+    width: 4px;
+    background-color: var(--surface);
   }
   ::-webkit-scrollbar-thumb {
-    background-color: #c1c1c1;
+    background-color: gray;
   }
 
 
