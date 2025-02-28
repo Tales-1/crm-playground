@@ -25,7 +25,6 @@ import {
 } from "@/components/ui/table";
 
 import { Button } from "../button";
-import { DataTableFacetedFilter } from "./data-table-faceted-filter";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];

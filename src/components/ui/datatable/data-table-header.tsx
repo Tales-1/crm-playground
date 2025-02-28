@@ -1,7 +1,6 @@
 import { Column } from "@tanstack/react-table";
 import { ArrowDown, ArrowUp, ChevronsUpDown, EyeOff } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { Button } from "../button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -10,7 +9,6 @@ import {
   DropdownMenuTrigger,
 } from "../dropdown-menu";
 import { HTMLAttributes } from "react";
-import { DataTableFacetedFilter } from "./data-table-faceted-filter";
 import React from "react";
 
 interface DataTableColumnHeaderProps<TData, TValue>
@@ -25,8 +23,6 @@ export function DataTableColumnHeader<TData, TValue>({
   column,
   title,
   className,
-  accessorKey,
-  showFilter = false
 }: DataTableColumnHeaderProps<TData, TValue>) {
   return (
     <div className={cn("flex items-center", className)}>

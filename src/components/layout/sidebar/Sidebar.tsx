@@ -3,7 +3,7 @@
 import Link from "next/link";
 import IconWrapper from "../../ui/icon-wrapper";
 
-import { Coins, LayoutDashboard, Network, Tags, User, Users } from "lucide-react";
+import { Coins, LayoutDashboard, Network, Tags, Users } from "lucide-react";
 import { ICON_SIZES } from "@/constants/constants";
 import { usePathname } from "next/navigation";
 import { ReactNode, useReducer } from "react";

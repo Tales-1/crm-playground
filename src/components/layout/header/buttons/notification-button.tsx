@@ -32,7 +32,7 @@ export default function NotificationButton(){
               <div>
                 <ul className="flex flex-col gap-5">
                     <li className="border-b border-spacing-3 py-3 flex flex-col gap-1">
-                        <p className="text-sm">New Contact: 'Phil McCrack' added</p>
+                        <p className="text-sm">New Contact: Phil McCrack added</p>
                         <div className="flex justify-between text-foreground/50 text-xs">
                             <span>Friday 3:12pm</span>
                             <span>2 hours ago</span>
@@ -41,7 +41,7 @@ export default function NotificationButton(){
                             
                     </li>
                     <li className="border-b border-spacing-3 py-3 flex flex-col gap-1">
-                        <p className="text-sm">New Product: 'Weed' added by Snoop Dogg</p>
+                        <p className="text-sm">New Product: Weed added by Snoop Dogg</p>
                         <div className="flex justify-between text-foreground/50 text-xs">
                             <span>Friday 3:12pm</span>
                             <span>2 hours ago</span>
@@ -50,7 +50,7 @@ export default function NotificationButton(){
                             
                     </li>
                     <li className="border-b border-spacing-3 py-3 flex flex-col gap-1">
-                        <p className="text-sm">New Deal: 'Box of Chocolates' added by Jason</p>
+                        <p className="text-sm">New Deal: Box of Chocolates added by Jason</p>
                         <div className="flex justify-between text-foreground/50 text-xs">
                             <span>Friday 3:12pm</span>
                             <span>2 hours ago</span>
@@ -59,7 +59,7 @@ export default function NotificationButton(){
                             
                     </li>
                     <li className="border-b border-spacing-3 py-3 flex flex-col gap-1">
-                        <p className="text-sm">New Deal: 'Products and Stocks' added by Jimmy</p>
+                        <p className="text-sm">New Deal: Products and Stocks added by Jimmy</p>
                         <div className="flex justify-between text-foreground/50 text-xs">
                             <span>Friday 3:12pm</span>
                             <span>2 hours ago</span>
@@ -68,7 +68,7 @@ export default function NotificationButton(){
                             
                     </li>
                     <li className="border-b border-spacing-3 py-3 flex flex-col gap-1">
-                        <p className="text-sm">New Deal: 'Products and Stocks' added</p>
+                        <p className="text-sm">New Deal: Products and Stocks added</p>
                         <div className="flex justify-between text-foreground/50 text-xs">
                             <span>Friday 3:12pm</span>
                             <span>2 hours ago</span>

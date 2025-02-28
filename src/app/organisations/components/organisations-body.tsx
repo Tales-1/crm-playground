@@ -6,7 +6,7 @@ import { columns } from "./table/columns"
 import ToggleGroup from "@/components/ui/toggle-group"
 import Toggle from "@/components/ui/toggle"
 import { FormEvent, useReducer, useState } from "react"
-import { AlignJustify, icons, Kanban, KanbanIcon, LayoutGrid, Plus } from "lucide-react"
+import { AlignJustify, LayoutGrid, Plus } from "lucide-react"
 import { ICON_SIZES } from "@/constants/constants"
 import GridBody from "./grid/grid-body"
 import { Sheet, SheetClose, SheetContent, SheetDescription, SheetFooter, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
@@ -60,7 +60,7 @@ export default function OrganisationsBody({ organisations }: OrganisationsBodyPr
             </div>
 
             {
-                isTable ? <DataTable data={organisations} columns={columns} /> : <GridBody data={organisations} />
+                isTable ? <DataTable data={orgs} columns={columns} /> : <GridBody data={orgs} />
             }
         </div>
     )
@@ -106,7 +106,7 @@ function AddOrganisationButton({
           <SheetHeader>
             <SheetTitle>Add Organisation</SheetTitle>
             <SheetDescription>
-              Add a new organisation. Click save when you're done.
+              Add a new organisation. Click save when you are done.
             </SheetDescription>
           </SheetHeader>
           <form onSubmit={addOrganisation}>

@@ -110,7 +110,7 @@ function AddDealButton({
           <SheetHeader>
             <SheetTitle>Add Deal</SheetTitle>
             <SheetDescription>
-              Add a new deal. Click save when you're done.
+              Add a new deal. Click save when you are done.
             </SheetDescription>
           </SheetHeader>
           <form onSubmit={addCard}>

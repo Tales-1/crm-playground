@@ -8,7 +8,7 @@ type OrganisationGridProps = {
 export default function GridBody({ data }: OrganisationGridProps){
     return(
         <div className="mt-3 grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] w-full gap-x-4 gap-y-4">
-            {data.map(organisation => (<GridCard organisation={organisation} />))}
+            {data.map(organisation => (<GridCard key={organisation.id} organisation={organisation} />))}
         </div>
     )
 }

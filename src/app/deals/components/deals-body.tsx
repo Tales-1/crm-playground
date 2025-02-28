@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { AlignJustify, Kanban, LayoutGrid } from "lucide-react";
+import { AlignJustify, Kanban } from "lucide-react";
 import { DataTable } from "@/components/ui/datatable/data-table";
 import { columns } from "./table/columns";
 import { useDeals } from "../data/deals-context";

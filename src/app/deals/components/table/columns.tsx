@@ -18,9 +18,7 @@ export const columns: ColumnDef<Deal>[] = [
   },
   {
     accessorKey: "stageTitle",
-    header: ({ column }) => (
-        <DataTableColumnHeader column={column} title="Stage" showFilter={true} accessorKey="stageTitle" />
-    ),
+    header: ({ column }) => ( <DataTableColumnHeader column={column} title="Stage" showFilter={true} accessorKey="stageTitle" />),
     cell: ({ row }) => (
       <div>{row.getValue("stageTitle")}</div>
     ),
@@ -82,7 +80,8 @@ export const columns: ColumnDef<Deal>[] = [
           targetDesc = "No Target";
           break;
         default:
-          "No active stage";
+          targetDesc = "No active stage";
+          break;
       }
 
       return <div>{targetDesc}</div>;

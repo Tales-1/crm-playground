@@ -19,5 +19,5 @@ export type Deal = {
     date: string;
     dealTarget: DealTargetEnum;
     stageTitle:string
-    [key: string]: any;
+    [key: string]: string | number ;
 };

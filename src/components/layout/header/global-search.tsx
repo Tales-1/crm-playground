@@ -1,10 +1,8 @@
 "use client";
 
 import Form from "next/form"
-import { useReducer } from "react";
 
 export default function GlobalSearch() {
-  const [suggestions, toggleSuggestions] = useReducer((prev) => !prev, false);
 
   return (
     <div className="max-w-[800px] w-[50%]">
@@ -16,8 +14,6 @@ export default function GlobalSearch() {
           name="query"
           placeholder="Search"
           className="bg-surface border text-sm px-3 py-[.3rem] w-full rounded-lg"
-          onFocus={toggleSuggestions}
-          onBlur={toggleSuggestions}
         />
         
       </Form>
@@ -25,17 +21,17 @@ export default function GlobalSearch() {
   );
 }
 
-const MODULES = {
-    deal: "deal",
-    organisation:"organisation",
-    people:"people",
-    product:"product",
-    general:"general"
-}
+// const MODULES = {
+//     deal: "deal",
+//     organisation:"organisation",
+//     people:"people",
+//     product:"product",
+//     general:"general"
+// }
 
-type SearchResultItem = {
-    module:"deal" | "organisation" | "people" | "product" | "general";
-    link:string;
-    description:string;
-}
+// type SearchResultItem = {
+//     module:"deal" | "organisation" | "people" | "product" | "general";
+//     link:string;
+//     description:string;
+// }
 
