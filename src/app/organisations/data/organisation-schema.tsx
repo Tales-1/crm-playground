@@ -16,5 +16,6 @@ export const organisationSchema = z.object({
     address:z.string(),
     phone:z.string(),
     email:z.string(),
-    website:z.string()
+    website:z.string(),
+    about:z.string()
 })

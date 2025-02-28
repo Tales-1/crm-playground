@@ -106,7 +106,7 @@ function AddDealButton({
           +
         </button>
       </SheetTrigger>
-      <SheetContent className="bg-modal">
+      <SheetContent className="bg-sliding-menu">
           <SheetHeader>
             <SheetTitle>Add Deal</SheetTitle>
             <SheetDescription>
@@ -119,24 +119,24 @@ function AddDealButton({
               <Label htmlFor="organisation" className="text-right">
                 Organisation
               </Label>
-              <Input id="organisation" name="organisation" className="col-span-3" />
+              <Input id="organisation" name="organisation" className="col-span-3 border" />
             </div>
             <div className="flex flex-col items-start gap-3">
               <Label htmlFor="primaryPerson" className="text-right">
                 Primary Person
               </Label>
-              <Input id="primaryPerson" name="primaryPerson" className="col-span-3" />
+              <Input id="primaryPerson" name="primaryPerson" className="col-span-3 border" />
             </div>
             <div className="flex flex-col items-start gap-3">
               <Label htmlFor="price" className="text-right">
                 Price
               </Label>
-              <Input id="price" name="price" className="col-span-3" />
+              <Input id="price" name="price" className="col-span-3 border" />
             </div>
           </div>
           <SheetFooter>
             <SheetClose asChild>
-              <Button type="submit" className="bg-add-button text-white">Add Deal</Button>
+              <Button type="submit" className="bg-add-button text-white">Save</Button>
             </SheetClose>
           </SheetFooter>
         </form>

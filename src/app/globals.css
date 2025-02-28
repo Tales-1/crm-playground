@@ -88,6 +88,11 @@ colors:
   background-blend-mode: overlay;
 }
 
+
+.bg-sliding-menu {
+  background: var(--background);
+}
+
 .bg-modal {
   background: linear-gradient(var(--background), var(--background)),
               linear-gradient(var(--elevation-16), var(--elevation-16));
@@ -232,11 +237,11 @@ colors:
 
   @layer components {
     .animate-slideIn {
-      animation: slideIn 0.2s ease-in;
+      animation: slideIn 0.4s ease-in-out;
     }
   
     .animate-slideOut {
-      animation: slideOut 0.2s ease-in;
+      animation: slideOut 0.4s ease-in-out;
     }
   
     @keyframes slideIn {
