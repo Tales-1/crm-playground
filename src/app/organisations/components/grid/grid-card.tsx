@@ -4,7 +4,7 @@ import { Organisation } from "../../data/organisation-schema";
 
 export default function GridCard({ organisation }: { organisation: Organisation }) {
     return (
-        <Card className="bg-card w-full text-center shadow-lg">
+        <Card className="bg-surface w-full text-center shadow-lg">
             <CardHeader>
                 <CardTitle>{organisation.name}</CardTitle>
                 <CardDescription>{organisation.about}</CardDescription>

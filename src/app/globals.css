@@ -51,24 +51,6 @@ input[type="checkbox"]{
   color: var(--active-state-text);
 }
 
-/*
-colors: 
---background
-  --on-background: text
---surface
-  --on-surface: text
-
-// Accents
---primary
---on-primary
---secondary
---on-secondary
-
---card
---on-card
-
-*/
-
 .bg-surface {
   background: linear-gradient(var(--surface), var(--surface)),
               linear-gradient(var(--elevation-08), var(--elevation-08));
@@ -76,18 +58,11 @@ colors:
 
 }
 
-.bg-card {
-  background: linear-gradient(var(--surface), var(--surface)), 
-              linear-gradient(var(--elevation-14), var(--elevation-14));
-  background-blend-mode: overlay;
-}
-
 .bg-menu{
   background: linear-gradient(var(--surface), var(--surface)), 
               linear-gradient(var(--elevation-16), var(--elevation-16));
   background-blend-mode: overlay;
 }
-
 
 .bg-sliding-menu {
   background: var(--background);
@@ -98,6 +73,12 @@ colors:
               linear-gradient(var(--elevation-16), var(--elevation-16));
   background-blend-mode: overlay;
 
+}
+
+.bg-card {
+  background: linear-gradient(var(--surface), var(--surface)), 
+              linear-gradient(var(--elevation-14), var(--elevation-14));
+  background-blend-mode: overlay;
 }
 
 .bg-add-button{

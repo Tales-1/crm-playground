@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useReducer } from "react";
 import { AlignJustify, Kanban } from "lucide-react";
 import { DataTable } from "@/components/ui/datatable/data-table";
 import { columns } from "./table/columns";
@@ -19,7 +19,7 @@ import Toggle from "@/components/ui/toggle";
 import { ICON_SIZES } from "@/constants/constants";
 
 export default function DealsBody() {
-  const [isKanban, setIsKanban] = useState(true);
+  const [isKanban, setIsKanban] = useReducer((prev) => !prev, true);
 
   const data = useDeals();
 
@@ -30,13 +30,13 @@ export default function DealsBody() {
           <Toggle
             active={isKanban}
             buttonLabel="Kanban"
-            toggleBtn={() => setIsKanban(true)}
+            toggleBtn={setIsKanban}
             toggleImage={<Kanban width={ICON_SIZES.small} />}
           />
           <Toggle
             active={!isKanban}
             buttonLabel="Table"
-            toggleBtn={() => setIsKanban(false)}
+            toggleBtn={setIsKanban}
             toggleImage={<AlignJustify width={ICON_SIZES.small} />}
           />
         </ToggleGroup>

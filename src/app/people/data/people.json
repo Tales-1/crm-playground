@@ -1,0 +1,38 @@
+[
+    {
+      "id":"1",
+      "name": "John Doe",
+      "phone": "+1-555-123-4567",
+      "email": "johndoe@example.com",
+      "occupation": "Software Engineer"
+    },
+    {
+      "id":"2",
+      "name": "Jane Smith",
+      "phone": "+1-555-987-6543",
+      "email": "janesmith@example.com",
+      "occupation": "Graphic Designer"
+    },
+    {
+      "id":"3",
+      "name": "Robert Johnson",
+      "phone": "+1-555-234-5678",
+      "email": "robertjohnson@example.com",
+      "occupation": "Data Analyst"
+    },
+    {
+      "id":"4",
+      "name": "Emily Davis",
+      "phone": "+1-555-876-5432",
+      "email": "emilydavis@example.com",
+      "occupation": "Marketing Specialist"
+    },
+    {
+      "id":"5",
+      "name": "Michael Brown",
+      "phone": "+1-555-345-6789",
+      "email": "michaelbrown@example.com",
+      "occupation": "Product Manager"
+    }
+  ]
+  
