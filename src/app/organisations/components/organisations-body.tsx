@@ -60,7 +60,7 @@ export default function OrganisationsBody({
   }
 
   return (
-    <div className="flex flex-col gap-3 w-[80%] mx-auto">
+    <div className="flex flex-col gap-3  mx-4">
       <div className="flex flex-col w-full gap-3">
         <div className="flex justify-between">
           <ToggleGroup heightClass="h-[30px]" widthClass="w-[175px]">

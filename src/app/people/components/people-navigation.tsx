@@ -15,7 +15,10 @@ export default function PeopleNavigation({ people }: { people: Person[] }) {
   return (
     <ul className="flex flex-col gap-3">
       {people.map((person) => (
-        <li key={person.id} className={`p-3 rounded-lg ${pathname === `/people/${person.id}` ? "bg-[var(--on-surface)] text-[var(--surface)]" : "bg-surface text-[(--on-surface)]"}`}>
+        <li key={person.id} className={`p-3 rounded-lg 
+          ${pathname === `/people/${person.id}` ? "bg-[var(--on-surface)] text-[var(--surface)]" : "bg-surface text-[(--on-surface)]"}
+          drop-shadow
+          `}>
           <Link
             href={`/people/${person.id}`}>
             <p>{person.name}</p>

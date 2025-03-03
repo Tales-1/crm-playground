@@ -1,0 +1,26 @@
+[
+    {
+      "name": "Premium Office Chair",
+      "price": "299.99",
+      "unit": "each",
+      "canDiscount": true
+    },
+    {
+      "name": "Wireless Keyboard",
+      "price": "49.99",
+      "unit": "each",
+      "canDiscount": true
+    },
+    {
+      "name": "Bulk Printing Paper",
+      "price": "24.99",
+      "unit": "ream",
+      "canDiscount": false
+    },
+    {
+      "name": "Noise-Canceling Headphones",
+      "price": "199.99",
+      "unit": "each",
+      "canDiscount": true
+    }
+]

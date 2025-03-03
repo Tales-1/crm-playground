@@ -92,7 +92,7 @@ export default function Sidebar() {
       <div
         className={`fixed inset-0 ${
           showFullMenu
-            ? "opacity-30 z-20 translate-x-0"
+            ? "opacity-60 z-20 translate-x-0"
             : "opacity-0 z-0 -translate-x-full"
         } ${transitionStyles}`}
         style={{ background: "var(--side-bar-gradient)" }}

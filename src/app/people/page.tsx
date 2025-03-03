@@ -1,8 +1,9 @@
 export default function Page() {
     return (
-        <div>
-          <h1>Select a person from the list</h1>
-          <p>Click on a name to see more details in the right column.</p>
+        <div className="grid place-items-center h-full">
+          <div className="text-center">
+            <p>Click on a name to see more details here.</p>
+          </div>
         </div>
       );
 }

@@ -25,6 +25,7 @@ import {
 } from "@/components/ui/table";
 
 import { Button } from "../button";
+import { Input } from "../input";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -74,7 +75,6 @@ export function DataTable<TData, TValue>({
           {table.getHeaderGroups().map((headerGroup) => (
             <TableRow key={headerGroup.id} className="drop-shadow-md rounded-xl bg-surface">
               {headerGroup.headers.map((header, index) => {
-                console.log(header.column)
                 return (
                 <>
                   <TableHead key={header.id} className={`${getBorderRadius(index, headerGroup.headers.length)}`}>

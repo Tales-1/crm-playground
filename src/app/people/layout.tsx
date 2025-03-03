@@ -2,9 +2,8 @@ import { promises as fs } from "fs"
 import { z } from "zod";
 import { personSchema } from "./data/people-schema";
 import path from "path";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 import PeopleNavigation from "./components/people-navigation";
+import { Plus, Search } from "lucide-react";
 
 async function getPeople(){
     const data = await fs.readFile(path.join(process.cwd(), "src/app/people/data/people.json"));
@@ -18,19 +17,24 @@ export default async function PeopleLayout({ children }: { children: React.React
     const people = await getPeople();
 
     return(
-        <main className="flex gap-4 w-[90%] mx-auto">
+        <main className="flex gap-4 mx-8">
             <div className="flex flex-col gap-4 w-fit">
-                <div className="flex justify-between bg-surface p-3 rounded-lg">
+                <div className="flex justify-between bg-surface p-3 rounded-lg drop-shadow">
                     <h3>All People</h3>
                     <div className="flex gap-2">
-                        Search
+                        <button>
+                            <Plus />
+                        </button>
+                        <button>
+                            <Search />
+                        </button>
                     </div>
                 </div>
 
                 <PeopleNavigation people={people} />
             </div>
 
-            <div className="w-full bg-surface">
+            <div className="w-full bg-surface rounded-lg drop-shadow">
                 {children}
             </div>
         </main>
