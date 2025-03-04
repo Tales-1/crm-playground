@@ -25,7 +25,6 @@ import {
 } from "@/components/ui/table";
 
 import { Button } from "../button";
-import { Input } from "../input";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];

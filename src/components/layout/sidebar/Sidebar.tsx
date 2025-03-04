@@ -3,7 +3,7 @@
 import Link from "next/link";
 import IconWrapper from "../../ui/icon-wrapper";
 
-import { Coins, LayoutDashboard, Network, Tags, Users } from "lucide-react";
+import { Coins, LayoutDashboard, Network, Settings, Tags, Users } from "lucide-react";
 import { ICON_SIZES } from "@/constants/constants";
 import { usePathname } from "next/navigation";
 import { ReactNode, useReducer } from "react";
@@ -60,6 +60,12 @@ export default function Sidebar() {
       isActive: usePathname() == "/products",
       href: "/products",
     },
+    {
+      menuText:"Settings",
+      iconElement: <Settings size={ICON_SIZES.medium} />,
+      isActive: usePathname() == "/settings",
+      href: "/settings"
+    }
   ];
 
   return (
@@ -70,12 +76,12 @@ export default function Sidebar() {
         }`}
       >
         <nav
-          className="flex flex-col items-start gap-2"
+          className="flex flex-col items-start gap-2 h-full"
           onMouseEnter={setShowFullMenu}
           onMouseLeave={setShowFullMenu}
         >
           {menuItems.map((item) => (
-            <Link href={item.href} className="relative flex items-center gap-2" key={item.menuText}>
+            <Link href={item.href} className={`relative flex items-center gap-2 ${item.menuText == "Settings" ? "mt-auto mb-12" : ""}`} key={item.menuText}>
               <IconWrapper isActive={item.isActive}>
                 {item.iconElement}
               </IconWrapper>

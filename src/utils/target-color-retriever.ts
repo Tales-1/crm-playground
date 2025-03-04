@@ -5,7 +5,7 @@ export default function returnColorForTarget(target:DealTargetEnum){
         case(DealTargetEnum.OnTarget):
             return "#009013";
         case(DealTargetEnum.Approaching):
-            return "#945F04"; 
+            return "#F69F0A"; 
         case(DealTargetEnum.Overdue):
             return "#FF0202";
         case(DealTargetEnum.NoTarget):
