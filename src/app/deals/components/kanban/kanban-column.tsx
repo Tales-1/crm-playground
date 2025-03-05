@@ -90,13 +90,15 @@ function AddDealButton({
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <button
+        <Button
           type="button"
-          className="bg-add-button w-[25px] aspect-square text-white ease-in-out 
+          variant="outline"
+          className="bg-accent/70 aspect-square text-white ease-in-out 
           duration-200 hover:scale-[1.05] flex justify-center items-center rounded-lg"
+          size="xs"
         >
           <Plus size={14} />
-        </button>
+        </Button>
       </SheetTrigger>
       <SheetContent className="bg-sliding-menu">
         <SheetHeader>

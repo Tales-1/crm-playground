@@ -10,7 +10,7 @@ export default function OrganisationsNavigation({ organisations } :
   const pathname = usePathname()
 
   return (
-    <ul className="flex flex-col gap-1 h-screen overflow-y-scroll">
+    <ul className="flex flex-col gap-y-1 h-screen pr-1 overflow-y-scroll">
       {organisations.map((org) => (
         <li key={org.id} className={`p-4 rounded-lg bg-surface ${pathname === `/organisations/${org.id}` ? "border border-accent" : ""}
           drop-shadow
@@ -22,12 +22,12 @@ export default function OrganisationsNavigation({ organisations } :
                   {org.name.charAt(0)}
                 </div>
                 <div>
-                  <p className="text-sm">{org.name}</p>
-                  <p className="text-xs text-muted-foreground">{org.address.city}, {org.address.state} {org.address.country}</p>
+                  <p className="text-xs">{org.name}</p>
+                  <p className="text-[10px] text-muted-foreground">{org.address.city}, {org.address.state} {org.address.country}</p>
                 </div>
               </div>
               
-              <div className="mt-3 flex justify-between text-xs">
+              {/* <div className="mt-3 flex justify-between text-xs">
                 <div>
                   <p className="text-crm-muted">Deals</p>
                   <p className="font-medium">{org.deals.length}</p>
@@ -39,10 +39,10 @@ export default function OrganisationsNavigation({ organisations } :
                 <div>
                   <p className="text-crm-muted">Value</p>
                   <p className="font-medium">
-                    ${org.deals.reduce((sum, deal) => sum + deal.price, 0).toLocaleString()}
+                    £{org.deals.reduce((sum, deal) => sum + deal.price, 0).toLocaleString()}
                   </p>
                 </div>
-              </div>
+              </div> */}
           </Link>
         </li>
       ))}
