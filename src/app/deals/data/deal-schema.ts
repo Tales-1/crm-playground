@@ -11,7 +11,7 @@ export const dealSchema = z.object({
     dealTarget: z.number(),
     })
 
-export type Deal = {
+export interface Deal {
     id:number;
     organisation: string;
     primaryPerson: string;

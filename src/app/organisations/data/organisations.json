@@ -1,83 +1,345 @@
 [
-    {
-      "id": 1,
-      "name": "Tech Solutions Inc.",
-      "address": "1234 Tech Lane, Silicon Valley, CA 94043",
-      "phone": "(408) 555-1234",
-      "email": "contact@techsolutions.com",
-      "website": "https://www.techsolutions.com",
-      "about":"Housing Association"
+  {
+    "id": "org-1",
+    "name": "Tech Solutions Inc.",
+    "logo": "/lovable-uploads/330c58e3-1d36-45a5-913d-275bde578bf0.png",
+    "address": {
+      "street": "123 Innovation Way",
+      "city": "Silicon Valley",
+      "state": "CA",
+      "zipCode": "94043",
+      "country": "USA"
     },
-    {
-      "id": 2,
-      "name": "Green Energy Co.",
-      "address": "5678 Green Street, San Francisco, CA 94110",
-      "phone": "(415) 555-5678",
-      "email": "info@greenenergy.com",
-      "website": "https://www.greenenergy.com",
-      "about":"Housing Association"
+    "industry": "Technology",
+    "website": "https://techsolutions.example.com",
+    "phone": "(408) 555-1234",
+    "email": "contact@techsolutions.com",
+    "contacts": [
+      {
+        "id": "contact-1",
+        "name": "John Smith",
+        "title": "CEO",
+        "phone": "(408) 555-6789",
+        "email": "john@techsolutions.com"
+      },
+      {
+        "id": "contact-2",
+        "name": "Sarah Johnson",
+        "title": "CTO",
+        "phone": "(408) 555-5678",
+        "email": "sarah@techsolutions.com"
+      }
+    ],
+    "deals": [
+      {
+        "id": 1,
+        "organisation": "Tech Solutions Inc.",
+        "primaryPerson": "John Smith",
+        "price": 75000,
+        "date": "2023-12-15",
+        "dealTarget": 1,
+        "stageTitle": "proposal"
+      },
+      {
+        "id": 2,
+        "organisation": "Tech Solutions Inc.",
+        "primaryPerson": "Sarah Johnson",
+        "price": 120000,
+        "date": "2024-01-30",
+        "dealTarget": 1,
+        "stageTitle": "negotiation"
+      }
+    ],
+    "notes": "Tech Solutions is interested in our premium plan. Follow up next quarter about expansion opportunities.",
+    "createdAt": "2023-01-15T12:00:00Z",
+    "updatedAt": "2023-06-20T15:30:00Z"
+  },
+  {
+    "id": "org-2",
+    "name": "Green Energy Co.",
+    "address": {
+      "city": "San Francisco",
+      "state": "CA",
+      "zipCode": "94110",
+      "country": "USA"
     },
-    {
-      "id": 3,
-      "name": "NextGen Enterprises",
-      "address": "4321 Future Blvd, Austin, TX 73301",
-      "phone": "(512) 555-4321",
-      "email": "support@nextgenenterprises.com",
-      "website": "https://www.nextgenenterprises.com",
-      "about":"Housing Association"
+    "industry": "Renewable Energy",
+    "website": "https://greenenergy.example.com",
+    "phone": "(415) 555-7890",
+    "email": "info@greenenergy.com",
+    "contacts": [
+      {
+        "id": "contact-3",
+        "name": "Michael Brown",
+        "title": "Director of Operations",
+        "phone": "(415) 555-2345",
+        "email": "michael@greenenergy.com"
+      }
+    ],
+    "deals": [
+      {
+        "id": 3,
+        "organisation": "Green Energy Co.",
+        "primaryPerson": "Michael Brown",
+        "price": 250000,
+        "date": "2023-05-10",
+        "dealTarget": 1,
+        "stageTitle": "closed-won"
+      }
+    ],
+    "createdAt": "2023-02-10T09:15:00Z",
+    "updatedAt": "2023-05-15T14:20:00Z"
+  },
+  {
+    "id": "org-3",
+    "name": "NextGen Enterprises",
+    "address": {
+      "city": "Austin",
+      "state": "TX",
+      "zipCode": "73301",
+      "country": "USA"
     },
-    {
-      "id": 4,
-      "name": "Urban Designs Ltd.",
-      "address": "8765 Urban Way, New York, NY 10001",
-      "phone": "(212) 555-8765",
-      "email": "designs@urbandesigns.com",
-      "website": "https://www.urbandesigns.com",
-      "about":"Housing Association"
+    "industry": "Education Technology",
+    "website": "https://nextgenenterprises.example.com",
+    "phone": "(512) 555-3456",
+    "email": "hello@nextgenenterprises.com",
+    "contacts": [
+      {
+        "id": "contact-4",
+        "name": "Emily Wilson",
+        "title": "Head of Sales",
+        "phone": "(512) 555-7890",
+        "email": "emily@nextgenenterprises.com"
+      }
+    ],
+    "deals": [
+      {
+        "id": 4,
+        "organisation": "NextGen Enterprises",
+        "primaryPerson": "Emily Wilson",
+        "price": 45000,
+        "date": "2024-03-20",
+        "dealTarget": 1,
+        "stageTitle": "opportunity"
+      }
+    ],
+    "createdAt": "2023-03-05T11:30:00Z",
+    "updatedAt": "2023-07-01T10:45:00Z"
+  },
+  {
+    "id": "org-4",
+    "name": "Urban Designs Ltd.",
+    "address": {
+      "city": "New York",
+      "state": "NY",
+      "zipCode": "10001",
+      "country": "USA"
     },
-    {
-      "id": 5,
-      "name": "Skyline Ventures",
-      "address": "1010 Summit Road, Denver, CO 80202",
-      "phone": "(303) 555-1010",
-      "email": "contact@skylineventures.com",
-      "website": "https://www.skylineventures.com",
-      "about":"Housing Association"
+    "industry": "Architecture",
+    "website": "https://urbandesigns.example.com",
+    "phone": "(212) 555-8901",
+    "email": "projects@urbandesigns.com",
+    "contacts": [
+      {
+        "id": "contact-5",
+        "name": "David Lee",
+        "title": "Principal Architect",
+        "phone": "(212) 555-1234",
+        "email": "david@urbandesigns.com"
+      }
+    ],
+    "deals": [
+      {
+        "id": 5,
+        "organisation": "Urban Designs Ltd.",
+        "primaryPerson": "David Lee",
+        "price": 180000,
+        "date": "2024-05-15",
+        "dealTarget": 2,
+        "stageTitle": "lead"
+      }
+    ],
+    "createdAt": "2023-04-12T13:45:00Z",
+    "updatedAt": "2023-06-30T16:20:00Z"
+  },
+  {
+    "id": "org-5",
+    "name": "Skyline Ventures",
+    "address": {
+      "city": "Denver",
+      "state": "CO",
+      "zipCode": "80202",
+      "country": "USA"
     },
-    {
-      "id": 6,
-      "name": "HealthTech Innovations",
-      "address": "3245 Wellness Ave, Los Angeles, CA 90001",
-      "phone": "(323) 555-3245",
-      "email": "info@healthtechinnovations.com",
-      "website": "https://www.healthtechinnovations.com",
-      "about":"Housing Association"
+    "industry": "Venture Capital",
+    "website": "https://skylineventures.example.com",
+    "phone": "(303) 555-6789",
+    "email": "investments@skylineventures.com",
+    "contacts": [
+      {
+        "id": "contact-6",
+        "name": "Jessica Adams",
+        "title": "Managing Partner",
+        "phone": "(303) 555-9012",
+        "email": "jessica@skylineventures.com"
+      }
+    ],
+    "deals": [
+      {
+        "id": 6,
+        "organisation": "Skyline Ventures",
+        "primaryPerson": "Jessica Adams",
+        "price": 500000,
+        "date": "2023-08-01",
+        "dealTarget": 2,
+        "stageTitle": "closed-lost"
+      }
+    ],
+    "createdAt": "2023-01-25T10:00:00Z",
+    "updatedAt": "2023-08-05T11:15:00Z"
+  },
+  {
+    "id": "org-6",
+    "name": "HealthTech Innovations",
+    "address": {
+      "city": "Los Angeles",
+      "state": "CA",
+      "zipCode": "90001",
+      "country": "USA"
     },
-    {
-      "id": 7,
-      "name": "Creative Solutions Group",
-      "address": "2134 Idea Rd, Chicago, IL 60601",
-      "phone": "(312) 555-2134",
-      "email": "contact@creativesolutions.com",
-      "website": "https://www.creativesolutions.com",
-      "about":"Housing Association"
+    "industry": "Healthcare",
+    "website": "https://healthtechinnovations.example.com",
+    "phone": "(213) 555-3456",
+    "email": "support@healthtechinnovations.com",
+    "contacts": [
+      {
+        "id": "contact-7",
+        "name": "Robert Chen",
+        "title": "Medical Director",
+        "phone": "(213) 555-7890",
+        "email": "robert@healthtechinnovations.com"
+      }
+    ],
+    "deals": [
+      {
+        "id": 7,
+        "organisation": "HealthTech Innovations",
+        "primaryPerson": "Robert Chen",
+        "price": 95000,
+        "date": "2024-02-28",
+        "dealTarget": 2,
+        "stageTitle": "proposal"
+      }
+    ],
+    "createdAt": "2023-02-18T14:30:00Z",
+    "updatedAt": "2023-07-12T09:40:00Z"
+  },
+  {
+    "id": "org-7",
+    "name": "Creative Solutions Group",
+    "address": {
+      "city": "Chicago",
+      "state": "IL",
+      "zipCode": "60601",
+      "country": "USA"
     },
-    {
-      "id": 8,
-      "name": "EcoWorld Enterprises",
-      "address": "7532 Greenfield Dr, Seattle, WA 98101",
-      "phone": "(206) 555-7532",
-      "email": "info@ecoworld.com",
-      "website": "https://www.ecoworld.com",
-      "about":"Housing Association"
+    "industry": "Marketing",
+    "website": "https://creativesolutions.example.com",
+    "phone": "(312) 555-9012",
+    "email": "hello@creativesolutions.com",
+    "contacts": [
+      {
+        "id": "contact-8",
+        "name": "Amanda Foster",
+        "title": "Creative Director",
+        "phone": "(312) 555-3456",
+        "email": "amanda@creativesolutions.com"
+      }
+    ],
+    "deals": [
+      {
+        "id": 8,
+        "organisation": "Creative Solutions Group",
+        "primaryPerson": "Amanda Foster",
+        "price": 35000,
+        "date": "2023-12-10",
+        "dealTarget": 3,
+        "stageTitle": "negotiation"
+      }
+    ],
+    "createdAt": "2023-03-22T08:00:00Z",
+    "updatedAt": "2023-06-14T13:10:00Z"
+  },
+  {
+    "id": "org-8",
+    "name": "EcoWorld Enterprises",
+    "address": {
+      "city": "Seattle",
+      "state": "WA",
+      "zipCode": "98101",
+      "country": "USA"
     },
-    {
-      "id": 9,
-      "name": "Smart Homes Tech",
-      "address": "9802 Smart Street, Boston, MA 02110",
-      "phone": "(617) 555-9802",
-      "email": "sales@smarthomestech.com",
-      "website": "https://www.smarthomestech.com",
-      "about":"Housing Association"
-    }
-  ]
+    "industry": "Sustainability",
+    "website": "https://ecoworld.example.com",
+    "phone": "(206) 555-6789",
+    "email": "info@ecoworld.com",
+    "contacts": [
+      {
+        "id": "contact-9",
+        "name": "Thomas Green",
+        "title": "Chief Sustainability Officer",
+        "phone": "(206) 555-1234",
+        "email": "thomas@ecoworld.com"
+      }
+    ],
+    "deals": [
+      {
+        "id": 9,
+        "organisation": "EcoWorld Enterprises",
+        "primaryPerson": "Thomas Green",
+        "price": 28000,
+        "date": "2024-04-05",
+        "dealTarget": 4,
+        "stageTitle": "opportunity"
+      }
+    ],
+    "createdAt": "2023-05-05T15:45:00Z",
+    "updatedAt": "2023-08-18T10:30:00Z"
+  },
+  {
+    "id": "org-9",
+    "name": "Smart Homes Tech",
+    "address": {
+      "city": "Boston",
+      "state": "MA",
+      "zipCode": "02110",
+      "country": "USA"
+    },
+    "industry": "Home Automation",
+    "website": "https://smarthomes.example.com",
+    "phone": "(617) 555-7890",
+    "email": "support@smarthomes.com",
+    "contacts": [
+      {
+        "id": "contact-10",
+        "name": "Rachel Kim",
+        "title": "Product Manager",
+        "phone": "(617) 555-2345",
+        "email": "rachel@smarthomes.com"
+      }
+    ],
+    "deals": [
+      {
+        "id": 10,
+        "organisation": "Smart Homes Tech",
+        "primaryPerson": "Rachel Kim",
+        "price": 65000,
+        "date": "2024-06-20",
+        "dealTarget": 4,
+        "stageTitle": "lead"
+      }
+    ],
+    "createdAt": "2023-05-28T09:20:00Z",
+    "updatedAt": "2023-07-30T12:15:00Z"
+  }
+]

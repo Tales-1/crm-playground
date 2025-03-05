@@ -18,17 +18,6 @@ type MenuItem = {
 export default function Sidebar() {
   const [showFullMenu, setShowFullMenu] = useReducer((prev) => !prev, false);
 
-  const transitionStyles = "ease-in-out duration-300 transition-discrete";
- 
-  const linkTextStyles =
-    (showFullMenu
-      ? "opacity-100 translate-x-[50px]"
-      : "opacity-0 -translate-x-[50px] select-none") +
-    " " +
-    transitionStyles +
-    " " +
-    "text-foreground";
-
   const menuItems: MenuItem[] = [
     {
       menuText: "Dashboard",
@@ -69,7 +58,6 @@ export default function Sidebar() {
   ];
 
   return (
-    <>
       <aside
         className={`relative mt-16 pl-4 ${
           showFullMenu ? "z-30 " : "z-10 w-fit"
@@ -85,24 +73,9 @@ export default function Sidebar() {
               <IconWrapper isActive={item.isActive}>
                 {item.iconElement}
               </IconWrapper>
-              <p 
-                className={`absolute text-xs ${linkTextStyles}`}
-                style={{color: item.isActive ? "var(--active-state-text)" : "var(--inactive-state-text)"}}
-              >
-                {item.menuText}
-              </p>
             </Link>
           ))}
         </nav>
       </aside>
-      <div
-        className={`fixed inset-0 ${
-          showFullMenu
-            ? "opacity-60 z-20 translate-x-0"
-            : "opacity-0 z-0 -translate-x-full"
-        } ${transitionStyles}`}
-        style={{ background: "var(--side-bar-gradient)" }}
-      ></div>
-    </>
   );
 }

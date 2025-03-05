@@ -8,7 +8,7 @@ import Toggle from "@/components/ui/toggle";
 import { FormEvent, useReducer, useState } from "react";
 import { AlignJustify, LayoutGrid, Plus } from "lucide-react";
 import { ICON_SIZES } from "@/constants/constants";
-import GridBody from "./grid/grid-body";
+import GridBody from "./list/grid-body";
 import {
   Sheet,
   SheetClose,
@@ -23,13 +23,10 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
-type OrganisationsBodyProps = {
-  organisations: Organisation[];
-};
 
-export default function OrganisationsBody({
-  organisations,
-}: OrganisationsBodyProps) {
+export default function OrganisationsBody({ organisations } 
+  : { organisations: Organisation[] }) {
+
   const [isTable, setIsTable] = useReducer((prev) => !prev, true);
 
   // temp measure, we should NEVER do stuff like this.
@@ -47,7 +44,7 @@ export default function OrganisationsBody({
       return [
         ...prev,
         {
-          id: prev.length + 1,
+          id: `${prev.length + 1}`,
           name,
           address,
           phone,

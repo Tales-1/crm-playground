@@ -10,11 +10,7 @@ import returnColorForTarget from "@/utils/target-color-retriever";
 import formatCurrency from "@/utils/format-currency";
 import { Deal } from "../../data/deal-schema";
 
-type KanbanCardProps = {
-  deal: Deal;
-};
-
-export default function KanbanCard({ deal }: KanbanCardProps) {
+export default function KanbanCard({ deal }: { deal : Deal }) {
   const { organisation, primaryPerson, price, date, dealTarget } = deal;
 
   return (

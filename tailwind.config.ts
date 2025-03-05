@@ -45,7 +45,17 @@ export default {
   				'3': 'hsl(var(--chart-3))',
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
-  			}
+  			},
+			crm: {
+				accent: "#5465FF",
+				text: "#F4F4F5",
+				muted: "#A1A1AA",
+				highlight: "#2A2A2E",
+				success: "#10B981",
+				warning: "#FBBF24",
+				error: "#EF4444",
+				"border-light": "rgba(255, 255, 255, 0.08)"
+			}
   		},
   		borderRadius: {
   			lg: 'var(--radius)',

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-type Person = {
+interface Person {
   id: string;
   name: string;
   email: string;

@@ -3,7 +3,7 @@ import path from "path";
 import React from "react";
 import { z } from "zod";
 import { personSchema } from "../data/people-schema";
-import { Mail, PersonStandingIcon, Phone, User } from "lucide-react";
+import { Mail, Phone, User } from "lucide-react";
 import { ICON_SIZES, STROKE_WIDTHS } from "@/constants/constants";
 import { Separator } from "@/components/ui/separator";
 import IconWrapper from "@/components/ui/icon-wrapper";
@@ -18,12 +18,8 @@ async function getPersonAsync(id:string){
     return peopleArray.find((person) => person.id == id);
 }
 
-export default async function Page({
-    params
-}: {
-    params:Promise<{slug:string}>
-}){
-    const id = (await params).slug;
+export default async function Page({ params }: { params:Promise<{personId:string}> }){
+    const id = (await params).personId;
 
     const person = await getPersonAsync(id);
     

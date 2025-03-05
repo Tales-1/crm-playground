@@ -5,7 +5,6 @@ import { productSchema } from "./data/product-schema";
 import ProductsBody from "./components/products-body";
 
 async function GetProductsAsync(){
-
     const data = await fs.readFile(path.join(process.cwd(), "src/app/products/data/products.json"));
 
     const products = JSON.parse(data.toString());
