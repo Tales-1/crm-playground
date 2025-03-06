@@ -12,30 +12,30 @@ export default function OrganisationDetailsTabs({ organisation }: { organisation
   const [activeTab, setActiveTab] = useState("overview");
 
   return (
-    <Tabs value={activeTab} onValueChange={setActiveTab} className="flex-1 overflow-hidden">
-      <div className="px-6 border-b border-crm-border-light">
+    <Tabs value={activeTab} onValueChange={setActiveTab} className="flex-1 overflow-hidden mt-2">
+      <div className="px-6 border-t border-border-light pt-2">
         <TabsList className="bg-transparent h-12 p-0 space-x-6">
           <TabsTrigger
             value="overview"
-            className="rounded-none border-b-2 border-transparent data-[state=active]:border-crm-accent data-[state=active]:text-crm-text px-0 pb-3.5"
+            className="rounded-none border-b-2 border-transparent data-[state=active]:border-accent data-[state=active]:text-on-surface px-0 pb-3.5"
           >
             Overview
           </TabsTrigger>
           <TabsTrigger
             value="deals"
-            className="rounded-none border-b-2 border-transparent data-[state=active]:border-crm-accent data-[state=active]:text-crm-text px-0 pb-3.5"
+            className="rounded-none border-b-2 border-transparent data-[state=active]:border-accent data-[state=active]:text-on-surface px-0 pb-3.5"
           >
             Deals ({organisation.deals.length})
           </TabsTrigger>
           <TabsTrigger
             value="contacts"
-            className="rounded-none border-b-2 border-transparent data-[state=active]:border-crm-accent data-[state=active]:text-crm-text px-0 pb-3.5"
+            className="rounded-none border-b-2 border-transparent data-[state=active]:border-accent data-[state=active]:text-on-surface px-0 pb-3.5"
           >
             Contacts ({organisation.contacts.length})
           </TabsTrigger>
           <TabsTrigger
             value="notes"
-            className="rounded-none border-b-2 border-transparent data-[state=active]:border-crm-accent data-[state=active]:text-crm-text px-0 pb-3.5"
+            className="rounded-none border-b-2 border-transparent data-[state=active]:border-accent data-[state=active]:text-on-surface px-0 pb-3.5"
           >
             Notes
           </TabsTrigger>

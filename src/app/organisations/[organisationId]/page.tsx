@@ -56,12 +56,12 @@ export default async function Page({ params }: OrganisationPageProps ) {
                         </div>
                     </div>
                     <div className="flex gap-3 text-sm">
-                        <Button variant="outline" className="bg-accent/50 text-on-surface">Edit</Button>
+                        <Button variant="outline" className="bg-accent/80 text-on-surface">Edit</Button>
                     </div>
                 </div>
 
                 <div className="grid grid-cols-3 gap-4 mt-6">
-                    <div className="bg-card rounded-lg p-3 border border-crm-border-light">
+                    <div className="bg-card rounded-lg p-3 border border-border-light">
                         <div className="flex items-center">
                             <div className="p-2 rounded-md bg-violet-500/10 text-violet-500 mr-3">
                                 <BadgePoundSterling className="h-5 w-5" />
@@ -73,7 +73,7 @@ export default async function Page({ params }: OrganisationPageProps ) {
                         </div>
                     </div>
 
-                    <div className="bg-card rounded-lg p-3 border border-crm-border-light">
+                    <div className="bg-card rounded-lg p-3 border border-border-light">
                         <div className="flex items-center">
                             <div className="p-2 rounded-md bg-green-500/10 text-green-500 mr-3">
                                 <BadgePoundSterling className="h-5 w-5" />
@@ -85,7 +85,7 @@ export default async function Page({ params }: OrganisationPageProps ) {
                         </div>
                     </div>
 
-                    <div className="bg-card rounded-lg p-3 border border-crm-border-light">
+                    <div className="bg-card rounded-lg p-3 border border-border-light">
                         <div className="flex items-center">
                             <div className="p-2 rounded-md bg-amber-500/10 text-amber-500 mr-3">
                                 <BadgePoundSterling className="h-5 w-5" />

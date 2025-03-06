@@ -27,13 +27,13 @@ export default async function OrganisationsLayout({ children } : { children: Rea
                 <div className="flex flex-col justify-between bg-surface p-3 rounded-lg drop-shadow">
                     <div className="flex gap-2 justify-between">
                         <h3 className="text-sm">Organisations</h3>
-                        <Button variant="secondary" size="xs" className="p-1 bg-add-button aspect-square text-white">
+                        <Button variant="addButton" size="xs">
                             <Plus size={ICON_SIZES.small}/>
                         </Button>
                     </div>
                     <Input 
                         placeholder="Search organisation"
-                        className="bg-card mt-3"
+                        className="bg-card mt-3 h-8"
                         />
                 </div>
 

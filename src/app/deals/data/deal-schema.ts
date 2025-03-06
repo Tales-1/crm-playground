@@ -9,6 +9,7 @@ export const dealSchema = z.object({
     price: z.number(),
     date: z.string(),
     dealTarget: z.number(),
+    name:z.string()
     })
 
 export interface Deal {
@@ -18,6 +19,7 @@ export interface Deal {
     price: number;
     date: string;
     dealTarget: DealTargetEnum;
-    stageTitle:string
+    stageTitle:string;
+    name:string;
     [key: string]: string | number ;
 };

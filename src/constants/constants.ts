@@ -1,5 +1,6 @@
 
-export const ICON_SIZES : { small: number, medium: number, large: number } = {
+export const ICON_SIZES : { xSmall:number, small: number, medium: number, large: number } = {
+    xSmall:14,
     small:16,
     medium: 20,
     large: 24

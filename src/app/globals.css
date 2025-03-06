@@ -35,7 +35,6 @@ main{
   overflow:scroll;
 }
 
-
 input[type="checkbox"]{
   display:none
 }
@@ -55,7 +54,6 @@ input[type="checkbox"]{
   background: linear-gradient(var(--surface), var(--surface)),
               linear-gradient(var(--elevation-08), var(--elevation-08));
   background-blend-mode: overlay;
-
 }
 
 .bg-menu{
@@ -72,16 +70,15 @@ input[type="checkbox"]{
   background: linear-gradient(var(--background), var(--background)),
               linear-gradient(var(--elevation-16), var(--elevation-16));
   background-blend-mode: overlay;
-
 }
 
-.bg-card {
+.bg-elevated-card {
   background: linear-gradient(var(--surface), var(--surface)), 
               linear-gradient(var(--elevation-14), var(--elevation-14));
   background-blend-mode: overlay;
 }
 
-.bg-add-button{
+.bg-add-button {
   background: linear-gradient(var(--primary), var(--primary)),
               linear-gradient(var(--elevation-14), var(--elevation-14));
   background-blend-mode: overlay;
@@ -129,6 +126,7 @@ input[type="checkbox"]{
     --inactive-state-text:hsl(0, 0%, 18.82%);
     --side-bar-gradient:linear-gradient(90deg, rgb(31, 31, 31) 0%, rgba(255,248,248,1) 100%);
 
+    --card:hsl(0, 0%, 99.5%);
     --primary:hsl(0, 0%, 19.22%);
 
     /* Overlay is transparent in light mode. Not required for light mode */
@@ -142,6 +140,7 @@ input[type="checkbox"]{
     --elevation-15:rgba(255, 255, 255, 0);
     --elevation-16:rgba(255, 255, 255, 0);
 
+    --border-light:rgba(0, 0, 0, 0.08);
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 3.9%;
     --secondary: 0 0% 96.1%; 
@@ -192,8 +191,10 @@ input[type="checkbox"]{
     --elevation-15:rgba(255, 255, 255, 0.15);
     --elevation-16:rgba(255, 255, 255, 0.16);
 
+    --card:hsl(0, 0%, 17%);
     --primary:hsl(0, 0%, 7.06%);
 
+    --border-light:rgba(255, 255, 255, 0.08);
     --popover: 0 0% 3.9%;
     --popover-foreground: 0 0% 98%;
     --primary-foreground: 0 0% 9%;

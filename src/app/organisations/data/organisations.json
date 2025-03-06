@@ -38,7 +38,8 @@
         "price": 75000,
         "date": "2023-12-15",
         "dealTarget": 1,
-        "stageTitle": "proposal"
+        "stageTitle": "proposal",
+        "name": "Enterprise Software License Agreement"
       },
       {
         "id": 2,
@@ -47,7 +48,8 @@
         "price": 120000,
         "date": "2024-01-30",
         "dealTarget": 1,
-        "stageTitle": "negotiation"
+        "stageTitle": "negotiation",
+        "name": "Cloud Infrastructure Upgrade Contract"
       }
     ],
     "notes": "Tech Solutions is interested in our premium plan. Follow up next quarter about expansion opportunities.",
@@ -84,7 +86,8 @@
         "price": 250000,
         "date": "2023-05-10",
         "dealTarget": 1,
-        "stageTitle": "closed-won"
+        "stageTitle": "closed-won",
+        "name": "Solar Panel Installation Project"
       }
     ],
     "createdAt": "2023-02-10T09:15:00Z",
@@ -120,7 +123,8 @@
         "price": 45000,
         "date": "2024-03-20",
         "dealTarget": 1,
-        "stageTitle": "opportunity"
+        "stageTitle": "opportunity",
+        "name": "Learning Management System Implementation"
       }
     ],
     "createdAt": "2023-03-05T11:30:00Z",
@@ -156,7 +160,8 @@
         "price": 180000,
         "date": "2024-05-15",
         "dealTarget": 2,
-        "stageTitle": "lead"
+        "stageTitle": "lead",
+        "name": "Commercial Building Design Contract"
       }
     ],
     "createdAt": "2023-04-12T13:45:00Z",
@@ -192,7 +197,8 @@
         "price": 500000,
         "date": "2023-08-01",
         "dealTarget": 2,
-        "stageTitle": "closed-lost"
+        "stageTitle": "closed-lost",
+        "name": "Investment in Tech Startup"
       }
     ],
     "createdAt": "2023-01-25T10:00:00Z",
@@ -228,7 +234,8 @@
         "price": 95000,
         "date": "2024-02-28",
         "dealTarget": 2,
-        "stageTitle": "proposal"
+        "stageTitle": "proposal",
+        "name": "Medical Device Procurement Agreement"
       }
     ],
     "createdAt": "2023-02-18T14:30:00Z",
@@ -264,7 +271,8 @@
         "price": 35000,
         "date": "2023-12-10",
         "dealTarget": 3,
-        "stageTitle": "negotiation"
+        "stageTitle": "negotiation",
+        "name": "Digital Marketing Campaign Contract"
       }
     ],
     "createdAt": "2023-03-22T08:00:00Z",
@@ -300,7 +308,8 @@
         "price": 28000,
         "date": "2024-04-05",
         "dealTarget": 4,
-        "stageTitle": "opportunity"
+        "stageTitle": "opportunity",
+        "name": "Sustainable Packaging Initiative"
       }
     ],
     "createdAt": "2023-05-05T15:45:00Z",
@@ -336,7 +345,8 @@
         "price": 65000,
         "date": "2024-06-20",
         "dealTarget": 4,
-        "stageTitle": "lead"
+        "stageTitle": "lead",
+        "name": "Smart Home Automation System Deployment"
       }
     ],
     "createdAt": "2023-05-28T09:20:00Z",

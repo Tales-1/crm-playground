@@ -8,7 +8,7 @@ export default function DealsTab({ organisation }: OrganisationProps) {
         <>
             <div className="mb-4 flex justify-between items-center">
                 <h3 className="font-medium">Deals</h3>
-                <Button variant="outline" size="sm" className="text-crm-text border-crm-border-light hover:bg-crm-highlight">
+                <Button variant="secondary" size="sm">
                     <Handshake className="h-4 w-4 mr-1" />
                     Add Deal
                 </Button>
@@ -20,7 +20,7 @@ export default function DealsTab({ organisation }: OrganisationProps) {
                 ))}
 
                 {organisation.deals.length === 0 && (
-                    <p className="text-sm text-crm-muted col-span-2 py-8 text-center">No deals found</p>
+                    <p className="text-sm text-muted-foreground col-span-2 py-8 text-center">No deals found</p>
                 )}
             </div>
         </>

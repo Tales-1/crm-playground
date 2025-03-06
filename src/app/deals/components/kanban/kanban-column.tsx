@@ -44,6 +44,7 @@ export default function KanbanColumn({
         date: "22/06/2025",
         dealTarget: DealTargetEnum.NoTarget,
         stageTitle: title,
+        name:"Big Dealz"
       },
     ]);
   }
@@ -92,9 +93,7 @@ function AddDealButton({
       <SheetTrigger asChild>
         <Button
           type="button"
-          variant="outline"
-          className="bg-accent/70 aspect-square text-white ease-in-out 
-          duration-200 hover:scale-[1.05] flex justify-center items-center rounded-lg"
+          variant="addButton"
           size="xs"
         >
           <Plus size={14} />

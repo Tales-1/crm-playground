@@ -8,7 +8,7 @@ export default function ContactsTab({ organisation }: OrganisationProps) {
         <>
             <div className="mb-4 flex justify-between items-center">
                 <h3 className="font-medium">Contacts</h3>
-                <Button variant="outline" size="sm" className="text-crm-text border-crm-border-light hover:bg-crm-highlight">
+                <Button variant="secondary" size="sm">
                     <Users className="h-4 w-4 mr-1" />
                     Add Contact
                 </Button>
