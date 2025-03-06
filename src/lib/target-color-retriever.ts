@@ -1,4 +1,4 @@
-import { DealTargetEnum } from "@/app/deals/data/kanban-deals-data";
+import { DealTargetEnum } from "@/app/deals/_data/kanban-deals-data";
 
 export default function returnColorForTarget(target:DealTargetEnum){
     switch(target){

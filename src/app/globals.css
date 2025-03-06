@@ -39,17 +39,6 @@ input[type="checkbox"]{
   display:none
 }
 
-.toggle-label{
-  padding: 2px 4px;
-  background: var(--inactive-state-bg);
-  color: var(--inactive-state-text);
-}
-
-.toggle-label-active{
-  background: var(--active-state-bg);
-  color: var(--active-state-text);
-}
-
 .bg-surface {
   background: linear-gradient(var(--surface), var(--surface)),
               linear-gradient(var(--elevation-08), var(--elevation-08));
@@ -58,16 +47,6 @@ input[type="checkbox"]{
 
 .bg-menu{
   background: linear-gradient(var(--surface), var(--surface)), 
-              linear-gradient(var(--elevation-16), var(--elevation-16));
-  background-blend-mode: overlay;
-}
-
-.bg-sliding-menu {
-  background: var(--background);
-}
-
-.bg-modal {
-  background: linear-gradient(var(--background), var(--background)),
               linear-gradient(var(--elevation-16), var(--elevation-16));
   background-blend-mode: overlay;
 }

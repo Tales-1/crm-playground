@@ -8,7 +8,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+} from "@/_components/ui/dropdown-menu";
 
 import ProfileButton from "./buttons/profile-button";
 import ThemeToggle from "./buttons/theme-toggle";
@@ -26,7 +26,7 @@ export default function Header() {
               className="object-cover sm:w-[50px] md:w-[85px]"
             />
           </DropdownMenuTrigger>
-          <DropdownMenuContent className="bg-menu absolute -left-3">
+          <DropdownMenuContent className="absolute -left-3">
             <DropdownMenuLabel className="text-[11px]">
               My Products
             </DropdownMenuLabel>

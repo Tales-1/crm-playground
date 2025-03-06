@@ -2,13 +2,13 @@ import { promises as fs } from "fs"
 import path from "path";
 import React from "react";
 import { z } from "zod";
-import { Organisation, OrganisationSchema } from "../data/organisation-schema";
+import { Organisation, OrganisationSchema } from "../_data/organisation-schema";
 import { BadgePoundSterling } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import OrganisationDetailsTabs from "./components/tabs/tabs-area";
+import { Button } from "@/_components/ui/button";
+import OrganisationDetailsTabs from "./_components/tabs/tabs-area";
 
 async function getOrganisationAsync(id: string) {
-    const data = await fs.readFile(path.join(process.cwd(), "src/app/organisations/data/organisations.json"));
+    const data = await fs.readFile(path.join(process.cwd(), "src/app/organisations/_data/organisations.json"));
 
     const organisations = JSON.parse(data.toString());
     const orgArray = z.array(OrganisationSchema).parse(organisations);

@@ -4,12 +4,12 @@ import {
     DialogHeader,
     DialogTitle,
     DialogTrigger,
-  } from "@/components/layout/header/buttons/notification-menu";
+  } from "@/_components/layout/header/buttons/notification-menu";
   
 import IconWrapper from "../../../ui/icon-wrapper";
 import { Bell, BellDot } from "lucide-react";
 import { ICON_SIZES } from "@/constants/constants";
-import { Separator } from "@/components/ui/separator";
+import { Separator } from "@/_components/ui/separator";
   
 export default function NotificationButton(){
     return(

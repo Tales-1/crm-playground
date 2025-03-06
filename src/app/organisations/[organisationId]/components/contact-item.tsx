@@ -1,4 +1,4 @@
-import { Person } from "@/app/people/data/people-schema";
+import { Person } from "@/app/people/_data/people-schema";
 import { Mail, Phone } from "lucide-react";
 
 export default function ContactItem({ contact }: { contact : Person}) {

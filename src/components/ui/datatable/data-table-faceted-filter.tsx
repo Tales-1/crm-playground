@@ -21,7 +21,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "../popover"
-import { useDeals } from "@/app/deals/data/deals-context";
+import { useDeals } from "@/app/deals/_data/deals-context";
 
 interface DataTableFacetedFilterProps<TData, TValue> {
   column?: Column<TData, TValue>

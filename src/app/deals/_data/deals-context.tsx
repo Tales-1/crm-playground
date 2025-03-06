@@ -23,7 +23,7 @@ export function useDeals(){
     const context = useContext(DealsContext);
 
     if(!context)
-        throw new Error("useDeals must be used within a DealsProvider");
+        throw new Error("Use deals must be used within a Deals Provider");
 
     return context;
 }

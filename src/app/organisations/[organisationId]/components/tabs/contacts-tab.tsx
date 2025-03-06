@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "@/_components/ui/button";
 import { Users } from "lucide-react";
 import ContactItem from "../contact-item";
 import { OrganisationProps } from "../../page";

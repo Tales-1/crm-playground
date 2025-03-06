@@ -1,11 +1,11 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import { Deal } from "../../data/deal-schema";
-import { DealTargetEnum } from "../../data/kanban-deals-data";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+import { Deal } from "../../_data/deal-schema";
+import { DealTargetEnum } from "../../_data/kanban-deals-data";
+import { Button } from "@/_components/ui/button";
+import { Input } from "@/_components/ui/input";
+import { Label } from "@/_components/ui/label";
 import {
   Sheet,
   SheetClose,
@@ -15,7 +15,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/components/ui/sheet";
+} from "@/_components/ui/sheet";
 
 import KanbanCard from "./kanban-card";
 import { Plus } from "lucide-react";
@@ -28,7 +28,7 @@ type KanbanColumnProps = {
 
 export default function KanbanColumn({
   title,
-  color,
+  color: colour,
   deals,
 }: KanbanColumnProps) {
   const [dealCards, setDealCards] = useState(deals);
@@ -52,10 +52,9 @@ export default function KanbanColumn({
   return (
     <div className="flex flex-col drop-shadow w-full h-fit relative">
       <div className="flex bg-surface kanban-col-header">
-        <div className="ml-3 pt-3">
+        <div className="ml-3 mt-4 py-1 px-3 rounded-lg" style={{ background: colour }}>
           <h3
-            className={`text-sm text-[#303030] px-2 py-1 font-bold w-fit rounded-lg`}
-            style={{ background: color }}
+            className={`text-sm font-bold w-fit rounded-lg`}
           >
             {title}
           </h3>
@@ -64,7 +63,7 @@ export default function KanbanColumn({
       <div className="absolute right-0">
           <AddDealButton action={AddCard} />
       </div>
-      <div className="flex flex-col gap-2 py-3 px-3 bg-surface rounded-b-lg">
+      <div className="bg-surface flex flex-col gap-2 py-3 px-3 rounded-b-lg">
         {dealCards.map(deal => <KanbanCard deal={deal} key={deal.id} /> )}
       </div>
     </div>
@@ -99,7 +98,7 @@ function AddDealButton({
           <Plus size={14} />
         </Button>
       </SheetTrigger>
-      <SheetContent className="bg-sliding-menu">
+      <SheetContent>
         <SheetHeader>
           <SheetTitle>Add Deal</SheetTitle>
           <SheetDescription>

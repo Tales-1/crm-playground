@@ -4,7 +4,7 @@ export default {
 	darkMode: ["class"],
 	content: [
 		"./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-		"./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+		"./src/_components/**/*.{js,ts,jsx,tsx,mdx}",
 		"./src/app/**/*.{js,ts,jsx,tsx,mdx}",
 	],
 	theme: {
@@ -53,6 +53,14 @@ export default {
 				warning: "#FBBF24",
 				error: "#EF4444",
 				"border-light": "var(--border-light)",
+				active:{
+					text:"var(--active-state-text)",
+					bg:"var(--active-state-bg)",
+				},
+				inactive:{
+					text:"var(--inactive-state-text)",
+					bg:"var(--inactive-state-bg)"
+				}
 
 			},
 			borderRadius: {

@@ -1,12 +1,12 @@
 import { promises as fs } from "fs"
 import { z } from "zod";
-import { personSchema } from "./data/people-schema";
+import { personSchema } from "./_data/people-schema";
 import path from "path";
-import PeopleNavigation from "./components/people-navigation";
+import PeopleNavigation from "./_components/people-navigation";
 import { Plus, Search } from "lucide-react";
 
 async function getPeople(){
-    const data = await fs.readFile(path.join(process.cwd(), "src/app/people/data/people.json"));
+    const data = await fs.readFile(path.join(process.cwd(), "src/app/people/_data/people.json"));
 
     const people = JSON.parse(data.toString());
 
@@ -34,7 +34,7 @@ export default async function PeopleLayout({ children }: { children: React.React
                 <PeopleNavigation people={people} />
             </div>
 
-            <div className="w-full bg-surface rounded-lg drop-shadow">
+            <div className="bg-surface w-full rounded-lg drop-shadow">
                 {children}
             </div>
         </main>

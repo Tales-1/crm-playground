@@ -1,9 +1,9 @@
 "use client";
 
 import { ColumnDef } from "@tanstack/react-table";
-import { DealTargetEnum } from "../../data/kanban-deals-data";
-import formatCurrency from "@/utils/format-currency";
-import { Deal } from "../../data/deal-schema";
+import { DealTargetEnum } from "../../_data/kanban-deals-data";
+import formatCurrency from "@/lib/format-currency";
+import { Deal } from "../../_data/deal-schema";
 import { DataTableColumnHeader } from "@/components/ui/datatable/data-table-header";
 import { DataTableViewOptions } from "@/components/ui/datatable/data-table-view-options";
 

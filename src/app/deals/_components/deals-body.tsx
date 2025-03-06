@@ -4,7 +4,7 @@ import { useReducer } from "react";
 import { AlignJustify, Kanban } from "lucide-react";
 import { DataTable } from "@/components/ui/datatable/data-table";
 import { columns } from "./table/columns";
-import { useDeals } from "../data/deals-context";
+import { useDeals } from "../_data/deals-context";
 import {
   Select,
   SelectContent,
@@ -20,7 +20,6 @@ import { ICON_SIZES } from "@/constants/constants";
 
 export default function DealsBody() {
   const [isKanban, setIsKanban] = useReducer((prev) => !prev, true);
-
   const data = useDeals();
 
   return (

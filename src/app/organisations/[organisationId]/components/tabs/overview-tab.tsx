@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "@/_components/ui/button";
 import { Building, FileText, Globe, Mail, Phone } from "lucide-react";
 import ContactItem from "../contact-item";
 import DealItem from "../deal-item";

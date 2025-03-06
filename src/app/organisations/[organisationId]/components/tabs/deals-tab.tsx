@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "@/_components/ui/button";
 import { Handshake, Users } from "lucide-react";
 import DealItem from "../deal-item";
 import { OrganisationProps } from "../../page";

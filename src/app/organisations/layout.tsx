@@ -1,16 +1,16 @@
 import path from "path";
 import { promises as fs } from "fs";
 import { z } from "zod";
-import { OrganisationSchema } from "./data/organisation-schema";
+import { OrganisationSchema } from "./_data/organisation-schema";
 import { Plus } from "lucide-react";
-import OrganisationsNavigation from "./components/organisations-navigation";
+import OrganisationsNavigation from "./_components/organisations-navigation";
 import { ICON_SIZES } from "@/constants/constants";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
 async function getOrganisationsAsync() {
   const data = await fs.readFile(
-    path.join((process.cwd(), "src/app/organisations/data/organisations.json"))
+    path.join((process.cwd(), "src/app/organisations/_data/organisations.json"))
   );
 
   const organisations = JSON.parse(data.toString());
@@ -31,9 +31,10 @@ export default async function OrganisationsLayout({ children } : { children: Rea
                             <Plus size={ICON_SIZES.small}/>
                         </Button>
                     </div>
+
                     <Input 
                         placeholder="Search organisation"
-                        className="bg-card mt-3 h-8"
+                        className="bg-card mt-3 h-7 border border-border-light"
                         />
                 </div>
 

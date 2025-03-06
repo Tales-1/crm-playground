@@ -1,8 +1,8 @@
 "use client";
 
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/_components/ui/tabs";
 import { useState } from "react";
-import { Organisation } from "../../../data/organisation-schema";
+import { Organisation } from "../../../_data/organisation-schema";
 import OverviewTab from "./overview-tab";
 import DealsTab from "./deals-tab";
 import ContactsTab from "./contacts-tab";

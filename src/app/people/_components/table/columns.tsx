@@ -1,7 +1,7 @@
 "use client"
 
 import { ColumnDef } from "@tanstack/react-table";
-import { Person } from "../../data/people-schema";
+import { Person } from "../../_data/people-schema";
 import { DataTableViewOptions } from "@/components/ui/datatable/data-table-view-options";
 import { DataTableColumnHeader } from "@/components/ui/datatable/data-table-header";
 

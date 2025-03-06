@@ -1,6 +1,6 @@
 import { BadgeCheck, AlertCircle, Clock } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { Deal } from "@/app/deals/data/deal-schema";
+import { Deal } from "@/app/deals/_data/deal-schema";
 import { ICON_SIZES } from "@/constants/constants";
 
 const getStageIcon = (stage: Deal['stage']) => {

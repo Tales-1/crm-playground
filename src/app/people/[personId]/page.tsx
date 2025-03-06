@@ -2,14 +2,14 @@ import { promises as fs } from "fs"
 import path from "path";
 import React from "react";
 import { z } from "zod";
-import { personSchema } from "../data/people-schema";
+import { personSchema } from "../_data/people-schema";
 import { Mail, Phone, User } from "lucide-react";
 import { ICON_SIZES, STROKE_WIDTHS } from "@/constants/constants";
-import { Separator } from "@/components/ui/separator";
-import IconWrapper from "@/components/ui/icon-wrapper";
+import { Separator } from "@/_components/ui/separator";
+import IconWrapper from "@/_components/ui/icon-wrapper";
 
 async function getPersonAsync(id:string){
-    const data = await fs.readFile(path.join(process.cwd(), "src/app/people/data/people.json"));
+    const data = await fs.readFile(path.join(process.cwd(), "src/app/people/_data/people.json"));
 
     const people = JSON.parse(data.toString());
 

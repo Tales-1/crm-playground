@@ -7,7 +7,7 @@ import { Coins, LayoutDashboard, Network, Settings, Tags, Users } from "lucide-r
 import { ICON_SIZES } from "@/constants/constants";
 import { usePathname } from "next/navigation";
 import { ReactNode, useReducer } from "react";
-import { Tooltip, TooltipProvider } from "@/components/ui/tooltip";
+import { Tooltip, TooltipProvider } from "@/_components/ui/tooltip";
 import { TooltipContent, TooltipTrigger } from "@radix-ui/react-tooltip";
 
 type MenuItem = {

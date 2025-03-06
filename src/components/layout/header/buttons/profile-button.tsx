@@ -7,10 +7,10 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+} from "@/_components/ui/dropdown-menu";
 
 import { CreditCard, LogOut, Settings, User } from "lucide-react";
-import { Separator } from "@/components/ui/separator";
+import { Separator } from "@/_components/ui/separator";
 import { ICON_SIZES } from "@/constants/constants";
 
 export default function ProfileButton() {
@@ -21,7 +21,7 @@ export default function ProfileButton() {
           <Image src={profilePic} alt="Profile picture" className="object-cover" />
         </div>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="bg-menu mr-3 w-[200px] flex flex-col gap-1">
+      <DropdownMenuContent className="mr-3 w-[200px] flex flex-col gap-1">
         <DropdownMenuLabel className="text-[12px]">
           Jawad Nazir
         </DropdownMenuLabel>

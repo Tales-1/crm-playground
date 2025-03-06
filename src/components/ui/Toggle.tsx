@@ -12,9 +12,11 @@ export default function Toggle(props:ToggleProps){
 
     const { buttonLabel, active, toggleBtn, textSize, toggleImage } = props
 
+    const activeStateClasses = active ? "bg-active-bg text-active-text" : "bg-inactive-bg text-inactive-text";
+    
     return (
-            <label className={`toggle-label text-center cursor-pointer w-full flex gap-1 items-center justify-center 
-                            ${textSize} ${active ? "toggle-label-active" : ""}`}>
+            <label className={`text-center cursor-pointer w-full flex gap-1 items-center justify-center 
+                            ${textSize} ${activeStateClasses}`}>
                 {toggleImage}
                 <p className="text-xs">
                     {buttonLabel}
