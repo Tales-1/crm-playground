@@ -1,0 +1,127 @@
+[
+    {
+      "title": "Qualification",
+      "color": "#FFA1A3",
+      "deals": [
+        {
+          "id": 1,
+          "name": "Large Scale Project",
+          "organisation": "LTD Solutions",
+          "primaryPerson": "John Doe",
+          "price": 100000,
+          "date": "03/03/2024",
+          "dealTarget":1,
+          "stageTitle": "Qualification"
+        }
+      ]
+    },
+    {
+      "title": "Needs Analysis",
+      "color": "#DFCF70",
+      "deals": [
+        {
+          "id": 5,
+          "name": "High Impact Campaign",
+          "organisation": "BrightFuture Inc",
+          "primaryPerson": "Michael Johnson",
+          "price": 180000,
+          "date": "05/07/2024",
+          "dealTarget":1,
+          "stageTitle": "Needs Analysis"
+        },
+        {
+          "id": 6,
+          "name": "Growth Opportunity",
+          "organisation": "GrowthTech",
+          "primaryPerson": "Emma White",
+          "price": 95000,
+          "date": "18/08/2024",
+          "dealTarget":2,
+          "stageTitle": "Needs Analysis"
+        },
+        {
+          "id": 7,
+          "name": "Strategic Partnership",
+          "organisation": "Synergy Solutions",
+          "primaryPerson": "Oliver Green",
+          "price": 210000,
+          "date": "29/09/2024",
+          "dealTarget":3,
+          "stageTitle": "Needs Analysis"
+        }
+      ]
+    },
+    {
+      "title": "Value Proposition",
+      "color": "#D0BAEF",
+      "deals": [
+        {
+          "id": 9,
+          "name": "Market Expansion",
+          "organisation": "Market Movers",
+          "primaryPerson": "Daniel Carter",
+          "price": 275000,
+          "date": "20/11/2024",
+          "dealTarget":1,
+          "stageTitle": "Value Proposition"
+        },
+        {
+          "id": 10,
+          "name": "Innovative Solution",
+          "organisation": "Expand Inc",
+          "primaryPerson": "Isabella Hall",
+          "price": 310000,
+          "date": "25/12/2024",
+          "dealTarget":2,
+          "stageTitle": "Value Proposition"
+        },
+        {
+          "id": 11,
+          "name": "Tech Integration",
+          "organisation": "Pioneer Systems",
+          "primaryPerson": "James Brown",
+          "price": 150000,
+          "date": "30/01/2025",
+          "dealTarget":3,
+          "stageTitle": "Value Proposition"
+        }
+      ]
+    },
+    {
+      "title": "Closed",
+      "color": "#009D47",
+      "deals": [
+        {
+          "id": 13,
+          "name": "Enterprise Solutions",
+          "organisation": "Summit Tech",
+          "primaryPerson": "Ethan Clarke",
+          "price": 500000,
+          "date": "10/03/2025",
+          "dealTarget":1,
+          "stageTitle": "Closed"
+        },
+        {
+          "id": 14,
+          "name": "Global Expansion",
+          "organisation": "Horizon Dynamics",
+          "primaryPerson": "Mia Evans",
+          "price": 430000,
+          "date": "15/04/2025",
+          "dealTarget":2,
+          "stageTitle": "Closed"
+        },
+        {
+          "id": 15,
+          "name": "Growth Milestone",
+          "organisation": "Peak Performance",
+          "primaryPerson": "Lucas Wright",
+          "price": 290000,
+          "date": "22/05/2025",
+          "dealTarget":3,
+          "stageTitle": "Closed"
+        }
+      ]
+    }
+  ]
+  

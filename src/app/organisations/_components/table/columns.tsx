@@ -1,8 +1,8 @@
 "use client"
 
 import { ColumnDef } from "@tanstack/react-table";
-import { DataTableColumnHeader } from "@/_components/ui/datatable/data-table-header";
-import { DataTableViewOptions } from "@/_components/ui/datatable/data-table-view-options";
+import { DataTableColumnHeader } from "@/components/ui/datatable/data-table-header";
+import { DataTableViewOptions } from "@/components/ui/datatable/data-table-view-options";
 import { Organisation } from "../../_data/organisation-schema";
 
 export const columns: ColumnDef<Organisation>[] = [

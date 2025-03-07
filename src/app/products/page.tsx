@@ -12,7 +12,7 @@ async function GetProductsAsync(){
     return z.array(productSchema).parse(products);
 }
 
-export default async function Page(){
+export default async function ProductsPage(){
 
     const products = await GetProductsAsync();
 

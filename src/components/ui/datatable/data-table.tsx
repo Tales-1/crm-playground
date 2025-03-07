@@ -22,7 +22,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/_components/ui/table";
+} from "@/components/ui/table";
 
 import { Button } from "../button";
 

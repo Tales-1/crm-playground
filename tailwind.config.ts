@@ -4,7 +4,7 @@ export default {
 	darkMode: ["class"],
 	content: [
 		"./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-		"./src/_components/**/*.{js,ts,jsx,tsx,mdx}",
+		"./src/components/**/*.{js,ts,jsx,tsx,mdx}",
 		"./src/app/**/*.{js,ts,jsx,tsx,mdx}",
 	],
 	theme: {
@@ -25,8 +25,7 @@ export default {
 					foreground: 'hsl(var(--secondary-foreground))'
 				},
 				muted: {
-					DEFAULT: 'hsl(var(--muted))',
-					foreground: 'hsl(var(--muted-foreground))'
+					DEFAULT: 'hsl(var(--muted-foreground))',
 				},
 				accent: {
 					DEFAULT: 'hsl(var(--accent))',
@@ -52,7 +51,7 @@ export default {
 				success: "#10B981",
 				warning: "#FBBF24",
 				error: "#EF4444",
-				"border-light": "var(--border-light)",
+				outline: "var(--border-light)",
 				active:{
 					text:"var(--active-state-text)",
 					bg:"var(--active-state-bg)",

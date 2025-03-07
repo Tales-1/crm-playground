@@ -1,4 +1,4 @@
-import { Button } from "@/_components/ui/button";
+import { Button } from "@/components/ui/button";
 import { Handshake, Users } from "lucide-react";
 import DealItem from "../deal-item";
 import { OrganisationProps } from "../../page";
@@ -20,7 +20,7 @@ export default function DealsTab({ organisation }: OrganisationProps) {
                 ))}
 
                 {organisation.deals.length === 0 && (
-                    <p className="text-sm text-muted-foreground col-span-2 py-8 text-center">No deals found</p>
+                    <p className="text-sm text-muted col-span-2 py-8 text-center">No deals found</p>
                 )}
             </div>
         </>

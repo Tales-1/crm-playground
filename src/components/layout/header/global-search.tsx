@@ -3,7 +3,6 @@
 import Form from "next/form"
 
 export default function GlobalSearch() {
-
   return (
     <div className="max-w-[800px] w-[50%]">
       {/* On submission, the input value will be appended to 
@@ -20,18 +19,3 @@ export default function GlobalSearch() {
     </div>
   );
 }
-
-// const MODULES = {
-//     deal: "deal",
-//     organisation:"organisation",
-//     people:"people",
-//     product:"product",
-//     general:"general"
-// }
-
-// type SearchResultItem = {
-//     module:"deal" | "organisation" | "people" | "product" | "general";
-//     link:string;
-//     description:string;
-// }
-

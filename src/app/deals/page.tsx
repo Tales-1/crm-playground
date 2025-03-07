@@ -1,26 +1,20 @@
-import DealsBody from "./_components/deals-body";
-import path from "path";
-import { z } from "zod";
-import { promises as fs } from "fs";
-import { dealSchema } from "./_data/deal-schema";
-import { DealsProvider } from "./_data/deals-context";
+import KanbanBoard from "./_components/kanban/kanban-board";
+import DealsTable from "./_components/table/deals-table";
+import DealsOptionsMenu from "./_components/deals-options";
 
-async function getDealsAsync() {
-  const data = await fs.readFile(
-    path.join(process.cwd(), "src/app/deals/_data/deals.json")
-  );
-  const deals = JSON.parse(data.toString());
-  return z.array(dealSchema).parse(deals);
+interface DealsPageProps {
+  searchParams: Promise<{view: "kanban" | "table"}>
 }
 
-export default async function Page() {
-  const data = await getDealsAsync();
+export default async function DealsPage({ searchParams }: DealsPageProps) {
+  
+  const activeView = (await searchParams).view || "kanban";
 
   return (
     <main>
-      <DealsProvider data={data}>
-        <DealsBody />
-      </DealsProvider>
+      <DealsOptionsMenu initialView={activeView} />
+     
+      {activeView == "kanban" ?  <KanbanBoard /> : <DealsTable  /> }
     </main>
   );
 }

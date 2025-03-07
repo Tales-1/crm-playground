@@ -2,7 +2,7 @@
 
 import { ColumnDef } from "@tanstack/react-table";
 import { DealTargetEnum } from "../../_data/kanban-deals-data";
-import formatCurrency from "@/lib/format-currency";
+import formatCurrency from "@/helpers/format-currency";
 import { Deal } from "../../_data/deal-schema";
 import { DataTableColumnHeader } from "@/components/ui/datatable/data-table-header";
 import { DataTableViewOptions } from "@/components/ui/datatable/data-table-view-options";
@@ -86,5 +86,9 @@ export const columns: ColumnDef<Deal>[] = [
 
       return <div>{targetDesc}</div>;
     },
+  },
+  {
+    accessorKey: "name",
+    header: "Name",
   },
 ];

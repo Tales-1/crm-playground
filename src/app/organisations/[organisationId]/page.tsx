@@ -4,32 +4,27 @@ import React from "react";
 import { z } from "zod";
 import { Organisation, OrganisationSchema } from "../_data/organisation-schema";
 import { BadgePoundSterling } from "lucide-react";
-import { Button } from "@/_components/ui/button";
+import { Button } from "@/components/ui/button";
 import OrganisationDetailsTabs from "./_components/tabs/tabs-area";
+
+interface OrganisationPageProps {
+    params: Promise<{organisationId: string}>
+}
 
 async function getOrganisationAsync(id: string) {
     const data = await fs.readFile(path.join(process.cwd(), "src/app/organisations/_data/organisations.json"));
-
     const organisations = JSON.parse(data.toString());
     const orgArray = z.array(OrganisationSchema).parse(organisations);
 
     return orgArray.find((org) => org.id == id);
 }
 
-interface OrganisationPageProps {
-    params: Promise<{organisationId: string}>
-}
-
-export interface OrganisationProps {
-    organisation: Organisation
-}
-
-export default async function Page({ params }: OrganisationPageProps ) {
+export default async function OrganisationDetailsPage({ params }: OrganisationPageProps ) {
     const id = (await params).organisationId;
     const organisation = await getOrganisationAsync(id);
 
     if (!organisation)
-        return <h1>organisation not found</h1>
+        return <h1>Organisation not found</h1>
 
     const totalValue = organisation.deals.reduce((sum, deal) => sum + deal.price, 0);
 
@@ -52,7 +47,7 @@ export default async function Page({ params }: OrganisationPageProps ) {
                         </div>
                         <div>
                             <p className="text-lg">{organisation.name}</p>
-                            <p className="text-sm text-muted-foreground">{organisation.address.city}, {organisation.address.state} {organisation.address.country}</p>
+                            <p className="text-sm text-muted">{organisation.address.city}, {organisation.address.state} {organisation.address.country}</p>
                         </div>
                     </div>
                     <div className="flex gap-3 text-sm">
@@ -61,37 +56,37 @@ export default async function Page({ params }: OrganisationPageProps ) {
                 </div>
 
                 <div className="grid grid-cols-3 gap-4 mt-6">
-                    <div className="bg-card rounded-lg p-3 border border-border-light">
+                    <div className="bg-card rounded-lg p-3 border border-outline">
                         <div className="flex items-center">
                             <div className="p-2 rounded-md bg-violet-500/10 text-violet-500 mr-3">
                                 <BadgePoundSterling className="h-5 w-5" />
                             </div>
                             <div>
-                                <p className="text-muted-foreground text-xs">Total Value</p>
+                                <p className="text-muted text-xs">Total Value</p>
                                 <p className="font-medium">£{totalValue.toLocaleString()}</p>
                             </div>
                         </div>
                     </div>
 
-                    <div className="bg-card rounded-lg p-3 border border-border-light">
+                    <div className="bg-card rounded-lg p-3 border border-outline">
                         <div className="flex items-center">
                             <div className="p-2 rounded-md bg-green-500/10 text-green-500 mr-3">
                                 <BadgePoundSterling className="h-5 w-5" />
                             </div>
                             <div>
-                                <p className="text-muted-foreground text-xs">Won Value</p>
+                                <p className="text-muted text-xs">Won Value</p>
                                 <p className="font-medium">£{wonValue.toLocaleString()}</p>
                             </div>
                         </div>
                     </div>
 
-                    <div className="bg-card rounded-lg p-3 border border-border-light">
+                    <div className="bg-card rounded-lg p-3 border border-outline">
                         <div className="flex items-center">
                             <div className="p-2 rounded-md bg-amber-500/10 text-amber-500 mr-3">
                                 <BadgePoundSterling className="h-5 w-5" />
                             </div>
                             <div>
-                                <p className="text-muted-foreground text-xs">Active Value</p>
+                                <p className="text-muted text-xs">Active Value</p>
                                 <p className="font-medium">£{activeValue.toLocaleString()}</p>
                             </div>
                         </div>

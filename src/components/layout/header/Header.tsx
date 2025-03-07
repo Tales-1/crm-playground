@@ -1,6 +1,6 @@
 import Image from "next/image";
 import GlobalSearch from "./global-search";
-import companyLogo from "@/assets/p-icon.png";
+import companyLogo from "@/../public/images/p-icon.png";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -8,7 +8,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/_components/ui/dropdown-menu";
+} from "@/components/ui/dropdown-menu";
 
 import ProfileButton from "./buttons/profile-button";
 import ThemeToggle from "./buttons/theme-toggle";
@@ -18,7 +18,7 @@ export default function Header() {
   return (
     <header className="flex justify-between items-center w-screen px-4 gap-[5rem]">
       <div className="relative aspect-square w-[85px] flex items-center">
-        <DropdownMenu >
+        <DropdownMenu>
           <DropdownMenuTrigger>
             <Image
               src={companyLogo}

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import profilePic from "@/assets/jawad.png"
+import profilePic from "@/../public/images/jawad.png"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -7,10 +7,10 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/_components/ui/dropdown-menu";
+} from "@/components/ui/dropdown-menu";
 
 import { CreditCard, LogOut, Settings, User } from "lucide-react";
-import { Separator } from "@/_components/ui/separator";
+import { Separator } from "@/components/ui/separator";
 import { ICON_SIZES } from "@/constants/constants";
 
 export default function ProfileButton() {

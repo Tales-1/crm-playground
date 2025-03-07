@@ -1,18 +1,18 @@
 "use client";
 
-import { DataTable } from "@/_components/ui/datatable/data-table"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/_components/ui/select"
+import { DataTable } from "@/components/ui/datatable/data-table"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Product } from "../_data/product-schema"
 import { productColumns } from "./table/columns"
 import { FormEvent, useReducer, useState } from "react";
 import { Plus } from "lucide-react";
-import { Sheet, SheetClose, SheetContent, SheetDescription, SheetFooter, SheetHeader, SheetTitle, SheetTrigger } from "@/_components/ui/sheet";
+import { Sheet, SheetClose, SheetContent, SheetDescription, SheetFooter, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { ICON_SIZES } from "@/constants/constants";
-import { Button } from "@/_components/ui/button";
-import { Label } from "@/_components/ui/label";
-import { Input } from "@/_components/ui/input";
-import ToggleGroup from "@/_components/ui/toggle-group";
-import Toggle from "@/_components/ui/toggle";
+import { Button } from "@/components/ui/button";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+import ToggleGroup from "@/components/ui/toggle-group";
+import Toggle from "@/components/ui/toggle";
 
 export default function ProductsBody({ data }: { data: Product[] }) {
 

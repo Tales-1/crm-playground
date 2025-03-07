@@ -5,8 +5,8 @@ import { z } from "zod";
 import { personSchema } from "../_data/people-schema";
 import { Mail, Phone, User } from "lucide-react";
 import { ICON_SIZES, STROKE_WIDTHS } from "@/constants/constants";
-import { Separator } from "@/_components/ui/separator";
-import IconWrapper from "@/_components/ui/icon-wrapper";
+import { Separator } from "@/components/ui/separator";
+import IconWrapper from "@/components/ui/icon-wrapper";
 
 async function getPersonAsync(id:string){
     const data = await fs.readFile(path.join(process.cwd(), "src/app/people/_data/people.json"));
@@ -18,7 +18,7 @@ async function getPersonAsync(id:string){
     return peopleArray.find((person) => person.id == id);
 }
 
-export default async function Page({ params }: { params:Promise<{personId:string}> }){
+export default async function PersonDetailsPage({ params }: { params:Promise<{personId:string}> }){
     const id = (await params).personId;
 
     const person = await getPersonAsync(id);
@@ -41,7 +41,7 @@ export default async function Page({ params }: { params:Promise<{personId:string
                                 <Phone size={ICON_SIZES.medium} /> 
                             </IconWrapper>
                             <div>
-                                <span className="block text-muted-foreground">Phone</span>
+                                <span className="block text-muted">Phone</span>
                                 <span>{person.phone}</span>
                             </div>
                         </a>
@@ -51,7 +51,7 @@ export default async function Page({ params }: { params:Promise<{personId:string
                                 <Mail size={ICON_SIZES.medium} /> 
                             </IconWrapper>
                             <div>
-                                <span className="block text-muted-foreground">Email</span>
+                                <span className="block text-muted">Email</span>
                                 <span>{person.email}</span>
                             </div>
                         </a>

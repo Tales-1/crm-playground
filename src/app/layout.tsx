@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Header from "@/_components/layout/header/header";
-import Sidebar from "@/_components/layout/sidebar/sidebar";
-import ThemeProvider from "@/_components/theme-provider";
+import Header from "@/components/layout/header/header";
+import Sidebar from "@/components/layout/sidebar/sidebar";
+import ThemeProvider from "@/components/theme-provider";
 
 export const metadata: Metadata = {
   title: "Crm Playground",

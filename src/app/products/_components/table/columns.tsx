@@ -2,8 +2,8 @@
 
 import { ColumnDef } from "@tanstack/react-table";
 import { Product } from "../../_data/product-schema";
-import { DataTableViewOptions } from "@/_components/ui/datatable/data-table-view-options";
-import { DataTableColumnHeader } from "@/_components/ui/datatable/data-table-header";
+import { DataTableViewOptions } from "@/components/ui/datatable/data-table-view-options";
+import { DataTableColumnHeader } from "@/components/ui/datatable/data-table-header";
 
 
 export const productColumns: ColumnDef<Product>[] = [

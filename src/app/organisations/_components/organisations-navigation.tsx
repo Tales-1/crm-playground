@@ -23,7 +23,7 @@ export default function OrganisationsNavigation({ organisations } :
                 </div>
                 <div>
                   <p className="text-[11px] xl:text-xs">{org.name}</p>
-                  <p className="text-[10px] xl:text-xs text-muted-foreground">{org.address.city}, {org.address.state} {org.address.country}</p>
+                  <p className="text-[10px] xl:text-xs text-muted">{org.address.city}, {org.address.state} {org.address.country}</p>
                 </div>
               </div>
           </Link>

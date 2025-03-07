@@ -1,27 +1,58 @@
-import { ReactNode } from "react";
+"use client"
 
-type ToggleProps = {
-    buttonLabel: string;
-    active: boolean;
-    toggleBtn: (event: React.ChangeEvent<HTMLInputElement>) => void;
-    textSize?:string,
-    toggleImage?: ReactNode
-}
+import * as React from "react"
+import * as TogglesPrimitive from "@radix-ui/react-tabs"
 
-export default function Toggle(props:ToggleProps){
+import { cn } from "@/lib/utils"
 
-    const { buttonLabel, active, toggleBtn, textSize, toggleImage } = props
+const Toggles = TogglesPrimitive.Root
 
-    const activeStateClasses = active ? "bg-active-bg text-active-text" : "bg-inactive-bg text-inactive-text";
-    
-    return (
-            <label className={`text-center cursor-pointer w-full flex gap-1 items-center justify-center 
-                            ${textSize} ${activeStateClasses}`}>
-                {toggleImage}
-                <p className="text-xs">
-                    {buttonLabel}
-                </p>
-                <input type="checkbox" onChange={toggleBtn}/>
-            </label>
-    )
-}
+const TogglesList = React.forwardRef<
+  React.ElementRef<typeof TogglesPrimitive.List>,
+  React.ComponentPropsWithoutRef<typeof TogglesPrimitive.List>
+>(({ className, ...props }, ref) => (
+  <TogglesPrimitive.List
+    ref={ref}
+    className={cn(
+      "flex flex-row rounded-lg drop-shadow overflow-hidden border",
+      className
+    )}
+    {...props}
+  />
+))
+
+TogglesList.displayName = TogglesPrimitive.List.displayName
+
+const ToggleTrigger = React.forwardRef<
+  React.ElementRef<typeof TogglesPrimitive.Trigger>,
+  React.ComponentPropsWithoutRef<typeof TogglesPrimitive.Trigger>
+>(({ className, ...props }, ref) => (
+  <TogglesPrimitive.Trigger
+    ref={ref}
+    className={cn(
+      "inline-flex items-center justify-center text-center cursor-pointer w-full transition-all transition-all data-[state=active]:bg-active-bg data-[state=active]:text-active-text",
+      className
+    )}
+    {...props}
+  />
+))
+
+ToggleTrigger.displayName = TogglesPrimitive.Trigger.displayName
+
+const ToggleContent = React.forwardRef<
+  React.ElementRef<typeof TogglesPrimitive.Content>,
+  React.ComponentPropsWithoutRef<typeof TogglesPrimitive.Content>
+>(({ className, ...props }, ref) => (
+  <TogglesPrimitive.Content
+    ref={ref}
+    className={cn(
+      "mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
+      className
+    )}
+    {...props}
+  />
+))
+
+ToggleContent.displayName = TogglesPrimitive.Content.displayName
+
+export { Toggles, TogglesList, ToggleTrigger, ToggleContent }

@@ -1,6 +1,6 @@
 "use client";
 
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/_components/ui/tabs";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useState } from "react";
 import { Organisation } from "../../../_data/organisation-schema";
 import OverviewTab from "./overview-tab";
@@ -13,7 +13,7 @@ export default function OrganisationDetailsTabs({ organisation }: { organisation
 
   return (
     <Tabs value={activeTab} onValueChange={setActiveTab} className="flex-1 overflow-hidden mt-2">
-      <div className="px-6 border-t border-border-light pt-2">
+      <div className="px-6 border-t border-outline pt-2">
         <TabsList className="bg-transparent h-12 p-0 space-x-6">
           <TabsTrigger
             value="overview"

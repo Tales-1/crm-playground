@@ -1,4 +1,3 @@
-import { DealTargetEnum } from "./kanban-deals-data";
 import { z } from "zod";
 
 export const dealSchema = z.object({
@@ -12,14 +11,18 @@ export const dealSchema = z.object({
     name:z.string()
     })
 
-export interface Deal {
-    id:number;
-    organisation: string;
-    primaryPerson: string;
-    price: number;
-    date: string;
-    dealTarget: DealTargetEnum;
-    stageTitle:string;
-    name:string;
-    [key: string]: string | number ;
-};
+export const stageDetailsSchema = z.object({
+    title:z.string(),
+    color:z.string(),
+    deals: z.array(dealSchema)
+})
+
+export type Deal = z.infer<typeof dealSchema>;
+export type StageDetails = z.infer<typeof stageDetailsSchema>;
+
+export enum DealTargetEnum {
+    OnTarget = 1,
+    Approaching,
+    Overdue,
+    NoTarget
+}

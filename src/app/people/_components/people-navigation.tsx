@@ -22,7 +22,7 @@ export default function PeopleNavigation({ people }: { people: Person[] }) {
           <Link
             href={`/people/${person.id}`}>
             <p>{person.name}</p>
-            <p className="text-muted-foreground">{person.email}</p>
+            <p className="text-muted">{person.email}</p>
           </Link>
         </li>
       ))}

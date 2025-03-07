@@ -14,9 +14,9 @@ const buttonVariants = cva(
         destructive:
           "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
         outline:
-          "border border-border-light bg-background shadow-sm hover:bg-accent",
+          "border border-outline bg-background shadow-sm hover:bg-accent",
         secondary:
-          "text-on-surface border border-border-light hover:bg-card",
+          "text-on-surface border border-outline hover:bg-card",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         addButton:`bg-add-button aspect-square text-white`,

@@ -45,7 +45,7 @@ export default function DealItem({ deal }: { deal : Deal }){
     const probability = Math.floor(Math.random() * 100);
 
   return (
-    <div className="p-3 rounded-lg bg-card border border-border-light hover-scale">
+    <div className="p-3 rounded-lg bg-card border border-outline hover-scale">
       <div className="flex justify-between items-start">
         <div className="flex-1 min-w-0">
           <h4 className="font-medium text-sm truncate">{deal.name}</h4>
@@ -56,13 +56,13 @@ export default function DealItem({ deal }: { deal : Deal }){
             )}>
               {deal.stageTitle.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}
             </span>
-            <span className="text-[11px] text-muted-foreground">
+            <span className="text-[11px] text-muted">
               {formatDate(deal.date)}
             </span>
           </div>
         </div>
         
-        <div className="flex items-center rounded-md px-2 py-1 border border-border-light">
+        <div className="flex items-center rounded-md px-2 py-1 border border-outline">
           <span className="font-medium text-[10px] mr-2">${deal.price.toLocaleString()}</span>
           {getStageIcon(deal.stageTitle)}
         </div>
@@ -80,7 +80,7 @@ export default function DealItem({ deal }: { deal : Deal }){
           ></div>
         </div>
         <div className="flex justify-between mt-1 mx-1">
-          <span className="text-xs text-muted-foreground">Probability</span>
+          <span className="text-xs text-muted">Probability</span>
           <span className="text-xs font-medium">{probability}%</span>
         </div>
       </div>
