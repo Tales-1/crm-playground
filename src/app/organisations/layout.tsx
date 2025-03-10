@@ -10,7 +10,7 @@ import { unstable_cache } from "next/cache";
 import OrganisationsNavigation from "./_components/organisations-navigation";
 
 
-// Testing out server side caching 
+// Testing out server side caching. This is only for orms. 
 const getOrganisations = unstable_cache(
     async () => {
         console.log("fetching")
@@ -29,7 +29,7 @@ export default async function OrganisationsLayout({ children } : { children: Rea
     const data = await getOrganisations();
 
     return(
-        <main className="flex gap-4 mx-8 pb-2">
+        <main className="flex gap-4 mx-4">
             <div className="flex flex-col gap-4">
                 <div className="flex flex-col justify-between bg-surface p-3 rounded-lg drop-shadow">
                     <div className="flex gap-2 justify-between">

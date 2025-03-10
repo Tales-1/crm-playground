@@ -11,7 +11,7 @@ export default async function DealsPage({ searchParams }: DealsPageProps) {
   const activeView = (await searchParams).view || "kanban";
 
   return (
-    <main>
+    <main className="mx-5 overflow-y-hidden">
       <DealsOptionsMenu />
      
       {activeView == "kanban" ?  <KanbanBoard /> : <DealsTable  /> }

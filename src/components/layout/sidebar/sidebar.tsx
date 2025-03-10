@@ -12,8 +12,9 @@ import { TooltipContent, TooltipTrigger } from "@radix-ui/react-tooltip";
 interface MenuItem {
   menuText: string;
   iconElement: ReactNode;
-  href: string;
+  pathname: string;
   isActive: boolean;
+  query?:string
 };
 
 export default function Sidebar() {
@@ -22,37 +23,38 @@ export default function Sidebar() {
       menuText: "Dashboard",
       iconElement: <LayoutDashboard size={ICON_SIZES.medium} />,
       isActive: usePathname() == "/",
-      href: "/",
+      pathname: "/",
     },
     {
       menuText: "Deals",
       iconElement: <Coins size={ICON_SIZES.medium} />,
-      isActive: usePathname() == "/deals",
-      href: "/deals",
+      isActive: usePathname().includes("/deals"),
+      pathname: "/deals",
+      query:"view=kanban"
     },
     {
       menuText: "Organisations",
       iconElement: <Network size={ICON_SIZES.medium} />,
-      isActive: usePathname() == "/organisations",
-      href: "/organisations",
+      isActive: usePathname().includes("/organisations"),
+      pathname: "/organisations",
     },
     {
       menuText: "People",
       iconElement: <Users size={ICON_SIZES.medium} />,
-      isActive: usePathname() == "/people",
-      href: "/people",
+      isActive: usePathname().includes("/people"),
+      pathname: "/people",
     },
     {
       menuText: "Products",
       iconElement: <Tags size={ICON_SIZES.medium} />,
-      isActive: usePathname() == "/products",
-      href: "/products",
+      isActive: usePathname().includes("/products"),
+      pathname: "/products",
     },
     {
       menuText: "Settings",
       iconElement: <Settings size={ICON_SIZES.medium} />,
-      isActive: usePathname() == "/settings",
-      href: "/settings"
+      isActive: usePathname().includes("/settings"),
+      pathname: "/settings"
     }
   ];
 
@@ -62,7 +64,7 @@ export default function Sidebar() {
         className="flex flex-col items-start gap-2 h-full"
       >
         {menuItems.map((item) => (
-          <Link href={item.href} 
+          <Link href={{ pathname: item.pathname, query: item.query }} 
                 className={`relative flex items-center gap-2 ${item.menuText == "Settings" ? "mt-auto mb-12" : ""}`}
                 key={item.menuText}>
             <TooltipProvider>

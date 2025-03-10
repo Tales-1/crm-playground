@@ -54,7 +54,7 @@ export default function KanbanColumn({
       <div className="flex bg-surface kanban-col-header">
         <div className="ml-3 mt-4 py-1 px-3 rounded-lg" style={{ background: colour }}>
           <h3
-            className={`text-sm font-bold w-fit rounded-lg`}
+            className={`text-sm font-bold w-fit rounded-lg text-[#303030]`}
           >
             {title}
           </h3>
