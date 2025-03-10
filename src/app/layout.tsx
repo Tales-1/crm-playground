@@ -1,8 +1,8 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Header from "@/components/layout/header/Header";
-import Sidebar from "@/components/layout/sidebar/Hidebar";
+import Header from "@/components/layout/header/header";
+import Sidebar from "@/components/layout/sidebar/sidebar";
 import ThemeProvider from "@/app/theme-provider";
 
 export const metadata: Metadata = {
