@@ -6,7 +6,7 @@ import { AlignJustify, Kanban } from "lucide-react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import ToggleGroup from "@/components/ui/toggle-group";
-import Toggle from "@/components/ui/Toggle";
+import Toggle from "@/components/ui/toggle";
 
 export default function DealsOptionsMenu() {
   const searchParams = useSearchParams().get("view");
