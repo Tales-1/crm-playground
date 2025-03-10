@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import { Deal } from "@/app/deals/_data/deal-schema";
 import { ICON_SIZES } from "@/constants/constants";
 
-const getStageIcon = (stage: Deal['stage']) => {
+const getStageIcon = (stage: Deal['stageTitle']) => {
   switch(stage) {
     case 'closed-won':
       return <BadgeCheck className="text-crm-success" size={ICON_SIZES.xSmall} />;
@@ -14,7 +14,7 @@ const getStageIcon = (stage: Deal['stage']) => {
   }
 };
 
-const getStageColor = (stage: Deal['stage']) => {
+const getStageColor = (stage: Deal['stageTitle']) => {
   console.log(stage)
   switch(stage) {
     case 'lead':
@@ -73,8 +73,8 @@ export default function DealItem({ deal }: { deal : Deal }){
           <div 
             className={cn(
               "h-full rounded-full",
-              deal.stage === 'closed-won' ? "bg-success" :
-              deal.stage === 'closed-lost' ? "bg-error" : "bg-accent"
+              deal.stageTitle === 'closed-won' ? "bg-success" :
+              deal.stageTitle === 'closed-lost' ? "bg-error" : "bg-accent"
             )}
             style={{ width: `${probability}%` }}
           ></div>

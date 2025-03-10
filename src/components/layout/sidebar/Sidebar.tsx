@@ -66,8 +66,6 @@ export default function Sidebar() {
     >
       <nav
         className="flex flex-col items-start gap-2 h-full"
-        onMouseEnter={setShowFullMenu}
-        onMouseLeave={setShowFullMenu}
       >
         {menuItems.map((item) => (
           <Link href={item.href} className={`relative flex items-center gap-2 ${item.menuText == "Settings" ? "mt-auto mb-12" : ""}`} key={item.menuText}>

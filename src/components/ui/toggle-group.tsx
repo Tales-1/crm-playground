@@ -1,18 +1,16 @@
 import { ReactNode } from "react";
 
 type ToggleGroupProps = {
-  widthClass?: string;
-  heightClass?: string;
+  className:string
 };
 
 export default function ToggleGroup({
-  widthClass = "w-[120px]",
-  heightClass = "h-[25px]",
+  className,
   children,
 }: ToggleGroupProps & { children: ReactNode }) {
   return (
     <div
-      className={`flex flex-row rounded-lg ${widthClass} ${heightClass} drop-shadow overflow-hidden border`}
+      className={`flex flex-row rounded-lg ${className} drop-shadow overflow-hidden border`}
     >
       {children}
     </div>

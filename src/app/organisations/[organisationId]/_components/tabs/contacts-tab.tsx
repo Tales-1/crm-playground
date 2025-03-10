@@ -1,9 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Users } from "lucide-react";
 import ContactItem from "../contact-item";
-import { OrganisationProps } from "../../page";
+import { Organisation } from "@/app/organisations/_data/organisation-schema";
 
-export default function ContactsTab({ organisation }: OrganisationProps) {
+export default function ContactsTab({ organisation }: { organisation: Organisation }) {
     return (
         <>
             <div className="mb-4 flex justify-between items-center">

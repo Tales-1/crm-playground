@@ -1,9 +1,9 @@
+import { Organisation } from "@/app/organisations/_data/organisation-schema";
 import { Button } from "@/components/ui/button";
 import { FileText } from "lucide-react";
-import { OrganisationProps } from "../../page";
 
 
-export default function NotesTab({ organisation }: OrganisationProps) {
+export default function NotesTab({ organisation }: { organisation: Organisation }) {
     return (
         <>
             <div className="mb-4 flex justify-between items-center">

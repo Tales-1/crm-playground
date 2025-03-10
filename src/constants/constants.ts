@@ -16,3 +16,8 @@ export const THEMES = {
     light:"light",
     dark:"dark"
 }
+
+export const PAGE_VIEWS = {
+    kanban:"kanban",
+    table: "table"
+}

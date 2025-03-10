@@ -1,9 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { Handshake, Users } from "lucide-react";
+import { Handshake } from "lucide-react";
+import { Organisation } from "@/app/organisations/_data/organisation-schema";
 import DealItem from "../deal-item";
-import { OrganisationProps } from "../../page";
 
-export default function DealsTab({ organisation }: OrganisationProps) {
+export default function DealsTab({ organisation }: { organisation: Organisation }) {
     return (
         <>
             <div className="mb-4 flex justify-between items-center">

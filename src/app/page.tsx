@@ -6,14 +6,14 @@ export default function Home() {
   return (
       <main className="mx-8 px-2 grid place-items-center">
         <div className="mt-3 grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] w-full gap-x-4 gap-y-4">
-          {arrayList.map(item => (
+          {/* {arrayList.map(item => (
               <Card className={`bg-card rounded-lg border-t-[3px] shadow-2`} key={item}>
               <CardHeader className="text-center">
                 <CardTitle className="text-sm">{item}</CardTitle>
                 <CardDescription className="text-xs">Item</CardDescription>
               </CardHeader>
             </Card>
-            ))}
+            ))} */}
         </div>
       </main>
   );

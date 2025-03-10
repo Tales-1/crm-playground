@@ -12,7 +12,7 @@ export default async function DealsPage({ searchParams }: DealsPageProps) {
 
   return (
     <main>
-      <DealsOptionsMenu initialView={activeView} />
+      <DealsOptionsMenu />
      
       {activeView == "kanban" ?  <KanbanBoard /> : <DealsTable  /> }
     </main>

@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image";
 import GlobalSearch from "./global-search";
 import companyLogo from "@/../public/images/p-icon.png";
@@ -10,9 +12,11 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
+import dynamic from "next/dynamic";
 import ProfileButton from "./buttons/profile-button";
-import ThemeToggle from "./buttons/theme-toggle";
 import NotificationButton from "./buttons/notification-button";
+
+const ThemeToggle = dynamic(() => import("./buttons/theme-toggle"), { ssr: false });
 
 export default function Header() {
   return (
@@ -40,7 +44,7 @@ export default function Header() {
 
       <GlobalSearch />
 
-      <div className="flex gap-3">
+      <div className="flex gap-3" suppressHydrationWarning>
         <ThemeToggle />
         <NotificationButton />
         <ProfileButton />

@@ -25,7 +25,9 @@ export default function ProfileButton() {
         <DropdownMenuLabel className="text-[12px]">
           Jawad Nazir
         </DropdownMenuLabel>
-        <DropdownMenuSeparator />
+        
+        <Separator />
+
         <DropdownMenuItem className="text-xs">
           <User size={ICON_SIZES.small} />
           Account
@@ -38,7 +40,9 @@ export default function ProfileButton() {
           <Settings size={ICON_SIZES.small} />
           Settings
         </DropdownMenuItem>
+
         <Separator />
+        
         <DropdownMenuItem className="text-xs">
           <LogOut size={ICON_SIZES.small} />
           Log out

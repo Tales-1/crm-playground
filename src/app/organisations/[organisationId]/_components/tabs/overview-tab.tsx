@@ -2,9 +2,9 @@ import { Button } from "@/components/ui/button";
 import { Building, FileText, Globe, Mail, Phone } from "lucide-react";
 import ContactItem from "../contact-item";
 import DealItem from "../deal-item";
-import { OrganisationProps } from "../../page";
+import { Organisation } from "@/app/organisations/_data/organisation-schema";
 
-export default function OverviewTab({ organisation }: OrganisationProps) {
+export default function OverviewTab({ organisation }: { organisation: Organisation }) {
     return (
         <>
             <div className="grid grid-cols-2 gap-6">

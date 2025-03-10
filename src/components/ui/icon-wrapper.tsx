@@ -8,7 +8,7 @@ export default function IconWrapper({
   children: ReactNode;
 }) {
   return (
-    <div className={`${isActive ? "bg-[var(--on-surface)] text-[var(--surface)]" : "bg-surface text-[var(--on-surface)]"} 
+    <div className={`${isActive ? "bg-active-bg text-active-text" : "bg-inactive-bg text-inactive-text"} 
                     border border-1 rounded-full w-[35px] 
                     aspect-square overflow-hidden flex justify-center items-center`}
                     >

@@ -1,24 +1,25 @@
-"use client"
-
 import { Moon, Sun } from "lucide-react"
 import { useTheme } from "next-themes"
-import IconWrapper from "../../../ui/icon-wrapper";
 import { ICON_SIZES, THEMES } from "@/constants/constants";
+import IconWrapper from "@/components/ui/icon-wrapper";
 
 export default function ThemeToggle() {
-    const { theme, setTheme } = useTheme();
-    
+    const { resolvedTheme, setTheme } = useTheme();
+
     return (
         <>
-            {theme === THEMES.dark && 
-            <button onClick={() => setTheme("light")}>
-                <IconWrapper>
-                    <Sun size={ICON_SIZES.small} />
-                </IconWrapper>
-            </button> } 
             {
-                theme === THEMES.light &&
-                <button onClick={() => setTheme("dark")}>
+                resolvedTheme === THEMES.dark && 
+                <button onClick={() => setTheme("light")} type="button" title="Light theme button">
+                    <IconWrapper>
+                        <Sun size={ICON_SIZES.small} />
+                    </IconWrapper>
+                </button> 
+            } 
+            
+            {
+                resolvedTheme === THEMES.light &&
+                <button onClick={() => setTheme("dark")} type="button" title="Dark theme button">
                     <IconWrapper>
                         <Moon size={ICON_SIZES.small} />
                     </IconWrapper>

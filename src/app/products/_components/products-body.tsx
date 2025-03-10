@@ -11,8 +11,7 @@ import { ICON_SIZES } from "@/constants/constants";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
-import ToggleGroup from "@/components/ui/toggle-group";
-import Toggle from "@/components/ui/toggle";
+
 
 export default function ProductsBody({ data }: { data: Product[] }) {
 
@@ -114,10 +113,10 @@ function AddProductButton({
                 <Label htmlFor="canDiscount" className="text-right">
                   Can Discount
                 </Label>
-                <ToggleGroup heightClass="h-[28px]">
+                {/* <ToggleGroup heightClass="h-[28px]">
                     <Toggle buttonLabel="Yes" active={canDiscount} toggleBtn={setCanDiscount} />
                     <Toggle buttonLabel="No"  active={!canDiscount} toggleBtn={setCanDiscount} />
-                </ToggleGroup>
+                </ToggleGroup> */}
               </div>
             </div>
             <SheetFooter>

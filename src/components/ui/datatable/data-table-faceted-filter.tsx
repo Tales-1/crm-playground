@@ -21,32 +21,26 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "../popover"
-import { useDeals } from "@/app/deals/_data/deals-context";
 
 interface DataTableFacetedFilterProps<TData, TValue> {
   column?: Column<TData, TValue>
   title?: string,
+  options?:DatatableOptions[]
   accessorkey?:string
+}
+
+interface DatatableOptions {
+  label:string,
+  value:string
 }
 
 export function DataTableFacetedFilter<TData, TValue>({
   column,
   title,
+  options,
   accessorkey = ""
 }: DataTableFacetedFilterProps<TData, TValue>) {
 
-  const deals = useDeals();
-
-  const options = deals
-        .map(deal => deal[accessorkey])
-        .filter((item, index, arr) => arr.indexOf(item) === index)
-        .map(key => {
-            return(
-                {
-                    label: key,
-                    value: key,
-                }
-            )});
 
   const facets = column?.getFacetedUniqueValues()
   const selectedValues = new Set(column?.getFilterValue() as string[])
@@ -74,7 +68,7 @@ export function DataTableFacetedFilter<TData, TValue>({
           <CommandList>
             <CommandEmpty>No results found.</CommandEmpty>
             <CommandGroup>
-              {options.map((option) => {
+              {options?.map((option:any) => {
                 const isSelected = selectedValues.has(option.value as string)
                 return (
                   <CommandItem

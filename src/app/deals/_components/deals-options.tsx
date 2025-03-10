@@ -1,36 +1,35 @@
 "use client"
 
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Toggles, TogglesList, ToggleTrigger } from "@/components/ui/toggle";
-import { ICON_SIZES } from "@/constants/constants";
-import { AlignJustify, Grid, icons, Kanban } from "lucide-react";
-import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { ICON_SIZES, PAGE_VIEWS } from "@/constants/constants";
+import { AlignJustify, Kanban } from "lucide-react";
+import Link from "next/link";
+import ToggleGroup from "@/components/ui/toggle-group";
+import Toggle from "@/components/ui/toggle";
+import { useSearchParams } from "next/navigation";
 
-export default function DealsOptionsMenu({ initialView } : { initialView : string }) {
-    const router = useRouter();
-    const [activeView, setActiveView] = useState(initialView);
-
-    function handleToggle(view: string){
-        console.log(view)
-        router.push(`/deals?view=${view}`)
-        setActiveView(view);
-    }
+export default function DealsOptionsMenu() {
+  const searchParams = useSearchParams().get("view");
 
   return (
     <div className="flex justify-between items-center">
-      <Toggles value={activeView} onValueChange={handleToggle}>
-        <TogglesList className="w-[125px]">
-            <ToggleTrigger value="kanban">
-                <Kanban size={ICON_SIZES.small}/>
-                Kanban
-            </ToggleTrigger>
-            <ToggleTrigger value="table">
-                <AlignJustify size={ICON_SIZES.small} /> 
-                Table
-            </ToggleTrigger>
-        </TogglesList>
-      </Toggles>
+      <ToggleGroup className="h-[27px] w-fit">
+        <Link href={"/deals/?view=kanban"} className="w-full">
+          <Toggle
+            buttonLabel="Kanban"
+            toggleImage={<Kanban size={ICON_SIZES.small} />}
+            active={searchParams == PAGE_VIEWS.kanban}
+          />
+        </Link>
+
+        <Link href={"/deals/?view=table"} className="w-full">
+          <Toggle
+            buttonLabel="Table"
+            toggleImage={<AlignJustify size={ICON_SIZES.small} />}
+            active={searchParams == PAGE_VIEWS.table}
+          />
+        </Link>
+      </ToggleGroup>
 
       <Select defaultValue="primary">
         <SelectTrigger className="w-[180px] bg-surface h-[30px] w-[175px] text-xs rounded-lg">
