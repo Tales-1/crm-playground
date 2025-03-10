@@ -2,15 +2,14 @@
 
 import Link from "next/link";
 import IconWrapper from "../../ui/icon-wrapper";
-
 import { Coins, LayoutDashboard, Network, Settings, Tags, Users } from "lucide-react";
 import { ICON_SIZES } from "@/constants/constants";
 import { usePathname } from "next/navigation";
-import { ReactNode, useReducer } from "react";
+import { ReactNode } from "react";
 import { Tooltip, TooltipProvider } from "@/components/ui/tooltip";
 import { TooltipContent, TooltipTrigger } from "@radix-ui/react-tooltip";
 
-type MenuItem = {
+interface MenuItem {
   menuText: string;
   iconElement: ReactNode;
   href: string;
@@ -18,8 +17,6 @@ type MenuItem = {
 };
 
 export default function Sidebar() {
-  const [showFullMenu, setShowFullMenu] = useReducer((prev) => !prev, false);
-
   const menuItems: MenuItem[] = [
     {
       menuText: "Dashboard",
@@ -60,15 +57,14 @@ export default function Sidebar() {
   ];
 
   return (
-    <aside
-      className={`relative mt-16 pl-4 ${showFullMenu ? "z-30 " : "z-10 w-fit"
-        }`}
-    >
+    <aside className={`relative mt-16 pl-4`}>
       <nav
         className="flex flex-col items-start gap-2 h-full"
       >
         {menuItems.map((item) => (
-          <Link href={item.href} className={`relative flex items-center gap-2 ${item.menuText == "Settings" ? "mt-auto mb-12" : ""}`} key={item.menuText}>
+          <Link href={item.href} 
+                className={`relative flex items-center gap-2 ${item.menuText == "Settings" ? "mt-auto mb-12" : ""}`}
+                key={item.menuText}>
             <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger>

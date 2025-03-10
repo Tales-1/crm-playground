@@ -3,10 +3,10 @@
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { ICON_SIZES, PAGE_VIEWS } from "@/constants/constants";
 import { AlignJustify, Kanban } from "lucide-react";
+import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import ToggleGroup from "@/components/ui/toggle-group";
-import Toggle from "@/components/ui/toggle";
-import { useSearchParams } from "next/navigation";
+import Toggle from "@/components/ui/Toggle";
 
 export default function DealsOptionsMenu() {
   const searchParams = useSearchParams().get("view");
