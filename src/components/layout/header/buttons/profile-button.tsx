@@ -21,7 +21,7 @@ export default function ProfileButton() {
           <Image src={profilePic} alt="Profile picture" className="object-cover" />
         </div>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="mr-3 w-[200px] flex flex-col gap-1">
+      <DropdownMenuContent className="bg-menu mr-3 w-[200px] flex flex-col gap-1">
         <DropdownMenuLabel className="text-[12px]">
           Jawad Nazir
         </DropdownMenuLabel>

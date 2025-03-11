@@ -18,48 +18,50 @@ interface MenuItem {
 };
 
 export default function Sidebar() {
+  const pathname = usePathname();
+  
   const menuItems: MenuItem[] = [
     {
       menuText: "Dashboard",
       iconElement: <LayoutDashboard size={ICON_SIZES.medium} />,
-      isActive: usePathname() == "/",
+      isActive: pathname == "/",
       pathname: "/",
     },
     {
       menuText: "Deals",
       iconElement: <Coins size={ICON_SIZES.medium} />,
-      isActive: usePathname().includes("/deals"),
+      isActive: pathname.includes("/deals"),
       pathname: "/deals",
       query:"view=kanban"
     },
     {
       menuText: "Organisations",
       iconElement: <Network size={ICON_SIZES.medium} />,
-      isActive: usePathname().includes("/organisations"),
+      isActive: pathname.includes("/organisations"),
       pathname: "/organisations",
     },
     {
       menuText: "People",
       iconElement: <Users size={ICON_SIZES.medium} />,
-      isActive: usePathname().includes("/people"),
+      isActive: pathname.includes("/people"),
       pathname: "/people",
     },
     {
       menuText: "Products",
       iconElement: <Tags size={ICON_SIZES.medium} />,
-      isActive: usePathname().includes("/products"),
+      isActive: pathname.includes("/products"),
       pathname: "/products",
     },
     {
       menuText: "Settings",
       iconElement: <Settings size={ICON_SIZES.medium} />,
-      isActive: usePathname().includes("/settings"),
+      isActive: pathname.includes("/settings"),
       pathname: "/settings"
     }
   ];
 
   return (
-    <aside className={`relative mt-16 pl-4`}>
+    <aside className="relative mt-16 pl-4">
       <nav
         className="flex flex-col items-start gap-2 h-full"
       >

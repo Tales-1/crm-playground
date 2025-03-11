@@ -47,7 +47,7 @@ input[type="checkbox"]{
 
 .bg-menu{
   background: linear-gradient(var(--surface), var(--surface)), 
-              linear-gradient(var(--elevation-16), var(--elevation-16));
+              linear-gradient(var(--elevation-11), var(--elevation-11));
   background-blend-mode: overlay;
 }
 

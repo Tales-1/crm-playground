@@ -25,6 +25,7 @@ import {
 } from "@/components/ui/table";
 
 import { Button } from "../button";
+import { Download } from "lucide-react";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -69,13 +70,14 @@ export function DataTable<TData, TValue>({
   
   return (
     <>
-      <Table className="text-xs px-1 w-full" style={{ borderCollapse: "separate", borderSpacing: "0 .6rem" }}>
+      <Table 
+            className="text-xs px-1 w-full" 
+            style={{ borderCollapse: "separate", borderSpacing: "0 .6rem" }}>
         <TableHeader>
-          {table.getHeaderGroups().map((headerGroup) => (
-            <TableRow key={headerGroup.id} className="drop-shadow-md rounded-xl bg-surface">
+          {table.getHeaderGroups().map((headerGroup, index) => (
+            <TableRow key={index} className="drop-shadow-md rounded-xl bg-surface">
               {headerGroup.headers.map((header, index) => {
                 return (
-                <>
                   <TableHead key={header.id} className={`${getBorderRadius(index, headerGroup.headers.length)}`}>
                     {header.isPlaceholder
                       ? null
@@ -84,7 +86,6 @@ export function DataTable<TData, TValue>({
                         header.getContext()
                       )}
                   </TableHead>
-                </>
                 );
               })}
             </TableRow>

@@ -2,21 +2,22 @@
 
 import Image from "next/image";
 import GlobalSearch from "./global-search";
-import companyLogo from "@/../public/images/p-icon.png";
+import companyLogo from "@/../public/images/rubixx.png"
+
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuLabel,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
 import dynamic from "next/dynamic";
 import ProfileButton from "./buttons/profile-button";
 import NotificationButton from "./buttons/notification-button";
+import { Separator } from "@/components/ui/separator";
 
-const ThemeToggle = dynamic(() => import("./buttons/theme-toggle"), { ssr: false });
+export const ThemeToggle = dynamic(() => import("./buttons/theme-toggle"), { ssr: false });
 
 export default function Header() {
   return (
@@ -30,11 +31,11 @@ export default function Header() {
               className="object-cover sm:w-[50px] md:w-[85px]"
             />
           </DropdownMenuTrigger>
-          <DropdownMenuContent className="absolute -left-3">
+          <DropdownMenuContent className="bg-menu absolute -left-3">
             <DropdownMenuLabel className="text-[11px]">
               My Products
             </DropdownMenuLabel>
-            <DropdownMenuSeparator />
+            <Separator className="my-1" />
             <DropdownMenuItem className="text-xs">Crm</DropdownMenuItem>
             <DropdownMenuItem className="text-xs">Housing</DropdownMenuItem>
             <DropdownMenuItem className="text-xs">Accounts</DropdownMenuItem>
@@ -44,7 +45,7 @@ export default function Header() {
 
       <GlobalSearch />
 
-      <div className="flex gap-3" suppressHydrationWarning>
+      <div className="flex gap-3">
         <ThemeToggle />
         <NotificationButton />
         <ProfileButton />
