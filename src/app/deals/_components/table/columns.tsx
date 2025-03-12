@@ -1,9 +1,8 @@
 "use client";
 
 import { ColumnDef } from "@tanstack/react-table";
-import { DealTargetEnum } from "../../_data/kanban-deals-data";
 import formatCurrency from "@/helpers/format-currency";
-import { Deal } from "../../_data/deal-schema";
+import { Deal, DealTargetEnum } from "../../_data/deal-schema";
 import { DataTableColumnHeader } from "@/components/ui/datatable/data-table-header";
 import { DataTableViewOptions } from "@/components/ui/datatable/data-table-view-options";
 
@@ -15,6 +14,10 @@ export const columns: ColumnDef<Deal>[] = [
       <DataTableViewOptions table={table} />
     ),
     cell: () => "",
+  },
+  {
+    accessorKey: "name",
+    header: "Name",
   },
   {
     accessorKey: "stageTitle",
@@ -86,9 +89,5 @@ export const columns: ColumnDef<Deal>[] = [
 
       return <div>{targetDesc}</div>;
     },
-  },
-  {
-    accessorKey: "name",
-    header: "Name",
   },
 ];

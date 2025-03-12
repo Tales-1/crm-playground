@@ -16,20 +16,24 @@ import dynamic from "next/dynamic";
 import ProfileButton from "./buttons/profile-button";
 import NotificationButton from "./buttons/notification-button";
 import { Separator } from "@/components/ui/separator";
+import { ChevronsUpDown } from "lucide-react";
 
 export const ThemeToggle = dynamic(() => import("./buttons/theme-toggle"), { ssr: false });
 
 export default function Header() {
   return (
     <header className="flex justify-between items-center w-screen px-4 gap-[5rem]">
-      <div className="relative aspect-square w-[85px] flex items-center">
+      <div className="relative aspect-square w-fit flex items-center">
         <DropdownMenu>
           <DropdownMenuTrigger>
-            <Image
-              src={companyLogo}
-              alt="Company logo"
-              className="object-cover sm:w-[50px] md:w-[85px]"
-            />
+            <div className="flex items-center">
+              <Image
+                src={companyLogo}
+                alt="Company logo"
+                className="object-cover sm:w-[50px] md:w-[85px]"
+              />
+              <ChevronsUpDown size={16} />
+            </div>
           </DropdownMenuTrigger>
           <DropdownMenuContent className="bg-menu absolute -left-3">
             <DropdownMenuLabel className="text-[11px]">
@@ -45,7 +49,7 @@ export default function Header() {
 
       <GlobalSearch />
 
-      <div className="flex gap-3">
+      <div className="flex gap-2">
         <ThemeToggle />
         <NotificationButton />
         <ProfileButton />

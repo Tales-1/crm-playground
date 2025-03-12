@@ -24,8 +24,8 @@ import {
   TableRow,
 } from "@/components/ui/table";
 
-import { Button } from "../button";
-import { Download } from "lucide-react";
+import { DataTablePagination } from "./data-table-pagination";
+import { DataTableToolbar } from "./data-table-tool-bar";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -67,24 +67,40 @@ export function DataTable<TData, TValue>({
   // pagination works by setting the page number and skip as search params
   // this is then retrieved by the parent component upon rerender and put into the 
   // data fetching url.
-  
+
   return (
     <>
-      <Table 
-            className="text-xs px-1 w-full" 
-            style={{ borderCollapse: "separate", borderSpacing: "0 .6rem" }}>
+    <DataTableToolbar table={table} />
+      <Table
+        className="text-xs px-1 w-full"
+        style={{ borderCollapse: "separate", borderSpacing: "0 .6rem" }}>
         <TableHeader>
           {table.getHeaderGroups().map((headerGroup, index) => (
             <TableRow key={index} className="drop-shadow-md rounded-xl bg-surface">
               {headerGroup.headers.map((header, index) => {
                 return (
                   <TableHead key={header.id} className={`${getBorderRadius(index, headerGroup.headers.length)}`}>
-                    {header.isPlaceholder
-                      ? null
-                      : flexRender(
-                        header.column.columnDef.header,
-                        header.getContext()
-                      )}
+                    <div className="flex items-center justify-between">
+                      {header.isPlaceholder
+                        ? null
+                        : flexRender(
+                          header.column.columnDef.header,
+                          header.getContext()
+                        )}
+                      {/* {
+                        index == headerGroup.headers.length - 1 &&
+                        <div className="flex items-center gap-2 border border-border rounded-lg px-1">
+                          <Search size={ICON_SIZES.small} />
+                          <input
+                            className="w-[150px] h-6 text-xs bg-surface"
+                            placeholder="Filter Names"
+                            onChange={(event) => {
+                              table.getColumn("name")?.setFilterValue(event.target.value)
+                            }}
+                            />
+                        </div>
+                      } */}
+                    </div>
                   </TableHead>
                 );
               })}
@@ -117,7 +133,7 @@ export function DataTable<TData, TValue>({
         </TableBody>
       </Table>
 
-      <div className="flex items-center justify-end space-x-2 py-4">
+      {/* <div className="flex items-center justify-end space-x-2 py-4">
         <Button
           className="bg-surface"
           variant="outline"
@@ -136,7 +152,9 @@ export function DataTable<TData, TValue>({
         >
           Next
         </Button>
-      </div>
+      </div> */}
+
+      <DataTablePagination table={table} />
     </>
   );
 }

@@ -1,8 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import { Deal } from "../../_data/deal-schema";
-import { DealTargetEnum } from "../../_data/kanban-deals-data";
+import { Deal, DealTargetEnum } from "../../_data/deal-schema";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";

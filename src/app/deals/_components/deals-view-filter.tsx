@@ -7,10 +7,9 @@ import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import ToggleGroup from "@/components/ui/toggle-group";
 import Toggle from "@/components/ui/toggle";
-import { Button } from "@/components/ui/button";
 import IconWrapper from "@/components/ui/icon-wrapper";
 
-export default function DealsOptionsMenu() {
+export default function DealsViewFilter() {
   const searchParams = useSearchParams().get("view");
 
   return (

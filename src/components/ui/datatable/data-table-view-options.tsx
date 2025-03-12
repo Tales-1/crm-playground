@@ -11,6 +11,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
 } from "../dropdown-menu"
+import { Separator } from "../separator"
 
 interface DataTableViewOptionsProps<TData> {
   table: Table<TData>
@@ -26,7 +27,7 @@ export function DataTableViewOptions<TData>({
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-[150px]">
         <DropdownMenuLabel>Options</DropdownMenuLabel>
-        <DropdownMenuSeparator />
+        <Separator />
         {table
           .getAllColumns()
           .filter(

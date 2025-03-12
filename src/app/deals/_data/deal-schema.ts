@@ -18,6 +18,7 @@ export const stageDetailsSchema = z.object({
 })
 
 export type Deal = z.infer<typeof dealSchema>;
+
 export type StageDetails = z.infer<typeof stageDetailsSchema>;
 
 export enum DealTargetEnum {
@@ -26,3 +27,22 @@ export enum DealTargetEnum {
     Overdue,
     NoTarget
 }
+
+export const stageTitles = [
+    {
+        value:"Qualification",
+        label:"Qualification",
+    },
+    {
+        value: "Needs Analysis",
+        label:"Needs Analysis"
+    },
+    {
+        value: "Value Proposition",
+        label:"Value Proposition"
+    },
+    {
+        value: "Closed",
+        label:"Closed"
+    }
+]
