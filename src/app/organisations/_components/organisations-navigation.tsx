@@ -4,7 +4,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Organisation } from "../_data/organisation-schema";
 
-
 export default function OrganisationsNavigation({ organisations } : 
   { organisations : Organisation[] }) {
   const pathname = usePathname()

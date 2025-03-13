@@ -1,18 +1,28 @@
-import { z } from "zod"
+import { DealSchema } from "@/app/deals/_data/deal-schema";
+import { OrganisationSchema } from "@/app/organisations/_data/organisation-schema";
+import { z } from "zod";
 
-export interface Person {
-    id:string,
-    name:string;
-    phone:string;
-    email:string;
-    title:string;
-}
+const PartialOrgSchema = z.lazy(() =>
+  OrganisationSchema.pick({
+    id: true,
+    name: true,
+    address: true,
+  })
+);
 
-export const personSchema = z.object({
-    id:z.string(),
-    name:z.string(),
-    title:z.string(),
-    phone:z.string(),
-    email:z.string(),
+const PersonSchema = z.object({
+  id: z.string(),
+  name: z.string(),
+  logo: z.string(),
+  organisations: z.array(PartialOrgSchema),
+  phone: z.string(),
+  email: z.string(),
+  deals: z.array(DealSchema),
+  notes: z.string(),
+  createdAt: z.string(),
+  updatedAt: z.string(),
 });
-   
+
+type Person = z.infer<typeof PersonSchema>;
+
+export { PersonSchema, type Person };

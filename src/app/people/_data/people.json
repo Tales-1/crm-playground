@@ -1,42 +1,472 @@
 [
   {
-    "id": "1",
-    "name": "John Doe",
-    "title": "Senior Software Engineer",
-    "phone": "+1-555-123-4567",
-    "email": "johndoe@example.com",
-    "occupation": "Software Engineer"
+    "id": "per-1",
+    "name": "Michael Oliver",
+    "logo": "/lovable-uploads/330c58e3-1d36-45a5-913d-275bde578bf0.png",
+    "organisations": [
+      {
+        "id": "org-1",
+        "name": "Tech Solutions Inc.",
+        "address": {
+          "street": "",
+          "city": "Silicon Valley",
+          "state": "CA",
+          "zipCode": "",
+          "country": "USA"
+        }
+      }
+    ],
+    "phone": "(408) 555-1234",
+    "email": "michael.oliver@gmail.com",
+    "deals": [
+      {
+        "id": 1,
+        "organisation": "Tech Solutions Inc.",
+        "primaryPerson": "Michael Oliver",
+        "price": 75000,
+        "date": "2023-12-15",
+        "dealTarget": 1,
+        "stageTitle": "proposal",
+        "name": "Enterprise Software License Agreement"
+      },
+      {
+        "id": 2,
+        "organisation": "Tech Solutions Inc.",
+        "primaryPerson": "Sarah Johnson",
+        "price": 120000,
+        "date": "2024-01-30",
+        "dealTarget": 1,
+        "stageTitle": "negotiation",
+        "name": "Cloud Infrastructure Upgrade Contract"
+      }
+    ],
+    "notes": "He can easily be influenced. Take him out for dinner before engaging in any deal talks.",
+    "createdAt": "2023-01-15T12:00:00Z",
+    "updatedAt": "2023-06-20T15:30:00Z"
   },
   {
-    "id": "2",
-    "name": "Jane Smith",
-    "title": "Lead Graphic Designer",
-    "phone": "+1-555-987-6543",
-    "email": "janesmith@example.com",
-    "occupation": "Graphic Designer"
+    "id": "per-2",
+    "name": "Emily Chen",
+    "logo": "/lovable-uploads/445d72a1-2b47-49c2-88c1-ff867f4d3b1a.png",
+    "organisations": [
+      {
+        "id": "org-2",
+        "name": "Innovative Tech Corp.",
+        "address": {
+          "street": "",
+          "city": "Austin",
+          "state": "TX",
+          "zipCode": "",
+          "country": "USA"
+        }
+      }
+    ],
+    "phone": "(512) 555-6789",
+    "email": "emily.chen@innovativetech.com",
+    "deals": [
+      {
+        "id": 3,
+        "organisation": "Innovative Tech Corp.",
+        "primaryPerson": "Emily Chen",
+        "price": 92000,
+        "date": "2024-02-10",
+        "dealTarget": 1,
+        "stageTitle": "discovery",
+        "name": "AI Analytics Platform Implementation"
+      }
+    ],
+    "notes": "Prefers detailed technical documentation upfront. Decision-maker needs CFO approval.",
+    "createdAt": "2022-11-01T09:15:00Z",
+    "updatedAt": "2023-08-12T14:20:00Z"
   },
   {
-    "id": "3",
-    "name": "Robert Johnson",
-    "title": "Data Science Specialist",
-    "phone": "+1-555-234-5678",
-    "email": "robertjohnson@example.com",
-    "occupation": "Data Analyst"
+    "id": "per-3",
+    "name": "Raj Patel",
+    "logo": "/lovable-uploads/6e9c8f2b-1a8d-4e5f-9c0a-3d7b1e4f5c6d.png",
+    "organisations": [
+      {
+        "id": "org-3",
+        "name": "Global Cloud Systems",
+        "address": {
+          "street": "",
+          "city": "London",
+          "state": "",
+          "zipCode": "",
+          "country": "UK"
+        }
+      }
+    ],
+    "phone": "+44 20 7946 0958",
+    "email": "raj.patel@globalcloud.co.uk",
+    "deals": [
+      {
+        "id": 4,
+        "organisation": "Global Cloud Systems",
+        "primaryPerson": "Raj Patel",
+        "price": 185000,
+        "date": "2024-03-05",
+        "dealTarget": 1,
+        "stageTitle": "negotiation",
+        "name": "Multi-Cloud Migration Project"
+      },
+      {
+        "id": 5,
+        "organisation": "Global Cloud Systems",
+        "primaryPerson": "Lisa Wong",
+        "price": 65000,
+        "date": "2023-11-20",
+        "dealTarget": 1,
+        "stageTitle": "closed",
+        "name": "Security Compliance Package"
+      }
+    ],
+    "notes": "Key influencer but not final decision maker. Connect with CTO for approvals.",
+    "createdAt": "2023-03-10T14:30:00Z",
+    "updatedAt": "2023-12-01T11:05:00Z"
   },
   {
-    "id": "4",
-    "name": "Emily Davis",
-    "title": "Marketing Lead",
-    "phone": "+1-555-876-5432",
-    "email": "emilydavis@example.com",
-    "occupation": "Marketing Specialist"
+    "id": "per-4",
+    "name": "Sophie Dubois",
+    "logo": "/lovable-uploads/9a8b7c6d-5e4f-3a2b-1c0d-4e5f6a7b8c9d.png",
+    "organisations": [
+      {
+        "id": "org-4",
+        "name": "Paris Digital Solutions",
+        "address": {
+          "street": "",
+          "city": "Paris",
+          "state": "",
+          "zipCode": "",
+          "country": "France"
+        }
+      }
+    ],
+    "phone": "+33 1 23 45 67 89",
+    "email": "sophie.dubois@parisdigital.fr",
+    "deals": [
+      {
+        "id": 6,
+        "organisation": "Paris Digital Solutions",
+        "primaryPerson": "Sophie Dubois",
+        "price": 45000,
+        "date": "2023-09-15",
+        "dealTarget": 1,
+        "stageTitle": "closed",
+        "name": "E-commerce Platform Upgrade"
+      }
+    ],
+    "notes": "Prefers communication in French. Flexible with timelines but strict on budgets.",
+    "createdAt": "2023-02-28T08:45:00Z",
+    "updatedAt": "2023-10-22T16:15:00Z"
   },
   {
-    "id": "5",
-    "name": "Michael Brown",
-    "title": "Senior Product Manager",
-    "phone": "+1-555-345-6789",
-    "email": "michaelbrown@example.com",
-    "occupation": "Product Manager"
+    "id": "per-5",
+    "name": "Carlos Mendoza",
+    "logo": "/lovable-uploads/b3c9a1d2-e4f5-6a7b-8c9d-0e1f2a3b4c5d.png",
+    "organisations": [
+      {
+        "id": "org-5",
+        "name": "Mexico Tech Innovators",
+        "address": {
+          "street": "",
+          "city": "Mexico City",
+          "state": "",
+          "zipCode": "",
+          "country": "Mexico"
+        }
+      }
+    ],
+    "phone": "+52 55 1234 5678",
+    "email": "carlos.mendoza@mexicotech.mx",
+    "deals": [
+      {
+        "id": 7,
+        "organisation": "Mexico Tech Innovators",
+        "primaryPerson": "Carlos Mendoza",
+        "price": 68000,
+        "date": "2024-04-01",
+        "dealTarget": 1,
+        "stageTitle": "proposal",
+        "name": "IoT Fleet Management System"
+      }
+    ],
+    "notes": "Decision maker. Enjoys golf outings. Speaks fluent English and Spanish.",
+    "createdAt": "2023-04-15T10:00:00Z",
+    "updatedAt": "2023-11-05T09:45:00Z"
+  },
+  {
+    "id": "per-6",
+    "name": "Aisha Al-Farsi",
+    "logo": "/lovable-uploads/d4e5f6a7-b8c9-4d0e-1f2a-3b4c5d6e7f8g.png",
+    "organisations": [
+      {
+        "id": "org-6",
+        "name": "Dubai Future Tech",
+        "address": {
+          "street": "",
+          "city": "Dubai",
+          "state": "",
+          "zipCode": "",
+          "country": "UAE"
+        }
+      }
+    ],
+    "phone": "+971 4 567 8901",
+    "email": "aisha.alfarsi@dubaifuture.ae",
+    "deals": [
+      {
+        "id": 8,
+        "organisation": "Dubai Future Tech",
+        "primaryPerson": "Aisha Al-Farsi",
+        "price": 210000,
+        "date": "2024-05-15",
+        "dealTarget": 1,
+        "stageTitle": "discovery",
+        "name": "Smart City AI Implementation"
+      },
+      {
+        "id": 9,
+        "organisation": "Dubai Future Tech",
+        "primaryPerson": "Omar Hassan",
+        "price": 95000,
+        "date": "2023-10-01",
+        "dealTarget": 1,
+        "stageTitle": "closed",
+        "name": "Blockchain Supply Chain Solution"
+      }
+    ],
+    "notes": "Requires executive summaries first. Final approval needs royal family endorsement.",
+    "createdAt": "2023-05-20T07:30:00Z",
+    "updatedAt": "2024-01-10T12:00:00Z"
+  },
+  {
+    "id": "per-7",
+    "name": "Liam O'Connor",
+    "logo": "/lovable-uploads/e5f6a7b8-c9d0-4e1f-2a3b-4c5d6e7f8g9h.png",
+    "organisations": [
+      {
+        "id": "org-7",
+        "name": "Dublin Data Systems",
+        "address": {
+          "street": "",
+          "city": "Dublin",
+          "state": "",
+          "zipCode": "",
+          "country": "Ireland"
+        }
+      }
+    ],
+    "phone": "+353 1 234 5678",
+    "email": "liam.oconnor@dublindata.ie",
+    "deals": [
+      {
+        "id": 10,
+        "organisation": "Dublin Data Systems",
+        "primaryPerson": "Liam O'Connor",
+        "price": 55000,
+        "date": "2024-02-28",
+        "dealTarget": 1,
+        "stageTitle": "negotiation",
+        "name": "Data Warehouse Modernization"
+      }
+    ],
+    "notes": "Technical expert but needs budget approval from US parent company.",
+    "createdAt": "2023-06-01T14:15:00Z",
+    "updatedAt": "2023-12-15T16:30:00Z"
+  },
+  {
+    "id": "per-8",
+    "name": "Yuki Tanaka",
+    "logo": "/lovable-uploads/f6a7b8c9-d0e1-4f2a-3b4c-5d6e7f8g9h0i.png",
+    "organisations": [
+      {
+        "id": "org-8",
+        "name": "Tokyo Robotics Ltd.",
+        "address": {
+          "street": "",
+          "city": "Tokyo",
+          "state": "",
+          "zipCode": "",
+          "country": "Japan"
+        }
+      }
+    ],
+    "phone": "+81 3-1234-5678",
+    "email": "yuki.tanaka@tokyorobotics.co.jp",
+    "deals": [
+      {
+        "id": 11,
+        "organisation": "Tokyo Robotics Ltd.",
+        "primaryPerson": "Yuki Tanaka",
+        "price": 135000,
+        "date": "2024-06-01",
+        "dealTarget": 1,
+        "stageTitle": "proposal",
+        "name": "Industrial Automation System"
+      }
+    ],
+    "notes": "Requires Japanese documentation. Decision by committee, needs multiple meetings.",
+    "createdAt": "2023-07-10T09:00:00Z",
+    "updatedAt": "2024-01-20T11:20:00Z"
+  },
+  {
+    "id": "per-9",
+    "name": "Olivia Schmidt",
+    "logo": "/lovable-uploads/7b8c9d0e-1f2a-3b4c-5d6e-7f8g9h0i1j2k.png",
+    "organisations": [
+      {
+        "id": "org-9",
+        "name": "Berlin Green Tech",
+        "address": {
+          "street": "",
+          "city": "Berlin",
+          "state": "",
+          "zipCode": "",
+          "country": "Germany"
+        }
+      }
+    ],
+    "phone": "+49 30 12345678",
+    "email": "olivia.schmidt@berlingreen.de",
+    "deals": [
+      {
+        "id": 12,
+        "organisation": "Berlin Green Tech",
+        "primaryPerson": "Olivia Schmidt",
+        "price": 88000,
+        "date": "2024-03-15",
+        "dealTarget": 1,
+        "stageTitle": "discovery",
+        "name": "Sustainable Energy Monitoring"
+      },
+      {
+        "id": 13,
+        "organisation": "Berlin Green Tech",
+        "primaryPerson": "Max Weber",
+        "price": 112000,
+        "date": "2023-12-01",
+        "dealTarget": 1,
+        "stageTitle": "closed",
+        "name": "Carbon Tracking Platform"
+      }
+    ],
+    "notes": "Environmental focus. Requires sustainability reports with proposals.",
+    "createdAt": "2023-08-05T08:45:00Z",
+    "updatedAt": "2024-01-05T14:00:00Z"
+  },
+  {
+    "id": "per-10",
+    "name": "Daniel Kim",
+    "logo": "/lovable-uploads/8c9d0e1f-2a3b-4c5d-6e7f-8g9h0i1j2k3l.png",
+    "organisations": [
+      {
+        "id": "org-10",
+        "name": "Seoul Mobile Innovations",
+        "address": {
+          "street": "",
+          "city": "Seoul",
+          "state": "",
+          "zipCode": "",
+          "country": "South Korea"
+        }
+      }
+    ],
+    "phone": "+82 2-1234-5678",
+    "email": "daniel.kim@seoulmobile.kr",
+    "deals": [
+      {
+        "id": 14,
+        "organisation": "Seoul Mobile Innovations",
+        "primaryPerson": "Daniel Kim",
+        "price": 165000,
+        "date": "2024-04-20",
+        "dealTarget": 1,
+        "stageTitle": "negotiation",
+        "name": "5G Network Optimization"
+      }
+    ],
+    "notes": "Fast decision maker. Prefers early morning meetings. Speaks English fluently.",
+    "createdAt": "2023-09-12T11:30:00Z",
+    "updatedAt": "2024-02-01T10:15:00Z"
+  },
+  {
+    "id": "per-11",
+    "name": "Isabella Rossi",
+    "logo": "/lovable-uploads/9d0e1f2a-3b4c-5d6e-7f8g-9h0i1j2k3l4m.png",
+    "organisations": [
+      {
+        "id": "org-11",
+        "name": "Milan Fashion Tech",
+        "address": {
+          "street": "",
+          "city": "Milan",
+          "state": "",
+          "zipCode": "",
+          "country": "Italy"
+        }
+      }
+    ],
+    "phone": "+39 02 1234 5678",
+    "email": "isabella.rossi@milanfashion.it",
+    "deals": [
+      {
+        "id": 15,
+        "organisation": "Milan Fashion Tech",
+        "primaryPerson": "Isabella Rossi",
+        "price": 72000,
+        "date": "2024-05-10",
+        "dealTarget": 1,
+        "stageTitle": "proposal",
+        "name": "AR Virtual Try-On System"
+      }
+    ],
+    "notes": "Creative director. Needs visual prototypes before technical details.",
+    "createdAt": "2023-10-01T13:00:00Z",
+    "updatedAt": "2024-01-18T15:45:00Z"
+  },
+  {
+    "id": "per-12",
+    "name": "Ethan Wilson",
+    "logo": "/lovable-uploads/0e1f2a3b-4c5d-6e7f-8g9h-0i1j2k3l4m5n.png",
+    "organisations": [
+      {
+        "id": "org-12",
+        "name": "Sydney FinTech Labs",
+        "address": {
+          "street": "",
+          "city": "Sydney",
+          "state": "",
+          "zipCode": "",
+          "country": "Australia"
+        }
+      }
+    ],
+    "phone": "+61 2 1234 5678",
+    "email": "ethan.wilson@sydneyfintech.au",
+    "deals": [
+      {
+        "id": 16,
+        "organisation": "Sydney FinTech Labs",
+        "primaryPerson": "Ethan Wilson",
+        "price": 148000,
+        "date": "2024-06-15",
+        "dealTarget": 1,
+        "stageTitle": "discovery",
+        "name": "Fraud Detection AI Solution"
+      },
+      {
+        "id": 17,
+        "organisation": "Sydney FinTech Labs",
+        "primaryPerson": "Sophia Lee",
+        "price": 89000,
+        "date": "2023-11-25",
+        "dealTarget": 1,
+        "stageTitle": "closed",
+        "name": "Payment Gateway Integration"
+      }
+    ],
+    "notes": "Regulatory compliance is critical. Connect with legal team early.",
+    "createdAt": "2023-10-01T13:00:00Z",
+    "updatedAt": "2024-01-18T15:45:00Z"
   }
 ]

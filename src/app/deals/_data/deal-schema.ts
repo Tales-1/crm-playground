@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-export const dealSchema = z.object({
+export const DealSchema = z.object({
     id:z.number(),
     stageTitle:z.string(),
     organisation: z.string(),
@@ -14,10 +14,10 @@ export const dealSchema = z.object({
 export const stageDetailsSchema = z.object({
     title:z.string(),
     color:z.string(),
-    deals: z.array(dealSchema)
+    deals: z.array(DealSchema)
 })
 
-export type Deal = z.infer<typeof dealSchema>;
+export type Deal = z.infer<typeof DealSchema>;
 
 export type StageDetails = z.infer<typeof stageDetailsSchema>;
 

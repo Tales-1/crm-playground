@@ -2,14 +2,18 @@
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useState } from "react";
-import { Organisation } from "../../../_data/organisation-schema";
-import OverviewTab from "./overview-tab";
-import DealsTab from "./deals-tab";
-import ContactsTab from "./contacts-tab";
-import NotesTab from "./notes-tab";
+import { getCurrentOrganisation } from "../../_data/organisation-store";
+import OverviewTab from "./tabs/overview-tab";
+import DealsTab from "./tabs/deals-tab";
+import ContactsTab from "./tabs/contacts-tab";
+import NotesTab from "./tabs/notes-tab";
 
-export default function OrganisationDetailsTabs({ organisation }: { organisation: Organisation }) {
+export default function OrganisationDetails() {
   const [activeTab, setActiveTab] = useState("overview");
+  const organisation = getCurrentOrganisation();
+
+  if(!organisation)
+    return <h1>Organisation not found</h1>
 
   return (
     <Tabs value={activeTab} onValueChange={setActiveTab} className="flex-1 overflow-hidden mt-2">
@@ -44,19 +48,19 @@ export default function OrganisationDetailsTabs({ organisation }: { organisation
 
       <div className="flex-1 overflow-auto p-6">
         <TabsContent value="overview" className="m-0 h-full space-y-6 animate-fade-in">
-          <OverviewTab organisation={organisation} />
+          <OverviewTab />
         </TabsContent>
 
         <TabsContent value="deals" className="m-0 h-full animate-fade-in">
-          <DealsTab organisation={organisation} />
+          <DealsTab />
         </TabsContent>
 
         <TabsContent value="contacts" className="m-0 h-full animate-fade-in">
-          <ContactsTab organisation={organisation} />
+          <ContactsTab />
         </TabsContent>
 
         <TabsContent value="notes" className="m-0 h-full animate-fade-in">
-          <NotesTab organisation={organisation} />
+          <NotesTab />
         </TabsContent>
       </div>
     </Tabs>

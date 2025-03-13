@@ -10,7 +10,7 @@ export default function ContactItem({ contact }: { contact : Person}) {
         
         <div className="flex-1 min-w-0">
           <h4 className="font-medium text-sm">{contact.name}</h4>
-          <p className="text-xs text-muted">{contact.title}</p>
+          <p className="text-xs text-muted">CEO</p>
         </div>
         
         <div className="flex space-x-2">

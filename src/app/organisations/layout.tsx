@@ -9,8 +9,6 @@ import { Button } from "@/components/ui/button";
 import { unstable_cache } from "next/cache";
 import OrganisationsNavigation from "./_components/organisations-navigation";
 
-
-// Testing out server side caching. This is only for orms. 
 const getOrganisations = unstable_cache(
     async () => {
         console.log("fetching")
@@ -45,6 +43,8 @@ export default async function OrganisationsLayout({ children } : { children: Rea
                         />
                 </div>
 
+                {/*Fetch only the org names, id and address*/}
+                
                 <OrganisationsNavigation organisations={data} />
             </div>
 

@@ -3,7 +3,7 @@ import { DataTable } from "@/components/ui/datatable/data-table";
 import path from "path";
 import { z } from "zod";
 import { promises as fs } from "fs";
-import { dealSchema, stageTitles } from "../../_data/deal-schema";
+import { DealSchema, stageTitles } from "../../_data/deal-schema";
 import { columns } from "./columns";
 
 async function getDealsAsync() {
@@ -11,7 +11,7 @@ async function getDealsAsync() {
     path.join(process.cwd(), "src/app/deals/_data/deals.json")
   );
   const deals = JSON.parse(data.toString());
-  return z.array(dealSchema).parse(deals);
+  return z.array(DealSchema).parse(deals);
 }
 
 export default async function DealsTable(){
